@@ -8,6 +8,7 @@ import FotoBanner from '../public/Assets/FotoBanner.jpg'
 import BackgroundOferta from '../public/Assets/Background-OfertaAcademica-01.png'; 
 import BackgroundPrograma from '../public/Assets/Background-ElPrograma1-01.png'; 
 import BackgroundPrograma2 from '../public/Assets/Background-ElPrograma2-01.png';
+import gradientCodes from '../public/gradientCodes.json'
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -26,10 +27,10 @@ export default function Home() {
 
         </div>
       </div>
-      <Section background={BackgroundOferta}></Section>
-      <Section background={BackgroundPrograma}></Section>
+      <Section background={BackgroundOferta} ></Section>
+      <Section background={BackgroundPrograma} gradientCode={gradientCodes.programa}></Section>
       <Section background={BackgroundPrograma2}></Section>
-
+      <Section gradientCode={gradientCodes.footer}></Section>
       <footer className={styles.footer}>
 
       </footer>

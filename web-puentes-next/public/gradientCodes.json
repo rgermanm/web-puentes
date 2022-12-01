@@ -1,0 +1,8 @@
+{
+    "programa": {
+        "background": "linear-gradient(76deg, rgba(255,115,54,1) 0%, rgba(255,32,210,1) 100%)"
+    },
+    "footer": {
+        "background":" linear-gradient(40deg, rgba(220,25,138,1) 0%, rgba(0,172,192,1) 100%);"
+    }
+}
