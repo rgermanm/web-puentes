@@ -8,6 +8,8 @@ import FotoBanner from '../public/Assets/FotoBanner.jpg'
 import BackgroundOferta from '../public/Assets/Background-OfertaAcademica-01.png';
 import BackgroundPrograma from '../public/Assets/Background-ElPrograma1-01.png';
 import BackgroundPrograma2 from '../public/Assets/Background-ElPrograma2-01.png';
+import BackgroundNumeros from '../public/Assets/Background-Numeros-01.png';
+
 import gradientCodes from '../public/gradientCodes.json'
 export default function Home() {
   return (
@@ -30,6 +32,7 @@ export default function Home() {
       <Section id="Oferta" background={BackgroundOferta} ></Section>
       <Section id="Programa" background={BackgroundPrograma} gradientCode={gradientCodes.programa}></Section>
       <Section id="Programa2" background={BackgroundPrograma2}></Section>
+      <Section id="Numeros" background={BackgroundNumeros}></Section>
       <Section id="Galeria" gradientCode={gradientCodes.galeria}></Section>
       <Section id="Universidades" gradientCode={gradientCodes.universidades}></Section>
       <Section id="Footer" gradientCode={gradientCodes.footer}></Section>
