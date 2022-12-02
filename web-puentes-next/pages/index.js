@@ -24,10 +24,11 @@ export default function Home() {
         <div className={styles.backgroundBannerContainer}>
           <Image className={styles.backgroundBanner} src={BackgroundBanner} />
           <Image className={styles.fotoBanner} src={FotoBanner} />
-
+        
         </div>
       </div>
-      <Section id="Oferta" background={BackgroundOferta} ></Section>
+      <Section id="Oferta" background={BackgroundOferta} >
+      </Section>
       <Section id="Programa" background={BackgroundPrograma} gradientCode={gradientCodes.programa}></Section>
       <Section id="Programa2" background={BackgroundPrograma2}></Section>
       <Section id="Galeria" gradientCode={gradientCodes.galeria}></Section>
