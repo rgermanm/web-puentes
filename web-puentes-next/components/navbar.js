@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logoBsAs from './../public/Assets/logos/gob_prov.png'
 import logoBsAsInverse from './../public/Assets/logos/gob_prov_inverse.png'
-
+import {Link as LinkScroll} from "react-scroll"
 
 export default function Navbar() {
     return (
@@ -13,7 +13,10 @@ export default function Navbar() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                    <Link className="nav-item nav-link active" style={{marginLeft:"50px"}}href="#">INICIO </Link>
+                    
+                    
+                    <Link  className="nav-item nav-link active" style={{marginLeft:"50px"}}href="#">
+                        <LinkScroll activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500} >INICIO </LinkScroll> </Link>
                     <Link className="nav-item nav-link" href="#">EL PROGRAMA</Link>
                     <Link className="nav-item nav-link" href="#">OFERTA ACADEMICA</Link>
                     <Link className="nav-item nav-link disabled" href="#">PREGUNTAS FRECUENTES</Link>

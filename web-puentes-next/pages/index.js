@@ -9,7 +9,10 @@ import BackgroundOferta from '../public/Assets/Background-OfertaAcademica-01.png
 import BackgroundPrograma from '../public/Assets/Background-ElPrograma1-01.png';
 import BackgroundPrograma2 from '../public/Assets/Background-ElPrograma2-01.png';
 import gradientCodes from '../public/gradientCodes.json'
+
+
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,7 +20,9 @@ export default function Home() {
         <meta name="description" content="Plan de integración territorial universitaria." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar></Navbar>
+      <Navbar 
+
+      ></Navbar>
 
       <div className={styles.welcome}>
 
