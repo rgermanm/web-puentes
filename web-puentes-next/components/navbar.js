@@ -15,12 +15,23 @@ export default function Navbar() {
                 <div className="navbar-nav">
                     
                     
-                    <Link  className="nav-item nav-link active" style={{marginLeft:"50px"}}href="#">
-                        <LinkScroll activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={500} >INICIO </LinkScroll> </Link>
-                    <Link className="nav-item nav-link" href="#">EL PROGRAMA</Link>
-                    <Link className="nav-item nav-link" href="#">OFERTA ACADEMICA</Link>
-                    <Link className="nav-item nav-link disabled" href="#">PREGUNTAS FRECUENTES</Link>
-                    <Link className="nav-item nav-link disabled" href="#">GALERIA</Link>
+                    <Link  className="nav-item nav-link" style={{marginLeft:"50px"}}href="#">
+                    INICIO
+
+                        </Link>
+                    <Link className="nav-item nav-link" href="" legacyBehavior passHref scroll ={false}  >
+                     <LinkScroll className="nav-item nav-link"  to="Programa" spy={true} smooth={true} duration = {500}> EL PROGRAMA</LinkScroll> 
+                        </Link>
+                    <Link className="nav-item nav-link" href="" legacyBehavior passHref scroll ={false} >
+                    <LinkScroll className="nav-item nav-link"  to="Programa" spy={true} smooth={true} duration = {500} >  OFERTA ACADEMICA </LinkScroll>
+                        
+                        </Link>
+                    <Link className="nav-item nav-link " href=""legacyBehavior passHref scroll ={false}  > 
+                    <LinkScroll className="nav-item nav-link"  to="Programa" spy={true} smooth={true} duration = {500} >PREGUNTAS FRECUENTES</LinkScroll>
+                    </Link>
+                    <Link className="nav-item nav-link " href="" legacyBehavior passHref scroll ={false}>
+                    <LinkScroll className="nav-item nav-link"  to="Galeria" spy={true} smooth={true} duration = {500} >  GALERIA </LinkScroll>
+                        </Link>
                 </div>
             </div>
             <a className="navbar-brand" href="#"><Image className="nav-logo" src={logoBsAsInverse}></Image></a>
