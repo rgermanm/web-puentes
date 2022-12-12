@@ -11,7 +11,10 @@ import BackgroundPrograma2 from '../public/Assets/Background-ElPrograma2-01.png'
 import BackgroundGaleria from '../public/Assets/Background-Galeria-01.png';
 import LogoPuentes from '../public/Assets/logos/LogoPuentes.svg'
 import gradientCodes from '../public/gradientCodes.json'
+
+
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,25 +22,29 @@ export default function Home() {
         <meta name="description" content="Plan de integración territorial universitaria." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar></Navbar>
-
+      <Navbar />
       <div className={styles.welcome}>
-      <div style={{ zIndex: 1500, height: "100vh", width: "100vw",position:"absolute" }} className="row">
-     
-          <Image  className="col-lg-5 col-md-5-col-sm-12" style={{  objectFit: "contain"}} src={LogoPuentes}></Image>
-    
- 
+        <div style={{ zIndex: 1500, height: "100vh", width: "100vw", position: "absolute" }} className="row">
+
+          <Image className="col-lg-5 col-md-5-col-sm-12" style={{ objectFit: "contain" }} src={LogoPuentes}></Image>
+
+
         </div>
+
         <div className={styles.backgroundBannerContainer}>
 
           <Image className={styles.backgroundBanner} src={BackgroundBanner} />
           <Image className={styles.fotoBanner} src={FotoBanner} />
-
         </div>
-   
+
       </div>
-      <Section id="Oferta" background={BackgroundOferta} ></Section>
-      <Section id="Programa" background={BackgroundPrograma} gradientCode={gradientCodes.programa}></Section>
+
+      <Section id="Oferta" background={BackgroundOferta} >
+      </Section>
+
+      <Section id="Programa" background={BackgroundPrograma} gradientCode={gradientCodes.programa} name="Programa">
+
+      </Section>
       <Section id="Programa2" background={BackgroundPrograma2}></Section>
       <Section id="Galeria" background={BackgroundGaleria} gradientCode={gradientCodes.galeria}></Section>
       <Section id="Universidades" gradientCode={gradientCodes.universidades}></Section>

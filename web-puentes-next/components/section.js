@@ -4,14 +4,16 @@ import logoBsAs from './../public/Assets/logos/gob_prov.png'
 import logoBsAsInverse from './../public/Assets/logos/gob_prov_inverse.png'
 
 
-export default function Navbar({ background, gradientCode }) {
+export default function Section({ background, gradientCode, id }) {
     return (
-        <div className="sectionContainer" style={{ background: gradientCode ? gradientCode.background : "" }}>
+        <div id =  {id}
+        className="sectionContainer" style={{ background: gradientCode ? gradientCode.background : "" }}>
             <div className="section" style={background?{
                 backgroundImage: `url("${background.src}")`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
+
             }:{}}>
 
             </div>

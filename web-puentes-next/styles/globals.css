@@ -51,14 +51,16 @@ a {
   background-color: #ffffff00;
   position: fixed;
   z-index: 150;
+  
 
 }
 .nav-item{
   font-family: 'EncodeSans-Bold';
-  color:white !important;
+  color:white !important ;
   z-index: 150;
   margin-left: 20px;
   margin-right: 20px;
+  transition: all 0.5s;
 
 }
 .navbar-brand{
@@ -93,4 +95,24 @@ background: linear-gradient(0deg, rgba(252,113,98,0) 0%, rgba(6,84,170,1) 100%);
   height: 100vh;
   width: 100vw;
 
+}
+
+.nav-item:hover{
+color: #48d6d2 !important; 
+
+}
+
+
+
+
+.nav-item{
+  z-index: 1800;
+}
+
+.navbar-nav{
+  z-index: 1800;
+}
+
+.navbar{
+  z-index: 1800;
 }

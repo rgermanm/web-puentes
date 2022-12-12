@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logoBsAs from './../public/Assets/logos/gob_prov.png'
 import logoBsAsInverse from './../public/Assets/logos/gob_prov_inverse.png'
-
+import {Link as LinkScroll} from "react-scroll"
 
 export default function Navbar() {
     return (
@@ -13,11 +13,25 @@ export default function Navbar() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                    <Link className="nav-item nav-link active" style={{marginLeft:"50px"}}href="#">INICIO </Link>
-                    <Link className="nav-item nav-link" href="#">EL PROGRAMA</Link>
-                    <Link className="nav-item nav-link" href="#">OFERTA ACADEMICA</Link>
-                    <Link className="nav-item nav-link disabled" href="#">PREGUNTAS FRECUENTES</Link>
-                    <Link className="nav-item nav-link disabled" href="#">GALERIA</Link>
+                    
+                    
+                    <Link  className="nav-item nav-link" style={{marginLeft:"50px"}}href="#">
+                    INICIO
+
+                        </Link>
+                    <Link className="nav-item nav-link" href="" legacyBehavior passHref scroll ={false}  >
+                     <LinkScroll className="nav-item nav-link"  to="Programa" spy={true} smooth={true} duration = {500}> EL PROGRAMA</LinkScroll> 
+                        </Link>
+                    <Link className="nav-item nav-link" href="" legacyBehavior passHref scroll ={false} >
+                    <LinkScroll className="nav-item nav-link"  to="Programa" spy={true} smooth={true} duration = {500} >  OFERTA ACADEMICA </LinkScroll>
+                        
+                        </Link>
+                    <Link className="nav-item nav-link " href=""legacyBehavior passHref scroll ={false}  > 
+                    <LinkScroll className="nav-item nav-link"  to="Programa" spy={true} smooth={true} duration = {500} >PREGUNTAS FRECUENTES</LinkScroll>
+                    </Link>
+                    <Link className="nav-item nav-link " href="" legacyBehavior passHref scroll ={false}>
+                    <LinkScroll className="nav-item nav-link"  to="Galeria" spy={true} smooth={true} duration = {500} >  GALERIA </LinkScroll>
+                        </Link>
                 </div>
             </div>
             <a className="navbar-brand" href="#"><Image className="nav-logo" src={logoBsAsInverse}></Image></a>
