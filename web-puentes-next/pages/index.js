@@ -9,7 +9,7 @@ import BackgroundOferta from '../public/Assets/Background-OfertaAcademica-01.png
 import BackgroundPrograma from '../public/Assets/Background-ElPrograma1-01.png';
 import BackgroundPrograma2 from '../public/Assets/Background-ElPrograma2-01.png';
 import BackgroundGaleria from '../public/Assets/Background-Galeria-01.png';
-
+import LogoPuentes from '../public/Assets/logos/LogoPuentes.svg'
 import gradientCodes from '../public/gradientCodes.json'
 export default function Home() {
   return (
@@ -22,12 +22,19 @@ export default function Home() {
       <Navbar></Navbar>
 
       <div className={styles.welcome}>
-
+      <div style={{ zIndex: 1500, height: "100vh", width: "100vw",position:"absolute" }} className="row">
+     
+          <Image  className="col-lg-5 col-md-5-col-sm-12" style={{  objectFit: "contain"}} src={LogoPuentes}></Image>
+    
+ 
+        </div>
         <div className={styles.backgroundBannerContainer}>
+
           <Image className={styles.backgroundBanner} src={BackgroundBanner} />
           <Image className={styles.fotoBanner} src={FotoBanner} />
 
         </div>
+   
       </div>
       <Section id="Oferta" background={BackgroundOferta} ></Section>
       <Section id="Programa" background={BackgroundPrograma} gradientCode={gradientCodes.programa}></Section>
