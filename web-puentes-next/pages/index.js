@@ -12,11 +12,11 @@ import BackgroundGaleria from '../public/Assets/Background-Galeria-01.png';
 import LogoPuentes from '../public/Assets/logos/LogoPuentes.svg'
 import gradientCodes from '../public/gradientCodes.json'
 
-import ilustracionesPrograma from '../public/assets/Ilustraciones.svg'
-import galeria from '../public/assets/FotoProvisoria-Galeria-01.jpg'
+import ilustracionesPrograma from '../public/Assets/Ilustraciones.svg'
+import galeria from '../public/Assets/FotoProvisoria-Galeria-01.jpg'
 
-import mapaPBA from '../public/assets/MapaPBA.svg'
-import logosUni from '../public/assets/logosUni.svg'
+import mapaPBA from '../public/Assets/MapaPBA.svg'
+import logosUni from '../public/Assets/logosUni.svg'
 
 export default function Home() {
 
