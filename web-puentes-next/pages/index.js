@@ -12,6 +12,11 @@ import BackgroundGaleria from '../public/Assets/Background-Galeria-01.png';
 import LogoPuentes from '../public/Assets/logos/LogoPuentes.svg'
 import gradientCodes from '../public/gradientCodes.json'
 
+import ilustracionesPrograma from '../public/assets/Ilustraciones.svg'
+import galeria from '../public/assets/FotoProvisoria-Galeria-01.jpg'
+
+import mapaPBA from '../public/assets/MapaPBA.svg'
+import logosUni from '../public/assets/logosUni.svg'
 
 export default function Home() {
 
@@ -40,15 +45,74 @@ export default function Home() {
       </div>
 
       <Section id="Oferta" background={BackgroundOferta} >
+        <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ backgroundColor: "#ec1482" }} className={`${styles.ballSection} col-md-4`}><h3>MUNICIPIOS</h3></div>
+          <div style={{ backgroundColor: "#1cafc2", marginLeft: "40px", marginRight: "50px" }} className={`${styles.ballSection} col-4`}><h3>UNIVERSIDADES</h3></div>
+          <div style={{ backgroundColor: "#ec1482" }} className={`${styles.ballSection} col-4`}><h3>CARRERAS</h3></div>
+        </div>
       </Section>
 
       <Section id="Programa" background={BackgroundPrograma} gradientCode={gradientCodes.programa} name="Programa">
 
+        <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ width: "50%", height: "60vh", margin: "0px", flexDirection: "column", display: "flex", alignItems: "flex-start", paddingLeft: "5%", justifyContent: "space-between" }}>
+            <div>
+              <h3 className={styles.centroTitle}>RED DE CENTROS</h3>
+              <h3 className={styles.centroTitle}>UNIVERSITARIOS <strong className={styles.centroTitleStrong}>PUENTES</strong></h3>
+              <div style={{ display: "flex", flexDirection: "row", alignItems: "center", marginTop: "80px" }}>
+                <div style={{ height: "50px", width: "50px", backgroundColor: "#ec1482", borderRadius: "100%", marginRight: "10px" }}></div>
+                <div>
+                  <h5 className={styles.centroTitle}>MUNICIPIOS </h5>
+                  <h5 className={styles.centroTitleStrong}> CON PLAN PUENTES</h5>
+                </div>
+              </div>
+            </div>
+            <div style={{ display: "flex", flexDirection: "row", alignItems: "center", marginTop: "80px" }}>
+              <div style={{ display: "flex", alignItems: "center", height: "40px", minWidth: "200px", paddingLeft: "80px", paddingRight: "80px", paddingTop: "auto", paddingBottom: "auto", backgroundColor: "#1cafc2",cursor:"pointer", borderRadius: "14px", marginRight: "10px" }}>
+                <h6 style={{margin:"0px"}}className={styles.centroTitleStrong}> MÁS INFO</h6>
+               </div>
+
+            </div>
+          </div>
+          <div style={{ width: "50%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <Image src={mapaPBA}></Image>
+          </div>
+        </div>
+
       </Section>
-      <Section id="Programa2" background={BackgroundPrograma2}></Section>
-      <Section id="Galeria" background={BackgroundGaleria} gradientCode={gradientCodes.galeria}></Section>
-      <Section id="Universidades" gradientCode={gradientCodes.universidades}></Section>
-      <Section id="Footer" gradientCode={gradientCodes.footer}></Section>
+      <Section id="Programa2" background={BackgroundPrograma2}>
+        <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <Image src={ilustracionesPrograma}></Image>
+        </div>
+      </Section>
+      <Section id="Galeria" background={BackgroundGaleria} gradientCode={gradientCodes.galeria}>
+        <div style={{ height: "100vh", display: "flex" }}>
+          <Image style={{
+            width: "auto",
+            maxWidth: "60%",
+            height: "auto",
+            margin: "auto",
+            maxHeight: "100%",
+          }} src={galeria}></Image>
+        </div>
+      </Section>
+      <Section id="Universidades" gradientCode={gradientCodes.universidades}>
+        <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <Image src={logosUni}></Image>
+        </div>
+      </Section>
+      <Section id="Footer" gradientCode={gradientCodes.footer}>
+        <div style={{ height: "100vh", display: "flex" }}>
+          <Image style={{
+            width: "auto",
+            maxWidth: "60%",
+            height: "auto",
+            margin: "auto",
+            maxHeight: "60%",
+          }} src={LogoPuentes}></Image>
+        </div>
+
+      </Section>
       <footer className={styles.footer}>
 
       </footer>

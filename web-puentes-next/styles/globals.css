@@ -41,7 +41,7 @@ a {
 
   body {
     color: white;
-    background: black;
+    background: white;
   }
 }
 
@@ -116,3 +116,4 @@ color: #48d6d2 !important;
 .navbar{
   z-index: 1800;
 }
+

@@ -29,3 +29,30 @@ width: auto;
   width: 100vw;
   position: absolute;
 }
+
+.ballSection{
+  height:300px;
+  width: 300px;
+  border-radius: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'EncodeSans-Bold', sans-serif;
+  font-weight: bold;
+  color:white;
+  cursor:pointer
+}
+
+.centroTitle {
+  font-family: 'EncodeSans', sans-serif;
+  color:white;
+ 
+
+}
+
+.centroTitleStrong {
+  font-family: 'EncodeSans-Bold', sans-serif;
+  color:white;
+ 
+
+}
