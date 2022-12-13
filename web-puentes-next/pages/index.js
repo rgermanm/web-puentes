@@ -12,11 +12,11 @@ import BackgroundGaleria from '../public/Assets/Background-Galeria-01.png';
 import LogoPuentes from '../public/Assets/logos/LogoPuentes.svg'
 import gradientCodes from '../public/gradientCodes.json'
 
-import ilustracionesPrograma from '../public/Assets/Ilustraciones.svg'
+import ilustracionesPrograma from '../public/Assets/Ilustraciones2.svg'
 import galeria from '../public/Assets/FotoProvisoria-Galeria-01.jpg'
 
 import mapaPBA from '../public/Assets/MapaPBA.svg'
-import logosUni from '../public/Assets/logosUni.svg'
+import logosUni from '../public/Assets/LogosUniversidades.svg'
 
 export default function Home() {
 
@@ -82,7 +82,7 @@ export default function Home() {
       </Section>
       <Section id="Programa2" background={BackgroundPrograma2}>
         <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <Image src={ilustracionesPrograma}></Image>
+          <Image style={{height:"50vh",width:"auto"}} src={ilustracionesPrograma}></Image>
         </div>
       </Section>
       <Section id="Galeria" background={BackgroundGaleria} gradientCode={gradientCodes.galeria}>
@@ -98,7 +98,7 @@ export default function Home() {
       </Section>
       <Section id="Universidades" gradientCode={gradientCodes.universidades}>
         <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <Image src={logosUni}></Image>
+          <Image src={logosUni} style={{height:"60vh",width:"auto"}}></Image>
         </div>
       </Section>
       <Section id="Footer" gradientCode={gradientCodes.footer}>
