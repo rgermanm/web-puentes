@@ -1,0 +1,146 @@
+[
+    {
+        "name": "Pehuajó",
+        "id": 1
+    },
+    {
+        "name": "Coronel Suárez",
+        "id": 2
+    },
+    {
+        "name": "Bolívar",
+        "id": 3
+    },
+    {
+        "name": "Colón",
+        "id": 4
+    },
+    {
+        "name": "Villa Gesell",
+        "id": 5
+    },
+    {
+        "name": "La Costa",
+        "id": 6
+    },
+    {
+        "name": "Las Flores",
+        "id": 7
+    },
+    {
+        "name": "Exaltación de la Cruz",
+        "id": 8
+    },
+    {
+        "name": "Lobería",
+        "id": 9
+    },
+    {
+        "name": "25 de Mayo",
+        "id": 10
+    },
+    {
+        "name": "Puán",
+        "id": 11
+    },
+    {
+        "name": "Carmen de Areco",
+        "id": 12
+    },
+    {
+        "name": "San Vicente",
+        "id": 13
+    },
+    {
+        "name": "Pellegrini",
+        "id": 14
+    },
+    {
+        "name": "Alberti",
+        "id": 15
+    },
+    {
+        "name": "Coronel Pringles",
+        "id": 16
+    },
+    {
+        "name": "Alem",
+        "id": 17
+    },
+    {
+        "name": "General Pinto",
+        "id": 18
+    },
+    {
+        "name": "Daireaux",
+        "id": 19
+    },
+    {
+        "name": "La Madrid",
+        "id": 20
+    },
+    {
+        "name": "General Paz",
+        "id": 21
+    },
+    {
+        "name": "Hipólito Yrigoyen",
+        "id": 22
+    },
+    {
+        "name": "Balcarce",
+        "id": 23
+    },
+    {
+        "name": "Saladillo",
+        "id": 24
+    },
+    {
+        "name": "Trenque Lauquen",
+        "id": 25
+    },
+    {
+        "name": "Adolfo Alsina",
+        "id": 26
+    },
+    {
+        "name": "General Alvarado",
+        "id": 27
+    },
+    {
+        "name": "Carlos Tejedor",
+        "id": 28
+    },
+    {
+        "name": "Punta Indio",
+        "id": 29
+    },
+    {
+        "name": "Salto",
+        "id": 30
+    },
+    {
+        "name": "Guaminí",
+        "id": 31
+    },
+    {
+        "name": "Mar Chiquita",
+        "id": 32
+    },
+    {
+        "name": "Roque Pérez",
+        "id": 33
+    },
+    {
+        "name": "San Cayetano",
+        "id": 34
+    },
+    {
+        "name": "Marcos Paz",
+        "id": 35
+    },
+    {
+        "name": "Tapalqué",
+        "id": 36
+    }
+]

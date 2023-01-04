@@ -17,6 +17,7 @@ import galeria from '../public/Assets/FotoProvisoria-Galeria-01.jpg'
 
 import mapaPBA from '../public/Assets/MapaPBA.svg'
 import logosUni from '../public/Assets/LogosUniversidades.svg'
+import MUC from '../components/muc'
 
 export default function Home() {
 
@@ -43,13 +44,18 @@ export default function Home() {
         </div>
 
       </div>
-
-      <Section id="Oferta" background={BackgroundOferta} >
+      <Section id="Programa2" background={BackgroundPrograma2}>
         <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <Image style={{ height: "50vh", width: "auto" }} src={ilustracionesPrograma}></Image>
+        </div>
+      </Section>
+      <Section id="Oferta" background={BackgroundOferta} >
+        {   /*     <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
           <div style={{ backgroundColor: "#ec1482" }} className={`${styles.ballSection} col-md-4`}><h3>MUNICIPIOS</h3></div>
           <div style={{ backgroundColor: "#1cafc2", marginLeft: "40px", marginRight: "50px" }} className={`${styles.ballSection} col-4`}><h3>UNIVERSIDADES</h3></div>
           <div style={{ backgroundColor: "#ec1482" }} className={`${styles.ballSection} col-4`}><h3>CARRERAS</h3></div>
-        </div>
+  </div>*/}
+  <MUC></MUC>
       </Section>
 
       <Section id="Programa" background={BackgroundPrograma} gradientCode={gradientCodes.programa} name="Programa">
@@ -68,9 +74,9 @@ export default function Home() {
               </div>
             </div>
             <div style={{ display: "flex", flexDirection: "row", alignItems: "center", marginTop: "80px" }}>
-              <div style={{ display: "flex", alignItems: "center", height: "40px", minWidth: "200px", paddingLeft: "80px", paddingRight: "80px", paddingTop: "auto", paddingBottom: "auto", backgroundColor: "#1cafc2",cursor:"pointer", borderRadius: "14px", marginRight: "10px" }}>
-                <h6 style={{margin:"0px"}}className={styles.centroTitleStrong}> MÁS INFO</h6>
-               </div>
+              <div style={{ display: "flex", alignItems: "center", height: "40px", minWidth: "200px", paddingLeft: "80px", paddingRight: "80px", paddingTop: "auto", paddingBottom: "auto", backgroundColor: "#1cafc2", cursor: "pointer", borderRadius: "14px", marginRight: "10px" }}>
+                <h6 style={{ margin: "0px" }} className={styles.centroTitleStrong}> MÁS INFO</h6>
+              </div>
 
             </div>
           </div>
@@ -80,11 +86,7 @@ export default function Home() {
         </div>
 
       </Section>
-      <Section id="Programa2" background={BackgroundPrograma2}>
-        <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <Image style={{height:"50vh",width:"auto"}} src={ilustracionesPrograma}></Image>
-        </div>
-      </Section>
+
       <Section id="Galeria" background={BackgroundGaleria} gradientCode={gradientCodes.galeria}>
         <div style={{ height: "100vh", display: "flex" }}>
           <Image style={{
@@ -98,7 +100,7 @@ export default function Home() {
       </Section>
       <Section id="Universidades" gradientCode={gradientCodes.universidades}>
         <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <Image src={logosUni} style={{height:"60vh",width:"auto"}}></Image>
+          <Image src={logosUni} style={{ height: "60vh", width: "auto" }}></Image>
         </div>
       </Section>
       <Section id="Footer" gradientCode={gradientCodes.footer}>
