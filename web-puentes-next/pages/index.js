@@ -18,8 +18,49 @@ import galeria from '../public/Assets/FotoProvisoria-Galeria-01.jpg'
 import mapaPBA from '../public/Assets/MapaPBA.svg'
 import logosUni from '../public/Assets/LogosUniversidades.svg'
 import MUC from '../components/muc'
+import ilustracion1 from '../public/Assets/ilustraciones/1.svg'
+
+import ilustracion2 from '../public/Assets/ilustraciones/2.svg'
+import ilustracion3 from '../public/Assets/ilustraciones/3.svg'
+import ilustracion4 from '../public/Assets/ilustraciones/4.svg'
+import ilustracion5 from '../public/Assets/ilustraciones/5.svg'
+import ilustracion6 from '../public/Assets/ilustraciones/6.svg'
+import StatsCard from '../components/StatsCard'
 
 export default function Home() {
+
+
+  const stats = [{
+    number: 36,
+    image: ilustracion1,
+    label: "Municipios en Puentes"
+  },
+  {
+    number: 11,
+    image: ilustracion2,
+    label: "Universidades"
+  },
+  {
+    number: 60,
+    image: ilustracion3,
+    label: "Ofertas academicas en 2023"
+  },
+  {
+    number: 350,
+    image: ilustracion4,
+    label: "Estudiantes inscriptos e inscriptas"
+  },
+  {
+    number: 1531,
+    image: ilustracion5,
+    label: "Millones de pesos en inversión"
+  },
+  {
+    number: 36,
+    image: ilustracion6,
+    label: "Centros universitarios en construcción, ampliación o refacción"
+  },]
+
 
   return (
     <div className={styles.container}>
@@ -45,17 +86,28 @@ export default function Home() {
 
       </div>
       <Section id="Programa2" background={BackgroundPrograma2}>
-        <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <Image style={{ height: "50vh", width: "auto" }} src={ilustracionesPrograma}></Image>
+        <div style={{ width: "75%", height: "100vh", margin: "auto", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div className='row'>
+
+            {stats.map((s, i) =>
+              <div className='col-4'>
+                <StatsCard fontColor={i % 2 == 1 ? "#1facbe" : "#ed1581"} ilustracion={s.image} stat={s.number} label={s.label}></StatsCard>
+              </div>
+            )}
+
+
+
+          </div>
+
         </div>
-      </Section>
+      </Section >
       <Section id="Oferta" background={BackgroundOferta} >
         {   /*     <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
           <div style={{ backgroundColor: "#ec1482" }} className={`${styles.ballSection} col-md-4`}><h3>MUNICIPIOS</h3></div>
           <div style={{ backgroundColor: "#1cafc2", marginLeft: "40px", marginRight: "50px" }} className={`${styles.ballSection} col-4`}><h3>UNIVERSIDADES</h3></div>
           <div style={{ backgroundColor: "#ec1482" }} className={`${styles.ballSection} col-4`}><h3>CARRERAS</h3></div>
   </div>*/}
-  <MUC></MUC>
+        <MUC></MUC>
       </Section>
 
       <Section id="Programa" background={BackgroundPrograma} gradientCode={gradientCodes.programa} name="Programa">
@@ -118,6 +170,6 @@ export default function Home() {
       <footer className={styles.footer}>
 
       </footer>
-    </div>
+    </div >
   )
 }
