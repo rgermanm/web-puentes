@@ -25,7 +25,7 @@ import ilustracion3 from '../public/Assets/ilustraciones/3.svg'
 import ilustracion4 from '../public/Assets/ilustraciones/4.svg'
 import ilustracion5 from '../public/Assets/ilustraciones/5.svg'
 import ilustracion6 from '../public/Assets/ilustraciones/6.svg'
-import StatsCard from '../components/StatsCard'
+import StatsCard from '../components/statsCard'
 
 export default function Home() {
 
