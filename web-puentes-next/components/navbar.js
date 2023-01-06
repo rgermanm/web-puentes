@@ -31,19 +31,19 @@ export default function Navbar() {
                 <div className="navbar-nav">
 
 
-                    <Link className="nav-item nav-link" style={{ marginLeft: "50px" }} href="#">
+                    <Link className="nav-item nav-link" style={{ marginLeft: "50px" }} href="/">
                         INICIO
 
                     </Link>
-                    <Link className="nav-item nav-link" href="" legacyBehavior passHref scroll={false}  >
-                        <LinkScroll className="nav-item nav-link" to="Programa" spy={true} smooth={true} duration={500}> EL PROGRAMA</LinkScroll>
+                    <Link className="nav-item nav-link" href="/programa" legacyBehavior passHref scroll={false}  >
+                        <LinkScroll className="nav-item nav-link" spy={true} smooth={true} duration={500}> EL PROGRAMA</LinkScroll>
                     </Link>
                     <Link className="nav-item nav-link" href="" legacyBehavior passHref scroll={false} >
                         <LinkScroll className="nav-item nav-link" to="Programa" spy={true} smooth={true} duration={500} >  OFERTA ACADEMICA </LinkScroll>
 
                     </Link>
-                    <Link className="nav-item nav-link " href="" legacyBehavior passHref scroll={false}  >
-                        <LinkScroll className="nav-item nav-link" to="Programa" spy={true} smooth={true} duration={500} >PREGUNTAS FRECUENTES</LinkScroll>
+                    <Link  className="nav-item nav-link " href="/preguntas-frecuentes" legacyBehavior passHref scroll={false}  >
+                        <LinkScroll className="nav-item nav-link"  spy={true} smooth={true} duration={500} >PREGUNTAS FRECUENTES</LinkScroll>
                     </Link>
                     <Link className="nav-item nav-link " href="" legacyBehavior passHref scroll={false}>
                         <LinkScroll className="nav-item nav-link" to="Galeria" spy={true} smooth={true} duration={500} >  GALERIA </LinkScroll>
