@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Web Puentes</title>
+        <title>Puentes | Plan de integración territorial universitaria </title>
         <meta name="description" content="Plan de integración territorial universitaria." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
