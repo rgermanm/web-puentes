@@ -1,6 +1,9 @@
 
 import { useEffect, useState } from "react";
 import municipios from "./data/municipios.json";
+import carreras from "./data/carreras.json";
+import universidades from "./data/universidades.json";
+
 export default function MUC() {
 
     const [muc, setMuc] = useState([
@@ -8,50 +11,113 @@ export default function MUC() {
             label: "MUNICIPIOS",
             selectedBgColor: "#1facbe",
             selected: true,
+            data: municipios,
+
+            cols: "4"
+
         },
         {
             label: "UNIVERSIDADES",
             selectedBgColor: "#ed1581",
-            selected: false
+            selected: false,
+            data: universidades,
+            cols: "6"
         },
         {
             label: "CARRERAS",
             selectedBgColor: "#1facbe",
-            selected: false
+            selected: false,
+            data: carreras,
+            cols: "6"
         },
     ])
-    const selectOption = (index) => {
-        let aux = [...muc];
-        for (let i = 0; i < muc.length; i++) {
-            aux[i].selected = false;
-        }
-        aux[index].selected = true;
 
-        setMuc(aux);
+    const [selected, setSelected] = useState(0);
+    const [listItemSelected, setListItemSelected] = useState(-1)
+
+
+    const getInnerList = () => {
+        switch (selected) {
+            case 0:
+                let carrerasDelMunicipio = [];
+                for (let i = 0; i < municipios[listItemSelected - 1].carreras.length; i++) {
+                    for (let j = 0; j < carreras.length; j++) {
+                        if (carreras[j].id == municipios[listItemSelected - 1].carreras[i]) {
+                            carrerasDelMunicipio.push(carreras[j])
+                        }
+                    }
+                }
+                return carrerasDelMunicipio.map((cdm =>
+                    <p className="list-item-inner">{cdm.name}</p>
+                ))
+                break;
+            case 1:
+                let carrerasPorUniversidades = [];
+                for (let j = 0; j < carreras.length; j++) {
+                    if (carreras[j].idUniversidad == listItemSelected) {
+                        carrerasPorUniversidades.push(carreras[j])
+                    }
+                }
+                return carrerasPorUniversidades.map((cpu =>
+                    <p className="list-item-inner">{cpu.name}</p>
+                ))
+                break;
+            case 2:
+                let municipiosPorCarrera = [];
+                let institucion = "";
+                for (let j = 0; j < carreras.length; j++) {
+                    for (let m = 0; m < universidades.length; m++) {
+                        if (carreras[j].idUniversidad == universidades[m].id) {
+                            institucion = universidades[m].name;
+                        }
+                    }
+                }
+                for (let d = 0; d < municipios.length; d++) {
+                    for (let n = 0; n < municipios[d].carreras.length; n++) {
+                        if (listItemSelected == municipios[d].carreras[n])
+                            municipiosPorCarrera.push(municipios[d].name);
+                    }
+                }
+                ;
+
+
+                let instTag = <p className="list-item-inner"><strong className="inner-bold">Institución:</strong> {institucion}</p>
+                let mpcTag = <p className="list-item-inner"><strong className="inner-bold">Municipios:</strong> {generateMunicipiosString(municipiosPorCarrera)}</p>
+
+                return [instTag, mpcTag]
+                break;
+        }
     }
 
-    const other=()=>{
-        let x=[...municipios];
-        for(let i=0;i<municipios.length;i++){
-            x[i].id=i+1
+    const generateMunicipiosString = (mpc) => {
+        let mpcString = ""
+        if (mpcString.length == 1) {
+            return mpcString = mpc[0];
         }
-        console.log(JSON.stringify(x));
+        for (let i = 0; i < mpc.length; i++) {
+            if (i == 0) {
+                mpcString = mpc[i];
+            }
+            else {
+                mpcString = i == mpc.length-1 ?mpcString + " y " + mpc[i]: mpcString + ", " + mpc[i] ;
+            }
+        }
+        return mpcString;
     }
-    useEffect(()=>other(),[])
 
     return (
         <div className="muc-container">
             <div>
                 <div className="row">
                     {muc.map((o, i) =>
-                        <div onClick={() => selectOption(i)}
+                        <div onClick={() => { setSelected(i); setListItemSelected(-1) }}
                             style={{
-                                backgroundColor: o.selected ? o.selectedBgColor : "white",
+                                backgroundColor: selected == i ? o.selectedBgColor : "white",
                                 borderColor: o.selectedBgColor,
                             }}
                             className="muc-button col-2">
                             <p
-                                style={{ color: o.selected ? "white" : o.selectedBgColor, }}
+                                style={{ color: selected == i ? "white" : o.selectedBgColor, }}
                             >{o.label}</p></div>
                     )}
 
@@ -61,8 +127,14 @@ export default function MUC() {
             </div>
             <div className="muc-list">
                 <div className="row">
-                    {municipios.map((m) =>
-                        <div className="col-4 muc-item" ><p>{m.name}</p></div>
+                    {muc[selected].data.map((m, index) =>
+                        <div onClick={() => setListItemSelected(m.id)} className={`muc-item col-${muc[selected].cols}`} >
+                            <p style={{color:listItemSelected == m.id?"#1facbe":""}} className="muc-item-name">{m.name}</p>
+                            {listItemSelected == m.id &&
+                                <div style={{ marginTop: "10px" }}>
+                                    {getInnerList()}
+                                </div>}
+                        </div>
                     )
                     }
                 </div>
