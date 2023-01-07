@@ -67,7 +67,7 @@ export default function MUC() {
                 let institucion = "";
                 for (let j = 0; j < carreras.length; j++) {
                     for (let m = 0; m < universidades.length; m++) {
-                        if (carreras[j].idUniversidad == universidades[m].id) {
+                        if (carreras[j].idUniversidad == universidades[m].id && carreras[j].id==listItemSelected) {
                             institucion = universidades[m].name;
                         }
                     }
