@@ -1,7 +1,8 @@
 [
     {
         "name": "Pehuajó",
-        "id": 1
+        "id": 1,
+        "carreras":[7]
     },
     {
         "name": "Coronel Suárez",
@@ -9,27 +10,34 @@
     },
     {
         "name": "Bolívar",
-        "id": 3
+        "id": 3,
+        "carreras":[2,10]
     },
     {
         "name": "Colón",
-        "id": 4
+        "id": 4,
+        "carreras":[4,10]
     },
     {
         "name": "Villa Gesell",
-        "id": 5
+        "id": 5,
+        "carreras":[8,9]
     },
     {
         "name": "La Costa",
-        "id": 6
+        "id": 6,
+        "carreras":[5,11]
     },
     {
         "name": "Las Flores",
-        "id": 7
+        "id": 7,
+        "carreras":[10]
+
     },
     {
         "name": "Exaltación de la Cruz",
-        "id": 8
+        "id": 8,
+        "carreras":[3,9]
     },
     {
         "name": "Lobería",
@@ -37,19 +45,23 @@
     },
     {
         "name": "25 de Mayo",
-        "id": 10
+        "id": 10,
+        "carreras":[6]
     },
     {
         "name": "Puán",
-        "id": 11
+        "id": 11,
+        "carreras":[7]
     },
     {
         "name": "Carmen de Areco",
-        "id": 12
+        "id": 12,
+        "carreras":[4]
     },
     {
         "name": "San Vicente",
-        "id": 13
+        "id": 13,
+        "carreras":[14,15]
     },
     {
         "name": "Pellegrini",
@@ -57,7 +69,8 @@
     },
     {
         "name": "Alberti",
-        "id": 15
+        "id": 15,
+        "carreras":[1,4]
     },
     {
         "name": "Coronel Pringles",
@@ -65,15 +78,18 @@
     },
     {
         "name": "Alem",
-        "id": 17
+        "id": 17,
+        "carreras":[4]
     },
     {
         "name": "General Pinto",
-        "id": 18
+        "id": 18,
+        "carreras":[16]
     },
     {
         "name": "Daireaux",
-        "id": 19
+        "id": 19,
+        "carreras":[18,19]
     },
     {
         "name": "La Madrid",
@@ -81,7 +97,8 @@
     },
     {
         "name": "General Paz",
-        "id": 21
+        "id": 21,
+        "carreras":[1]
     },
     {
         "name": "Hipólito Yrigoyen",
@@ -121,7 +138,8 @@
     },
     {
         "name": "Guaminí",
-        "id": 31
+        "id": 31,
+        "carreras":[13]
     },
     {
         "name": "Mar Chiquita",
@@ -142,5 +160,16 @@
     {
         "name": "Tapalqué",
         "id": 36
+    },
+    {
+        "name":"Ramallo",
+        "id":37,
+        "carreras":[17]
+    },
+    {
+        "name":"Tres Lomas",
+        "id":38,
+        "carreras":[20]
     }
+
 ]

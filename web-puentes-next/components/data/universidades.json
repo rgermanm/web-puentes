@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "Universidad Nacional Arturo Jauretche",
+        "acronym": "UNAJ"
+    },
+    {
+        "id": 2,
+        "name": "Universidad Nacional de Quilmes",
+        "acronym": "UNQ"
+    },
+    {
+        "id": 3,
+        "name": "Universidad Nacional de Avellaneda",
+        "acronym": "UNDAV"
+    },
+    {
+        "id": 4,
+        "name": "Universidad Nacional de Tres de Febrero",
+        "acronym": "UNTREF"
+    },
+    {
+        "id": 5,
+        "name": "Universidad Provincial del Sudoeste",
+        "acronym": "UPSO"
+    },
+    {
+        "id": 6,
+        "name": "Universidad Provincial de Ezeiza",
+        "acronym": ""
+    },
+    {
+        "id": 7,
+        "name": "Universidad Nacional de Lomas de Zamora",
+        "acronym": "UNLZ"
+    },
+    {
+        "id": 8,
+        "name": "Universidad Nacional de La Plata",
+        "acronym": "UNLP"
+    },
+    {
+        "id": 9,
+        "name": "Universidad Nacional de Luján",
+        "acronym": ""
+    },
+    {
+        "id": 10,
+        "name": "Universidad Tecnológica Nacional",
+        "acronym": "UTN"
+    },
+    {
+        "id": 11,
+        "name": "Universidad de Buenos Aires",
+        "acronym": "UBA"
+    }
+]

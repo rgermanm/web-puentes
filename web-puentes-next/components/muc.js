@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import municipios from "./municipios.json";
+import municipios from "./data/municipios.json";
 export default function MUC() {
 
     const [muc, setMuc] = useState([

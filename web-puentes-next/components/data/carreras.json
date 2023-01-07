@@ -1,0 +1,171 @@
+[
+    {
+        "id": 1,
+        "idUniversidad": 1,
+        "name": "Ciclo de Complementación Curricular en Gestión Educativa"
+    },
+    {
+        "id": 2,
+        "idUniversidad": 1,
+        "name": "Ciclo de Complementación Curricular en Enseñanza de las Ciencias Naturales"
+    },
+    {
+        "id": 3,
+        "idUniversidad": 1,
+        "name": "Ciclo de Complementación Curricular en Enseñanza de la Matemática"
+    },
+    {
+        "id": 4,
+        "idUniversidad": 1,
+        "name": "Licenciatura en Administración Agraria"
+    },
+    {
+        "id": 5,
+        "idUniversidad": 1,
+        "name": "Tecnicatura Universitaria en Información Clínica y Gestión de Pacientes"
+    },
+    {
+        "id": 6,
+        "idUniversidad": 1,
+        "name": "Tecnicatura en Gestión Ambiental"
+    },
+
+    {
+        "id": 7,
+        "idUniversidad": 2,
+        "name": "Diplomatura en Prácticas de Comunicación y Cultura Popular"
+    },
+    {
+        "id": 8,
+        "idUniversidad": 2,
+        "name": "Diplomatura en Servicios TIC"
+    },
+    {
+        "id": 9,
+        "idUniversidad": 2,
+        "name": "Diplomatura en Turismo Social Comunitario"
+    },
+    {
+        "id": 10,
+        "idUniversidad": 2,
+        "name": "Tecnicatura Universitaria en Química"
+    },
+    {
+        "id": 11,
+        "idUniversidad": 2,
+        "name": "Tecnicatura Universitaria en Gestión de Pequeñas y Medianas Empresas"
+    },
+    {
+        "id": 12,
+        "idUniversidad": 2,
+        "name": "Tecnicatura Universitaria en el Acompañamiento y Cuidado de la Persona Mayor"
+    },
+    {
+        "id": 13,
+        "idUniversidad": 2,
+        "name": "Tecnicatura en Producción Digital"
+    },
+    {
+        "id": 14,
+        "idUniversidad": 3,
+        "name": "Tecnicatura en Seguridad e Higiene con Orientación Sector Automotriz"
+    },
+    {
+        "id": 15,
+        "idUniversidad": 3,
+        "name": "Diplomatura en Ciencias Ambientales"
+    },
+    {
+        "id": 16,
+        "idUniversidad": 4,
+        "name": "Diplomatura Asistente Gerontológico y en Personas con Discapacidad"
+    },
+    {
+        "id": 17,
+        "idUniversidad": 4,
+        "name": "Diplomatura en Desarrollo Web Backend y Frontend"
+    },
+    {
+        "id": 18,
+        "idUniversidad": 5,
+        "name": "Tecnicatura en Gestión Ambiental"
+    },
+    {
+        "id": 19,
+        "idUniversidad": 5,
+        "name": "Tecnicatura en Acompañante Terapéutico"
+    },
+    {
+        "id": 20,
+        "idUniversidad": 7,
+        "name": "Tecnicatura en Construcción"
+    },
+    {
+        "id": 21,
+        "idUniversidad": 8,
+        "name": "Tecnicatura en Artes Audio Visuales"
+    },
+
+    {
+        "id": 22,
+        "idUniversidad": 10,
+        "name": "Tecnicatura Universitaria en Operación y Mantenimiento de Redes Eléctricas"
+    },
+    {
+        "id": 23,
+        "idUniversidad": 10,
+        "name": "Tecnicatura Universitaria en Bromatología y Medio Ambiente"
+    },
+    {
+        "id": 24,
+        "idUniversidad": 10,
+        "name": "Tecnicatura Universitaria en Industrias Alimentarias"
+    },
+    {
+        "id": 25,
+        "idUniversidad": 10,
+        "name": "Tecnicatura Universitaria en Producción Textil"
+    },
+    {
+        "id": 26,
+        "idUniversidad": 10,
+        "name": "Tecnicatura Universitaria en Programación"
+    },
+    {
+        "id": 27,
+        "idUniversidad": 10,
+        "name": "Tecnicatura Universitaria en Gestión de Tecnologías Agropecuarias"
+    },
+    {
+        "id": 28,
+        "idUniversidad": 10,
+        "name": "Tecnicatura Universitaria en Enología"
+    },
+    {
+        "id": 29,
+        "idUniversidad": 10,
+        "name": "Tecnicatura Universitaria en Moldes, Matrices y Dispositivos"
+    },
+    {
+        "id": 30,
+        "idUniversidad": 10,
+        "name": "Tecnicatura Universitaria en Procedimientos y Tecnologías Ambientales"
+    },
+    {
+        "id": 31,
+        "idUniversidad": 10,
+        "name": "Tramo pedagógico"
+    },
+    {
+        "id": 32,
+        "idUniversidad": 10,
+        "name": "Diplomatura en Comunicación Digital"
+    },
+    {
+        "id": 33,
+        "idUniversidad": 11,
+        "name": "Diplomatura Universitaria en Programación"
+    }
+    
+    
+]
