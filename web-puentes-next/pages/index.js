@@ -156,7 +156,7 @@ export default function Home() {
           </div>
           <div style={{ width: "50%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
           
-            <SVGMap  onLocationClick={(e)=>console.log(e.target.ariaLabel)} map={BsAs} />
+            <SVGMap  onLocationMouseOver={(e)=>console.log(e.target.ariaLabel)} map={BsAs} />
           </div>
         </div>
 
