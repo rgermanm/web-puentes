@@ -26,6 +26,12 @@ import ilustracion4 from '../public/Assets/ilustraciones/4.svg'
 import ilustracion5 from '../public/Assets/ilustraciones/5.svg'
 import ilustracion6 from '../public/Assets/ilustraciones/6.svg'
 import StatsCard from '../components/statsCard'
+import { SVGMap } from "react-svg-map";
+import BsAs from "./BSASFinalNamed";
+import Departamentos from "./departamentos-buenos_aires.json";
+
+import { useEffect } from 'react'
+
 
 export default function Home() {
 
@@ -61,6 +67,22 @@ export default function Home() {
     label: "Centros universitarios en construcción, ampliación o refacción"
   },]
 
+
+  /*useEffect(()=>{
+    let newBsAsJs=[];
+    BsAs.locations.map((m,i)=>{
+      let jsonDepto;
+      newBsAsJs.push({
+        id:Departamentos[i].id,
+        name:Departamentos[i].departamento,
+        cabecera:Departamentos[i].cabecera,
+        path:m.path
+      })
+      
+    })
+    console.log(JSON.stringify(newBsAsJs));
+  }
+  ,[])*/
 
   return (
     <div className={styles.container}>
@@ -133,7 +155,8 @@ export default function Home() {
             </div>
           </div>
           <div style={{ width: "50%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Image src={mapaPBA}></Image>
+          
+            <SVGMap  onLocationClick={(e)=>console.log(e.target.ariaLabel)} map={BsAs} />
           </div>
         </div>
 
