@@ -34,7 +34,7 @@ import { useEffect, useState } from 'react'
 
 
 export default function Home() {
-const [selectedLocation, setSelectedLocation] = useState("Municipios");
+  const [selectedLocation, setSelectedLocation] = useState("Municipios");
 
   const stats = [{
     number: 36,
@@ -90,7 +90,7 @@ const [selectedLocation, setSelectedLocation] = useState("Municipios");
         <title>Puentes | Plan de integración territorial universitaria </title>
         <meta name="description" content="Plan de integración territorial universitaria." />
         <link rel="icon" href="/favicon.ico" />
-     
+
       </Head>
       <Navbar />
       <div className={styles.welcome}>
@@ -148,48 +148,48 @@ const [selectedLocation, setSelectedLocation] = useState("Municipios");
                 </div>
               </div>
             </div>
-           <div style={{ display: "flex", flexDirection: "row", alignItems: "center", marginTop: "80px" }}>
-           { /*<div style={{ display: "flex", alignItems: "center", height: "40px", minWidth: "200px", paddingLeft: "80px", paddingRight: "80px", paddingTop: "auto", paddingBottom: "auto", backgroundColor: "#1cafc2", cursor: "pointer", borderRadius: "14px", marginRight: "10px" }}>
+            <div style={{ display: "flex", flexDirection: "row", alignItems: "center", marginTop: "80px" }}>
+              { /*<div style={{ display: "flex", alignItems: "center", height: "40px", minWidth: "200px", paddingLeft: "80px", paddingRight: "80px", paddingTop: "auto", paddingBottom: "auto", backgroundColor: "#1cafc2", cursor: "pointer", borderRadius: "14px", marginRight: "10px" }}>
                 <h6 style={{ margin: "0px" }} className={styles.centroTitleStrong}> MÁS INFO</h6>
 </div>*/}
 
             </div>
           </div>
-          <div style={{position:"relative", width: "40%", height: "90vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          
-            <SVGMap   onLocationMouseOver={(e)=>setSelectedLocation(e.target.ariaLabel)} map={BsAs} />
+          <div style={{ position: "relative", width: "40%", height: "90vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+
+            <SVGMap onLocationMouseOver={(e) => setSelectedLocation(e.target.ariaLabel)} map={BsAs} />
             <div style={{
               //cartel con el nombre del municipio, borde redondeado rosa , fondo azul, con sombra
               position: "absolute",
-          bottom:10,
-          zIndex:1000,
+              bottom: 10,
+              zIndex: 1000,
 
-              backgroundColor: "#1cafc2" ,
+              backgroundColor: "#1cafc2",
               borderRadius: "10px",
               padding: "10px",
               boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              justifyContent: "center", 
-              minWidth:"240px",
-              border:"2px solid #ec1482"
+              justifyContent: "center",
+              minWidth: "240px",
+              border: "2px solid #ec1482"
             }}>
               <h5 style={{ margin: "0px" }} className={styles.centroTitleStrong}>{selectedLocation}</h5>
               <h5 style={{ margin: "0px" }} className={styles.centroTitle}>UNIVERSIDADES</h5>
               <h5 style={{ margin: "0px" }} className={styles.centroTitleStrong}>CARRERAS</h5>
             </div>
 
-     
+
           </div>
         </div>
 
       </Section>
 
       <Section id="Galeria" background={BackgroundGaleria} gradientCode={gradientCodes.galeria}>
-        <div style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",minWidth:"100%"}}>
-     <div className='instapost' style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",minWidth:"100vw"}} data-mc-src="e8f096f6-d988-48df-862d-b4a663484442#instagram"></div>
-     </div>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minWidth: "100%" }}>
+          <div className='instapost' style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minWidth: "100vw" }} data-mc-src="e8f096f6-d988-48df-862d-b4a663484442#instagram"></div>
+        </div>
       </Section>
       <Section id="Universidades" gradientCode={gradientCodes.universidades}>
         <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
