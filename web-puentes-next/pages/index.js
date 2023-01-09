@@ -27,6 +27,7 @@ import ilustracion5 from '../public/Assets/ilustraciones/5.svg'
 import ilustracion6 from '../public/Assets/ilustraciones/6.svg'
 import StatsCard from '../components/statsCard'
 import { SVGMap } from "react-svg-map";
+
 import BsAs from "./BSASFinalNamed";
 import Departamentos from "./departamentos-buenos_aires.json";
 
@@ -155,9 +156,9 @@ export default function Home() {
 
             </div>
           </div>
-          <div style={{ width: "50%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{ width: "40%", height: "90vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
           
-            <SVGMap  onLocationMouseOver={(e)=>console.log(e.target.ariaLabel)} map={BsAs} />
+            <SVGMap   onLocationMouseOver={(e)=>console.log(e.target.ariaLabel)} map={BsAs} />
           </div>
         </div>
 
