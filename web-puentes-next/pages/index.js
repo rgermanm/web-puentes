@@ -68,6 +68,7 @@ export default function Home() {
         <title>Puentes | Plan de integración territorial universitaria </title>
         <meta name="description" content="Plan de integración territorial universitaria." />
         <link rel="icon" href="/favicon.ico" />
+     
       </Head>
       <Navbar />
       <div className={styles.welcome}>
@@ -140,15 +141,9 @@ export default function Home() {
       </Section>
 
       <Section id="Galeria" background={BackgroundGaleria} gradientCode={gradientCodes.galeria}>
-        <div style={{ height: "100vh", display: "flex" }}>
-          <Image style={{
-            width: "auto",
-            maxWidth: "60%",
-            height: "auto",
-            margin: "auto",
-            maxHeight: "100%",
-          }} src={galeria}></Image>
-        </div>
+        <div style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",minWidth:"100%"}}>
+     <div className='instapost' style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",minWidth:"100vw"}} data-mc-src="e8f096f6-d988-48df-862d-b4a663484442#instagram"></div>
+     </div>
       </Section>
       <Section id="Universidades" gradientCode={gradientCodes.universidades}>
         <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>

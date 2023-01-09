@@ -230,3 +230,7 @@ a {
   line-height: 20px;
 
 }
+
+.instapost article{
+ min-width: 45vw;
+}
