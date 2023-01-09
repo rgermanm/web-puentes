@@ -2,188 +2,276 @@
     {
         "name": "Pehuajó",
         "id": 1,
-        "carreras":[7,22]
+        "carreras": [
+            7,
+            22
+        ]
     },
     {
         "name": "Coronel Suárez",
         "id": 2,
-        "carreras":[22,23]
+        "carreras": [
+            22,
+            23
+        ]
     },
     {
         "name": "Bolívar",
         "id": 3,
-        "carreras":[2,10]
+        "carreras": [
+            2,
+            10
+        ]
     },
     {
         "name": "Colón",
         "id": 4,
-        "carreras":[4,10]
+        "carreras": [
+            4,
+            10
+        ]
     },
     {
         "name": "Villa Gesell",
         "id": 5,
-        "carreras":[8,9]
+        "carreras": [
+            8,
+            9
+        ]
     },
     {
         "name": "La Costa",
         "id": 6,
-        "carreras":[5,11]
+        "carreras": [
+            5,
+            11
+        ]
     },
     {
         "name": "Las Flores",
         "id": 7,
-        "carreras":[10,24]
-
+        "carreras": [
+            10,
+            24
+        ]
     },
     {
         "name": "Exaltación de la Cruz",
         "id": 8,
-        "carreras":[3,9]
+        "carreras": [
+            3,
+            9
+        ]
     },
     {
         "name": "Lobería",
         "id": 9,
-        "carreras":[32]
+        "carreras": [
+            32
+        ]
     },
     {
         "name": "25 de Mayo",
         "id": 10,
-        "carreras":[6,21,25]
+        "carreras": [
+            6,
+            21,
+            25
+        ]
     },
     {
         "name": "Puán",
         "id": 11,
-        "carreras":[7]
+        "carreras": [
+            7
+        ]
     },
     {
         "name": "Carmen de Areco",
         "id": 12,
-        "carreras":[4]
+        "carreras": [
+            4
+        ]
     },
     {
         "name": "San Vicente",
         "id": 13,
-        "carreras":[14,15]
+        "carreras": [
+            14,
+            15
+        ]
     },
     {
         "name": "Pellegrini",
-        "id": 14
+        "id": 14,
+        "carreras": []
     },
     {
         "name": "Alberti",
         "id": 15,
-        "carreras":[1,4]
+        "carreras": [
+            1,
+            4
+        ]
     },
     {
         "name": "Coronel Pringles",
         "id": 16,
-        "carreras":[25]
+        "carreras": [
+            25
+        ]
     },
     {
         "name": "Alem",
         "id": 17,
-        "carreras":[4,26]
+        "carreras": [
+            4,
+            26
+        ]
     },
     {
         "name": "General Pinto",
         "id": 18,
-        "carreras":[16,27]
+        "carreras": [
+            16,
+            27
+        ]
     },
     {
         "name": "Daireaux",
         "id": 19,
-        "carreras":[18,19]
+        "carreras": [
+            18,
+            19
+        ]
     },
     {
         "name": "La Madrid",
         "id": 20,
-        "carreras":[27]
+        "carreras": [
+            27
+        ]
     },
     {
         "name": "General Paz",
         "id": 21,
-        "carreras":[1,26]
+        "carreras": [
+            1,
+            26
+        ]
     },
     {
         "name": "Hipólito Yrigoyen",
-        "id": 22
+        "id": 22,
+        "carreras": []
     },
     {
         "name": "Balcarce",
         "id": 23,
-        "carreras":[28]
+        "carreras": [
+            28
+        ]
     },
     {
         "name": "Saladillo",
         "id": 24,
-        "carreras":[26]
+        "carreras": [
+            26
+        ]
     },
     {
         "name": "Trenque Lauquen",
-        "id": 25
+        "id": 25,
+        "carreras": []
     },
     {
         "name": "Adolfo Alsina",
         "id": 26,
-        "carreras":[26]
+        "carreras": [
+            26
+        ]
     },
     {
         "name": "General Alvarado",
         "id": 27,
-        "carreras":[33]
+        "carreras": [
+            33
+        ]
     },
     {
         "name": "Carlos Tejedor",
         "id": 28,
-        "carreras":[27]
+        "carreras": [
+            27
+        ]
     },
     {
         "name": "Punta Indio",
         "id": 29,
-        "carreras":[22,31]
+        "carreras": [
+            22,
+            31
+        ]
     },
     {
         "name": "Salto",
         "id": 30,
-        "carreras":[29]
+        "carreras": [
+            29
+        ]
     },
     {
         "name": "Guaminí",
         "id": 31,
-        "carreras":[13,23]
+        "carreras": [
+            13,
+            23
+        ]
     },
     {
         "name": "Mar Chiquita",
-        "id": 32
+        "id": 32,
+        "carreras":[]
     },
     {
         "name": "Roque Pérez",
         "id": 33,
-        "carreras":[26]
+        "carreras": [
+            26
+        ]
     },
     {
         "name": "San Cayetano",
-        "id": 34
+        "id": 34,
+        "carreras": []
     },
     {
         "name": "Marcos Paz",
         "id": 35,
-        "carreras":[30,33]
+        "carreras": [
+            30,
+            33
+        ]
     },
     {
         "name": "Tapalqué",
         "id": 36,
-        "carreras":[26]
+        "carreras": [
+            26
+        ]
     },
     {
-        "name":"Ramallo",
-        "id":37,
-        "carreras":[17]
+        "name": "Ramallo",
+        "id": 37,
+        "carreras": [
+            17
+        ]
     },
     {
-        "name":"Tres Lomas",
-        "id":38,
-        "carreras":[20]
+        "name": "Tres Lomas",
+        "id": 38,
+        "carreras": [
+            20
+        ]
     }
-
 ]
