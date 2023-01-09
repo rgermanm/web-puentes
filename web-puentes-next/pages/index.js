@@ -9,7 +9,7 @@ import BackgroundOferta from '../public/Assets/Background-OfertaAcademica-01.png
 import BackgroundPrograma from '../public/Assets/Background-ElPrograma1-01.png';
 import BackgroundPrograma2 from '../public/Assets/Background-ElPrograma2-01.png';
 import BackgroundGaleria from '../public/Assets/Background-Galeria-01.png';
-import LogoPuentes from '../public/Assets/logos/LogoPuentes.svg'
+import LogoPuentes from '../public/Assets/LogoPuentesPrograma.svg'
 import gradientCodes from '../public/gradientCodes.json'
 
 import ilustracionesPrograma from '../public/Assets/Ilustraciones2.svg'
@@ -87,8 +87,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Puentes | Plan de integración territorial universitaria </title>
-        <meta name="description" content="Plan de integración territorial universitaria." />
+        <title>Puentes | Programa de integración territorial universitaria </title>
+        <meta name="description" content="Programa de integración territorial universitaria." />
         <link rel="icon" href="/favicon.ico" />
 
       </Head>
@@ -144,7 +144,7 @@ export default function Home() {
                 <div style={{ height: "50px", width: "50px", backgroundColor: "#ec1482", borderRadius: "100%", marginRight: "10px" }}></div>
                 <div>
                   <h5 className={styles.centroTitle}>MUNICIPIOS </h5>
-                  <h5 className={styles.centroTitleStrong}> CON PLAN PUENTES</h5>
+                  <h5 className={styles.centroTitleStrong}> CON PROGRAMA PUENTES</h5>
                 </div>
               </div>
             </div>

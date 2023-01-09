@@ -27,7 +27,7 @@ export default function Home() {
         <title>Web Puentes</title>
         <meta
           name="description"
-          content="Plan de integración territorial universitaria."
+          content="Programa de integración territorial universitaria."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

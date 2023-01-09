@@ -24,52 +24,52 @@ import Accordion from "react-bootstrap/Accordion";
 let acoList =[
   {
     title: "El programa",
-    body: "El Plan de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
+    body: "El Programa de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
   },
 
   {
     title: "Beneficiarios y beneficiarias",
-    body: "El Plan de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
+    body: "El Programa de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
   },
 
   {
     title: "Las carreras",
-    body: "El Plan de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
+    body: "El Programa de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
   },
   
 
   {
     title: "Las cursadas",
-    body: "El Plan de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
+    body: "El Programa de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
   },
 
   {
     title: "La inscripción",
-    body: "El Plan de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
+    body: "El Programa de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
   },
 
   {
     title: "Requisitos",
-    body: "El Plan de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
+    body: "El Programa de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
   },
 
   {
     title: "Cursadas",
-    body: "El Plan de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
+    body: "El Programa de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
   },
 
   {
     title: "Centros Puentes",
-    body: "El Plan de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
+    body: "El Programa de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
   },
 
   {
     title: "Becas",
-    body: "El Plan de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
+    body: "El Programa de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
   },
   {
     title: "Consultas",
-    body: "El Plan de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
+    body: "El Programa de Integración Territorial Universitaria (PITU) es un programa de la Secretaría de Políticas Universitarias (SPU) del Ministerio de Educación de la Nación, que tiene como objetivo promover la articulación entre las universidades y las comunidades de la región, a través de la realización de proyectos de extensión universitaria. El PITU se desarrolla en el marco de la Ley de Educación Superior N° 24.521 y de la Resolución 1.000/2019 del Ministerio de Educación de la Nación."
   },
 ]
 export default function Home() {
@@ -79,7 +79,7 @@ export default function Home() {
         <title>Web Puentes</title>
         <meta
           name="description"
-          content="Plan de integración territorial universitaria."
+          content="Programa de integración territorial universitaria."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
