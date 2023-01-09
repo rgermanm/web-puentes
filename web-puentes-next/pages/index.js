@@ -28,8 +28,7 @@ import ilustracion6 from '../public/Assets/ilustraciones/6.svg'
 import StatsCard from '../components/statsCard'
 import { SVGMap } from "react-svg-map";
 
-import BsAs from "./BSASFinalNamed";
-import Departamentos from "./departamentos-buenos_aires.json";
+import BsAs from "../components/BSASFinalNamed";
 
 import { useEffect } from 'react'
 
