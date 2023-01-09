@@ -30,11 +30,11 @@ import { SVGMap } from "react-svg-map";
 
 import BsAs from "../components/BSASFinalNamed";
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 
 export default function Home() {
-
+const [selectedLocation, setSelectedLocation] = useState("Municipios");
 
   const stats = [{
     number: 36,
@@ -155,9 +155,32 @@ export default function Home() {
 
             </div>
           </div>
-          <div style={{ width: "40%", height: "90vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div style={{position:"relative", width: "40%", height: "90vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
           
-            <SVGMap   onLocationMouseOver={(e)=>console.log(e.target.ariaLabel)} map={BsAs} />
+            <SVGMap   onLocationMouseOver={(e)=>setSelectedLocation(e.target.ariaLabel)} map={BsAs} />
+            <div style={{
+              //cartel con el nombre del municipio, borde redondeado rosa , fondo azul, con sombra
+              position: "absolute",
+          bottom:10,
+          zIndex:1000,
+
+              backgroundColor: "#1cafc2" ,
+              borderRadius: "10px",
+              padding: "10px",
+              boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center", 
+              minWidth:"240px",
+              border:"2px solid #ec1482"
+            }}>
+              <h5 style={{ margin: "0px" }} className={styles.centroTitleStrong}>{selectedLocation}</h5>
+              <h5 style={{ margin: "0px" }} className={styles.centroTitle}>UNIVERSIDADES</h5>
+              <h5 style={{ margin: "0px" }} className={styles.centroTitleStrong}>CARRERAS</h5>
+            </div>
+
+     
           </div>
         </div>
 
