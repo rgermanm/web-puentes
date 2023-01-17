@@ -1,58 +1,112 @@
-
-
-.welcome{
-  height:100vh;
-  width:100vw;
+.welcome {
+  height: 100vh;
+  width: 100vw;
   background-color: rebeccapurple;
 }
 
-.backgroundBanner{
-  height:100%;
-  position: absolute;
-  z-index: 100;
-  left:0px;
-object-fit: contain;
-width: auto;
-}
-.fotoBanner{
-  height:100%;
-  width: 100%;
-  position: absolute;
-  z-index: 99;
-  object-fit: contain;
-  right:0px;
-  width: auto;
+
+@media (min-width: 800px) {
+  .backgroundBannerContainer {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+  }
+
+  .backgroundBanner {
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    left: 0px;
+    object-fit: contain;
+    width: auto;
+  }
+
+  .fotoBanner {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    object-fit: contain;
+    right: 0px;
+    width: auto;
+  }
 }
 
-.backgroundBannerContainer{
-  height:100vh;
-  width: 100vw;
-  position: absolute;
+@media (max-width: 800px) {
+  .backgroundBannerContainer {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+  }
+
+  .backgroundBanner {
+    height: 100%;
+    position: absolute;
+    z-index: 21;
+    right: 10%;
+    object-fit: scale-down;
+
+  }
+
+  .fotoBanner {
+    height: 100%;
+
+    position: absolute;
+    z-index: 20;
+    object-fit: contain;
+    right: 0px;
+    width: auto;
+  }
 }
 
-.ballSection{
-  height:280px;
+
+.ballSection {
+  height: 280px;
   width: 280px;
   border-radius: 100%;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'EncodeSans-Bold', sans-serif;
   font-weight: bold;
-  color:white;
-  cursor:pointer
+  color: white;
+  cursor: pointer
 }
 
 .centroTitle {
   font-family: 'EncodeSans', sans-serif;
-  color:white;
- 
+  color: white;
+
 
 }
 
 .centroTitleStrong {
   font-family: 'EncodeSans-Bold', sans-serif;
-  color:white;
- 
+  color: white;
 
+
+}
+
+
+@media (min-width:800px) {
+  .statsContainer {
+    width: 75%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
+}
+
+@media (max-width:800px) {
+  .statsContainer {
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
 }

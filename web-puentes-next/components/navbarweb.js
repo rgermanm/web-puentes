@@ -5,7 +5,7 @@ import logoBsAsInverse from './../public/Assets/logos/gob_prov_inverse.png'
 import { Link as LinkScroll } from "react-scroll"
 import { useEffect,useState } from "react";
 
-export default function Navbar() {
+export default function NavbarWeb() {
     
    /* 
    scroll bg color 
@@ -22,11 +22,9 @@ export default function Navbar() {
         }
     })*/
     return (
-        <nav className="navbar navbar-expand-lg ">
-
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
+        <nav className="navbar navbar-expand-lg d-none d-lg-flex">
+            
+          
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
 

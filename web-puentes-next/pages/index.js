@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Navbar from '../components/navbar'
 import Section from '../components/section'
 import BackgroundBanner from '../public/Assets/BackgroundBanner.png';
 import FotoBanner from '../public/Assets/FotoBanner.jpg'
@@ -31,6 +30,8 @@ import { SVGMap } from "react-svg-map";
 import BsAs from "../components/BSASFinalNamed";
 
 import { useEffect, useState } from 'react'
+import NavbarWeb from '../components/navbarweb'
+import NavbarMobile from '../components/navbarMobile';
 
 
 export default function Home() {
@@ -92,7 +93,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
 
       </Head>
-      <Navbar />
+      <NavbarWeb />
+      <NavbarMobile></NavbarMobile>
       <div className={styles.welcome}>
         <div style={{ zIndex: 1500, height: "100vh", width: "100vw", position: "absolute" }} className="row">
 
@@ -109,11 +111,11 @@ export default function Home() {
 
       </div>
       <Section id="Programa2" background={BackgroundPrograma2}>
-        <div style={{ width: "75%", height: "100vh", margin: "auto", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div className={styles.statsContainer}>
           <div className='row'>
 
             {stats.map((s, i) =>
-              <div className='col-4'>
+              <div className='col-lg-4 col-6'>
                 <StatsCard fontColor={i % 2 == 1 ? "#1facbe" : "#ed1581"} ilustracion={s.image} stat={s.number} label={s.label}></StatsCard>
               </div>
             )}
@@ -192,9 +194,7 @@ export default function Home() {
         </div>
       </Section>
       <Section id="Universidades" gradientCode={gradientCodes.universidades}>
-        <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <Image src={logosUni} style={{ height: "60vh", width: "auto" }}></Image>
-        </div>
+
       </Section>
       <Section id="Footer" gradientCode={gradientCodes.footer}>
         <div style={{ height: "100vh", display: "flex" }}>

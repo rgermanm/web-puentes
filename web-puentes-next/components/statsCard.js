@@ -8,7 +8,7 @@ export default function StatsCard({ ilustracion, fontColor, stat, label }) {
     return (
         <div className="stats-card">
             <div>
-                <Image style={{ height: "120px", width: "120px" }} src={ilustracion}></Image>
+                <Image className="stats-illustration" src={ilustracion}></Image>
             </div>
             <div className="stats-number-container">
                 <div>
