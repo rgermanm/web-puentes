@@ -444,13 +444,14 @@ ul .mo {
 /*Seccion universidades*/
 @media (max-width:800px) {
   .uni-image{
-    width: 120px;
+    width: 60px;
     height: auto;
   }
   .uni-image-container{
     display:flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    
     margin-top: 10px;
     margin-bottom: 10px;
     min-height: 100px;
@@ -479,7 +480,7 @@ ul .mo {
   .uni-image-container{
     display:flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
 

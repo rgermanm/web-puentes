@@ -6,15 +6,17 @@ import BackgroundBanner from "../public/Assets/BackgroundBanner.png";
 import FotoBannerMobile from "../public/Assets/mobilebg.png";
 import FotoBanner from "../public/Assets/FotoBanner.jpg";
 import FotoProv from "../public/Assets/prov.png";
+import FotoProvWhite from "../public/Assets/provWhite.png";
 import FotoDer from "../public/Assets/derecho.png";
 import BackgroundOferta from "../public/Assets/Background-OfertaAcademica-01.png";
 import BackgroundPrograma from "../public/Assets/Background-ElPrograma1-01.png";
-import BackgroundPrograma2 from "../public/Assets/Background-ElPrograma2-01.png";
+import BackgroundPrograma2 from "../public/Assets/background-estadisticas.png";
 import BackgroundGaleria from "../public/Assets/Background-Galeria-01.png";
+import LogoPuentesNoBottom from "../public/Assets/LogoPuentesProgramaNoBottom.svg";
 import LogoPuentes from "../public/Assets/LogoPuentesPrograma.svg";
 import LogoPuentesMobile from "../public/Assets/LogoPuentesMobile.svg";
 import gradientCodes from "../public/gradientCodes.json";
-
+import Details from "../public/Assets/details.png";
 import ilustracionesPrograma from "../public/Assets/Ilustraciones2.svg";
 import galeria from "../public/Assets/FotoProvisoria-Galeria-01.jpg";
 
@@ -48,6 +50,7 @@ import BsAs from "../components/BSASFinalNamed";
 import { useEffect, useState } from "react";
 import NavbarWeb from "../components/navbarweb";
 import NavbarMobile from "../components/navbarMobile";
+import SocialFooterIcons from "../components/SocialFooterIcons";
 
 export default function Home() {
   const [selectedLocation, setSelectedLocation] = useState("Municipios");
@@ -57,31 +60,75 @@ export default function Home() {
       number: 36,
       image: ilustracion1,
       label: "Municipios en Puentes",
+      color: "#1facbe",
     },
     {
       number: 11,
       image: ilustracion2,
       label: "Universidades",
+      color: "#ed1581",
     },
     {
       number: 60,
       image: ilustracion3,
       label: "Ofertas academicas en 2023",
+      color: "#ed1581",
     },
     {
       number: 350,
       image: ilustracion4,
       label: "Estudiantes inscriptos e inscriptas",
+      color: "#1facbe",
     },
     {
       number: 1531,
       image: ilustracion5,
       label: "Millones de pesos en inversión",
+      color: "#1facbe",
     },
     {
       number: 36,
       image: ilustracion6,
       label: "Centros universitarios en construcción, ampliación o refacción",
+      color: "#ed1581",
+    },
+  ];
+  const statsWeb = [
+    {
+      number: 36,
+      image: ilustracion1,
+      label: "Municipios en Puentes",
+      color: "#1facbe",
+    },
+    {
+      number: 11,
+      image: ilustracion2,
+      label: "Universidades",
+      color: "#ed1581",
+    },
+    {
+      number: 60,
+      image: ilustracion3,
+      label: "Ofertas academicas en 2023",
+      color: "#1facbe",
+    },
+    {
+      number: 350,
+      image: ilustracion4,
+      label: "Estudiantes inscriptos e inscriptas",
+      color: "#ed1581",
+    },
+    {
+      number: 1531,
+      image: ilustracion5,
+      label: "Millones de pesos en inversión",
+      color: "#1facbe",
+    },
+    {
+      number: 36,
+      image: ilustracion6,
+      label: "Centros universitarios en construcción, ampliación o refacción",
+      color: "#ed1581",
     },
   ];
 
@@ -137,7 +184,7 @@ export default function Home() {
             width: "100vw",
             position: "absolute",
             alignItems: "center",
- 
+
             display: "flex",
           }}
           className="row"
@@ -200,26 +247,53 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Section
-        style={{ maxWidth: "100%" }}
-        id="Programa2"
-        background={BackgroundPrograma2}
-      >
-        <div className={styles.statsContainer}>
-          <div className="row">
-            {stats.map((s, i) => (
-              <div className="col-lg-4 col-6">
-                <StatsCard
-                  fontColor={i % 2 == 1 ? "#1facbe" : "#ed1581"}
-                  ilustracion={s.image}
-                  stat={s.number}
-                  label={s.label}
-                ></StatsCard>
-              </div>
-            ))}
+
+      <div className="d-none d-sm-block">
+        <Section
+          style={{ maxWidth: "100%" }}
+          id="Programa2"
+          background={BackgroundPrograma2}
+        >
+          <div className={styles.statsContainer}>
+            <div className="row">
+              {statsWeb.map((s, i) => (
+                <div className="col-lg-4 col-6">
+                  <StatsCard
+                    fontColor={s.color}
+                    ilustracion={s.image}
+                    stat={s.number}
+                    label={s.label}
+                  ></StatsCard>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      </div>
+
+      <div className="d-block d-sm-none">
+        <Section
+          style={{ maxWidth: "100%" }}
+          id="Programa2"
+          background={BackgroundPrograma2}
+        >
+          <div className={styles.statsContainer}>
+            <div className="row">
+              {stats.map((s, i) => (
+                <div className="col-lg-4 col-6">
+                  <StatsCard
+                    fontColor={s.color}
+                    ilustracion={s.image}
+                    stat={s.number}
+                    label={s.label}
+                  ></StatsCard>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Section>
+      </div>
+
       <Section id="Oferta" background={BackgroundOferta}>
         {/*     <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
           <div style={{ backgroundColor: "#ec1482" }} className={`${styles.ballSection} col-md-4`}><h3>MUNICIPIOS</h3></div>
@@ -387,7 +461,7 @@ export default function Home() {
       </Section>
       <Section id="Universidades" gradientCode={gradientCodes.universidades}>
         <div className={"uni-section-container"}>
-          <div className="row">
+          <div className="row" style={{ justifyContent: "center" }}>
             {UnivImages.map((m) => (
               <div className="col-lg-3 col-6 uni-image-container">
                 <Image className="uni-image" src={m}></Image>
@@ -397,17 +471,70 @@ export default function Home() {
         </div>
       </Section>
       <Section id="Footer" gradientCode={gradientCodes.footer}>
-        <div style={{ height: "100vh", display: "flex" }}>
+        <div
+          style={{
+            height: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-start",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
           <Image
             style={{
-              width: "auto",
-              maxWidth: "60%",
-              height: "auto",
-              margin: "auto",
-              maxHeight: "60%",
+              marginTop: 30,
+              maxWidth: "50%",
+              maxHeight: "50%",
             }}
-            src={LogoPuentes}
+            src={LogoPuentesNoBottom}
           ></Image>
+          <SocialFooterIcons></SocialFooterIcons>
+          <div
+            style={{
+              position: "absolute",
+              width: "100%",
+              backgroundColor: "#4ca8ba",
+              height: 140,
+              bottom: "15%",
+              boxShadow: "0px 2px 10px 0px rgba(0,0,0,0.5)",
+              alignItems: "center",
+              justifyContent: "center",
+              display: "flex",
+            }}
+          >
+            <Image
+              className="d-none d-sm-block"
+              style={{ height: "100%", width: "auto" }}
+              src={FotoProvWhite}
+            />
+            <Image
+              className="d-block d-sm-none"
+              style={{ height: "auto", width: "70%" }}
+              src={FotoProvWhite}
+            />
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              width: "100%",
+
+              height: 140,
+              top: -60,
+              left: 0,
+            }}
+          >
+            <Image
+              className="d-block d-sm-none"
+              style={{ height: "auto", width: "100%" }}
+              src={Details}
+            />
+            <Image
+              className="d-none d-sm-block"
+              style={{ height: "100%", width: "auto" }}
+              src={Details}
+            />
+          </div>
         </div>
       </Section>
       <footer className={styles.footer}></footer>
