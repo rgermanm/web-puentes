@@ -279,7 +279,7 @@ a {
 
   .stats-label {
     font-family: 'EncodeSans-Bold';
-    font-size: 7px;
+    font-size: 12px;
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 0px;
@@ -291,8 +291,8 @@ a {
   }
 
   .stats-illustration {
-    height: 60px;
-    width: 60px;
+    height: 65px;
+    width: 65px;
   }
 
 

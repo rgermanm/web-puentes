@@ -250,7 +250,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="d-none d-sm-block">
+      <div className="d-none d-sm-block"
+        style={{ position: "relative"}}
+        >
         <Section
           style={{ maxWidth: "100%" }}
           id="Programa2"
@@ -270,22 +272,53 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          <div
+            style={{
+              //center horizontally the absolute div
+              position: "absolute",
+              bottom: "10%",
+              left: "50%",
+              transform: "translate(-50%, 0)",
+              marginBottom: 20,
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "#ec1482",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                window.location.href = "/municipios";
+              }}
+            >
+              <h3
+                style={{ color: "white", fontWeight: "bold", padding: 10,paddingLeft:15,paddingRight:15 }}
+                className="stats-label"
+              >
+                VER MÁS
+              </h3>
+            </div>
+          </div>
         </Section>
       </div>
 
       <div
         className="d-block d-sm-none"
-        style={{ position: "relative", paddingTop: 20 }}
+        style={{ position: "relative", maxHeight: "65vh", paddingTop: 15 }}
       >
         <Section
-          style={{ maxWidth: "100%" }}
+          style={{ maxWidth: "100%", maxHeight: "100vh" }}
           id="Programa2"
           background={BackgroundPrograma2}
         >
           <div className={styles.statsContainer}>
             <div className="row">
               {stats.map((s, i) => (
-                <div className="col-lg-4 col-6" >
+                <div className="col-lg-4 col-6" style={{ padding: 0 }}>
                   <StatsCard
                     fontColor={s.color}
                     ilustracion={s.image}
@@ -297,23 +330,46 @@ export default function Home() {
               <div style={{ position: "absolute", top: 0, left: -15 }}>
                 <Image src={Ball} style={{ width: 65, height: 65 }} />
               </div>
-           
             </div>
-            <div style={{ position: "absolute", top: "20%", right: -25 }}>
-                <Image src={Ballr} style={{ width: 80, height: 80 }} />
-              </div>
+            <div style={{ position: "absolute", top: "30%", right: 0 }}>
+              <Image src={Ballr} style={{ width: 80, height: 80 }} />
+            </div>
+          </div>
+
+          <div
+            style={{
+              //center horizontally the absolute div
+              position: "absolute",
+              bottom: 0,
+              left: "50%",
+              transform: "translate(-50%, 0)",
+              marginBottom: 20,
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "#ec1482",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                window.location.href = "/municipios";
+              }}
+            >
+              <h3
+                style={{ color: "white", fontWeight: "bold", padding: 10 }}
+                className="stats-label"
+              >
+                VER MÁS
+              </h3>
+            </div>
           </div>
         </Section>
       </div>
 
-      <Section id="Oferta" background={BackgroundOferta}>
-        {/*     <div style={{ width: "100%", height: "100vh", margin: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <div style={{ backgroundColor: "#ec1482" }} className={`${styles.ballSection} col-md-4`}><h3>MUNICIPIOS</h3></div>
-          <div style={{ backgroundColor: "#1cafc2", marginLeft: "40px", marginRight: "50px" }} className={`${styles.ballSection} col-4`}><h3>UNIVERSIDADES</h3></div>
-          <div style={{ backgroundColor: "#ec1482" }} className={`${styles.ballSection} col-4`}><h3>CARRERAS</h3></div>
-  </div>*/}
-        <MUC></MUC>
-      </Section>
+
 
       <Section
         id="Programa"
@@ -444,6 +500,13 @@ export default function Home() {
         </div>
       </Section>
 
+
+      <Section id="Oferta" background={BackgroundOferta}>
+
+        <MUC></MUC>
+      </Section>
+
+
       <Section
         id="Galeria"
         background={BackgroundGaleria}
@@ -456,6 +519,7 @@ export default function Home() {
             alignItems: "center",
             justifyContent: "center",
             minWidth: "100%",
+        
           }}
         >
           <div

@@ -107,7 +107,7 @@ export default function MUC() {
 
     return (
         <div className="muc-container">
-            <div>
+            <div style={{paddingTop:40}}>
                 <div className="row">
                     {muc.map((o, i) =>
                         <div onClick={() => { setSelected(i); setListItemSelected(-1) }}
