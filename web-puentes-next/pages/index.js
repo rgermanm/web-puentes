@@ -17,6 +17,8 @@ import LogoPuentes from "../public/Assets/LogoPuentesPrograma.svg";
 import LogoPuentesMobile from "../public/Assets/LogoPuentesMobile.svg";
 import gradientCodes from "../public/gradientCodes.json";
 import Details from "../public/Assets/details.png";
+import Ball from "../public/Assets/ball.png";
+import Ballr from "../public/Assets/ballr.png";
 import ilustracionesPrograma from "../public/Assets/Ilustraciones2.svg";
 import galeria from "../public/Assets/FotoProvisoria-Galeria-01.jpg";
 
@@ -271,7 +273,10 @@ export default function Home() {
         </Section>
       </div>
 
-      <div className="d-block d-sm-none">
+      <div
+        className="d-block d-sm-none"
+        style={{ position: "relative", paddingTop: 20 }}
+      >
         <Section
           style={{ maxWidth: "100%" }}
           id="Programa2"
@@ -280,7 +285,7 @@ export default function Home() {
           <div className={styles.statsContainer}>
             <div className="row">
               {stats.map((s, i) => (
-                <div className="col-lg-4 col-6">
+                <div className="col-lg-4 col-6" >
                   <StatsCard
                     fontColor={s.color}
                     ilustracion={s.image}
@@ -289,7 +294,14 @@ export default function Home() {
                   ></StatsCard>
                 </div>
               ))}
+              <div style={{ position: "absolute", top: 0, left: -15 }}>
+                <Image src={Ball} style={{ width: 65, height: 65 }} />
+              </div>
+           
             </div>
+            <div style={{ position: "absolute", top: "20%", right: -25 }}>
+                <Image src={Ballr} style={{ width: 80, height: 80 }} />
+              </div>
           </div>
         </Section>
       </div>
