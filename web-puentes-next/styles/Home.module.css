@@ -103,10 +103,13 @@
 @media (max-width:800px) {
   .statsContainer {
     width: 90%;
-    height: 100vh;
+    height: 600px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center
   }
+
+
+
 }

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Navbar from "../components/navbar";
+import NavbarWeb from "../components/navbarweb";
 import Section from "../components/section";
 import BackgroundBanner from "../public/Assets/Banner-SeccionElPrograma.jpg";
 import BackgroundSeccion from "../public/Assets/Background- SeccionPreguntasFrecuentes.png";
@@ -19,6 +19,7 @@ import galeria from "../public/Assets/FotoProvisoria-Galeria-01.jpg";
 import mapaPBA from "../public/Assets/MapaPBA.svg";
 import logosUni from "../public/Assets/LogosUniversidades.svg";
 import MUC from "../components/muc";
+import NavbarMobile from "../components/navbarMobile";
 
 export default function Home() {
   return (
@@ -31,7 +32,9 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+      <NavbarWeb />
+      <NavbarMobile></NavbarMobile>
+      <div className="marginMobile">
       <Image
         style={{ width: "100vw", height: "65vw",position:"absolute",top:"23vw" }}
         src={BackgroundSeccion}
@@ -40,7 +43,7 @@ export default function Home() {
         style={{ width: "100vw", height: "25vw" }}
         src={BackgroundBanner}
       />
-      <h1 style={{color:"white",position:"absolute",top:"12vw",marginLeft:52,fontFamily: "EncodeSans-Bold" ,textTransform:"uppercase"}}>El Programa</h1>
+      <h1 className={"pageTitle"}>El Programa</h1>
      
       <Section id="Programa2" background={BackgroundPrograma2}>
         <div className="muc-list ">
@@ -136,6 +139,7 @@ export default function Home() {
         </div>
       </Section>
       <footer className={styles.footer}></footer>
+      </div>
     </div>
   );
 }

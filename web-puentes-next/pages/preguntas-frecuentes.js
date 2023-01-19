@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Navbar from "../components/navbar";
+import NavbarWeb from "../components/navbarweb";
 import Section from "../components/section";
 import BackgroundBanner from "../public/Assets/Banner-SeccionPreguntasFrecuentes.jpg";
 import FotoBanner from "../public/Assets/FotoBanner.jpg";
@@ -21,6 +21,7 @@ import logosUni from "../public/Assets/LogosUniversidades.svg";
 import MUC from "../components/muc";
 
 import Accordion from "react-bootstrap/Accordion";
+import NavbarMobile from "../components/navbarMobile";
 let acoList =[
   {
     title: "El programa",
@@ -83,8 +84,9 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-
+      <NavbarWeb />
+      <NavbarMobile></NavbarMobile>
+      <div className="marginMobile">
       <Image
         style={{
           width: "100vw",
@@ -99,14 +101,7 @@ export default function Home() {
         src={BackgroundBanner}
       />
       <h1
-        style={{
-          color: "white",
-          position: "absolute",
-          top: "12vw",
-          marginLeft: 52,
-          fontFamily: "EncodeSans-Bold",
-          textTransform: "uppercase",
-        }}
+className="pageTitle"
       >
         Preguntas Frecuentes
       </h1>
@@ -161,6 +156,7 @@ export default function Home() {
         </div>
       </Section>
       <footer className={styles.footer}></footer>
+      </div>
     </div>
   );
 }

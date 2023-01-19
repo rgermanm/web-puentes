@@ -34,17 +34,17 @@ export default function NavbarWeb() {
 
                     </Link>
                     <Link className="nav-item nav-link" href="/programa" legacyBehavior passHref scroll={false}  >
-                        <LinkScroll className="nav-item nav-link" spy={true} smooth={true} duration={500}> EL PROGRAMA</LinkScroll>
+                        <LinkScroll className="nav-item nav-link" spy={true} smooth={false} duration={100}> EL PROGRAMA</LinkScroll>
                     </Link>
                     <Link className="nav-item nav-link" href="" legacyBehavior passHref scroll={false} >
-                        <LinkScroll className="nav-item nav-link" to="Programa" spy={true} smooth={true} duration={500} >  OFERTA ACADEMICA </LinkScroll>
+                        <LinkScroll className="nav-item nav-link" to="Programa" spy={true} smooth={false} duration={100} >  OFERTA ACADEMICA </LinkScroll>
 
                     </Link>
                     <Link  className="nav-item nav-link " href="/preguntas-frecuentes" legacyBehavior passHref scroll={false}  >
-                        <LinkScroll className="nav-item nav-link"  spy={true} smooth={true} duration={500} >PREGUNTAS FRECUENTES</LinkScroll>
+                        <LinkScroll className="nav-item nav-link"  spy={true} smooth={false} duration={100} >PREGUNTAS FRECUENTES</LinkScroll>
                     </Link>
                     <Link className="nav-item nav-link " href="" legacyBehavior passHref scroll={false}>
-                        <LinkScroll className="nav-item nav-link" to="Galeria" spy={true} smooth={true} duration={500} >  GALERIA </LinkScroll>
+                        <LinkScroll className="nav-item nav-link" to="Galeria" spy={true} smooth={false} duration={100} >  GALERIA </LinkScroll>
                     </Link>
                 </div>
             </div>

@@ -495,3 +495,28 @@ ul .mo {
   
 
 }
+
+
+@media (max-width:800px) {
+  .marginMobile{margin-top: 90px;}
+  .pageTitle {
+    color: white;
+    position: absolute;
+    top: 120px;
+    margin-left: 20px;
+    font-size: 1.3rem;
+    font-family: "EncodeSans-Bold";
+    text-transform: uppercase
+  }
+}
+
+@media (min-width:800px) {
+  .pageTitle {
+    color: white;
+    position: absolute;
+    top: 120px;
+    margin-left: 52px;
+    font-family: "EncodeSans-Bold";
+    text-transform: uppercase
+  }
+}
