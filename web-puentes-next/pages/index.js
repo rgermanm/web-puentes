@@ -24,6 +24,18 @@ import ilustracion3 from '../public/Assets/ilustraciones/3.svg'
 import ilustracion4 from '../public/Assets/ilustraciones/4.svg'
 import ilustracion5 from '../public/Assets/ilustraciones/5.svg'
 import ilustracion6 from '../public/Assets/ilustraciones/6.svg'
+
+import uni1 from '../public/Assets/logos/universidades/1.jpeg';
+import uni2 from '../public/Assets/logos/universidades/2.png';
+import uni3 from '../public/Assets/logos/universidades/3.jpeg';
+import uni4 from '../public/Assets/logos/universidades/4.jpeg';
+import uni5 from '../public/Assets/logos/universidades/5.jpeg';
+import uni6 from '../public/Assets/logos/universidades/6.png';
+import uni7 from '../public/Assets/logos/universidades/7.png';
+import uni8 from '../public/Assets/logos/universidades/8.png';
+import uni9 from '../public/Assets/logos/universidades/9.png';
+import uni10 from '../public/Assets/logos/universidades/10.jpeg';
+import uni11 from '../public/Assets/logos/universidades/f.jpeg';
 import StatsCard from '../components/statsCard'
 import { SVGMap } from "react-svg-map";
 
@@ -68,6 +80,10 @@ export default function Home() {
     label: "Centros universitarios en construcción, ampliación o refacción"
   },]
 
+
+  const UnivImages = [
+    uni1, uni2, uni3, uni4, uni5, uni6, uni7, uni8, uni9, uni10, uni11
+  ]
 
   /*useEffect(()=>{
     let newBsAsJs=[];
@@ -174,7 +190,7 @@ export default function Home() {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              minWidth: "240px",
+
               border: "2px solid #ec1482"
             }}>
               <h5 style={{ margin: "0px" }} className={styles.centroTitleStrong}>{selectedLocation}</h5>
@@ -194,7 +210,16 @@ export default function Home() {
         </div>
       </Section>
       <Section id="Universidades" gradientCode={gradientCodes.universidades}>
-
+       
+        <div className={"uni-section-container"}>
+          <div className='row'>
+            {UnivImages.map((m) =>
+              <div className='col-lg-3 col-6 uni-image-container'>
+                <Image className='uni-image' src={m} ></Image>
+              </div>
+            )}
+          </div>
+        </div>
       </Section>
       <Section id="Footer" gradientCode={gradientCodes.footer}>
         <div style={{ height: "100vh", display: "flex" }}>

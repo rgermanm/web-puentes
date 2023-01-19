@@ -3,7 +3,7 @@ import Hamburger from "hamburger-react";
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 import Delay from "./delay";
-import coverLogo from "./../public/Assets/logos/logo-puentes-navbarMobile.svg";
+import coverLogo from "./../public/Assets/logos/logo-puentes-navbarMobileBlanco.svg";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -80,7 +80,7 @@ const HambuerguerItems = ({ isOpen, setOpen }) => {
           >
             <div
               style={{
-                height: 70,
+                height: 100,
                 justifyContent: "space-between",
                 alignItems: "center",
                 display: "flex",
@@ -90,7 +90,7 @@ const HambuerguerItems = ({ isOpen, setOpen }) => {
             >
                             <Image
                 alt="Agencia Enero"
-                style={{ width: 90 }}
+                style={{ width: 140 }}
                 src={coverLogo}
               ></Image>
               <Hamburger color="white" toggled={isOpen} toggle={setOpen} />
@@ -99,47 +99,47 @@ const HambuerguerItems = ({ isOpen, setOpen }) => {
             <li className="mo" onClick={()=>setOpen(false)}>
               <Link
                 className="men underline-menu-yel"
-                style={{ color: "#F7D97C", textAlign: "left", color: "white" }}
+                style={{ color: "white", textAlign: "left", color: "white" }}
                 href="/"
               >
-                HOME
+                INICIO
               </Link>
             </li>
 
             <li className="mo" onClick={()=>setOpen(false)}>
               <Link
                 className="men underline-menu-yel"
-                style={{ color: "#F7D97C", textAlign: "left" }}
+                style={{ color: "white", textAlign: "left" }}
                 href="/agencia"
               >
-                AGENCIA
+                EL PROGRAMA
               </Link>
             </li>
             <li className="mo" onClick={()=>setOpen(false)}>
               <Link
                 className=" men underline-menu-pink"
-                style={{ color: "#E097B9" }}
+                style={{ color: "white" }}
                 href="/hacemos-m"
               >
-                HACEMOS
+                 OFERTA ACADÉMICA
               </Link>
             </li>
             <li className="mo" onClick={()=>setOpen(false)}>
               <Link
                 className="men underline-menu-blue"
-                style={{ color: "#6ABFE9" }}
+                style={{ color: "white" }}
                 href="/proyectos"
               >
-                PROYECTOS
+                PREGUNTAS FRECUENTES
               </Link>
             </li>
             <li className="mo" onClick={()=>setOpen(false)}>
               <Link
                 className=" men underline-menu-orange"
-                style={{ color: "#E3903E" }}
+                style={{ color: "white" }}
                 href="/contacto"
               >
-                CONTACTO
+                GALERIA
               </Link>
             </li>
           </ul>
