@@ -53,6 +53,8 @@ import { useEffect, useState } from "react";
 import NavbarWeb from "../components/navbarweb";
 import NavbarMobile from "../components/navbarMobile";
 import SocialFooterIcons from "../components/SocialFooterIcons";
+import ComponenteMapaWeb from "../components/ComponenteMapaWeb";
+import ComponenteMapaWobile from "../components/ComponenteMapaWobile";
 
 export default function Home() {
   const [selectedLocation, setSelectedLocation] = useState("Municipios");
@@ -250,9 +252,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="d-none d-sm-block"
-        style={{ position: "relative"}}
-        >
+      <div className="d-none d-sm-block" style={{ position: "relative" }}>
         <Section
           style={{ maxWidth: "100%" }}
           id="Programa2"
@@ -296,7 +296,13 @@ export default function Home() {
               }}
             >
               <h3
-                style={{ color: "white", fontWeight: "bold", padding: 10,paddingLeft:15,paddingRight:15 }}
+                style={{
+                  color: "white",
+                  fontWeight: "bold",
+                  padding: 10,
+                  paddingLeft: 15,
+                  paddingRight: 15,
+                }}
                 className="stats-label"
               >
                 VER MÁS
@@ -368,144 +374,24 @@ export default function Home() {
           </div>
         </Section>
       </div>
-
-
-
-      <Section
-        id="Programa"
-        background={BackgroundPrograma}
-        gradientCode={gradientCodes.programa}
-        name="Programa"
-      >
-        <div
-          style={{
-            width: "100%",
-            height: "100vh",
-            margin: "0px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+      <div className="d-none d-sm-block">
+        <Section
+          id="Programa"
+          background={BackgroundPrograma}
+          gradientCode={gradientCodes.programa}
+          name="Programa"
         >
-          <div
-            style={{
-              width: "50%",
-              height: "60vh",
-              margin: "0px",
-              flexDirection: "column",
-              display: "flex",
-              alignItems: "flex-start",
-              paddingLeft: "5%",
-              justifyContent: "space-between",
-            }}
-          >
-            <div>
-              <h3 className={styles.centroTitle}>RED DE CENTROS</h3>
-              <h3 className={styles.centroTitle}>
-                UNIVERSITARIOS{" "}
-                <strong className={styles.centroTitleStrong}>PUENTES</strong>
-              </h3>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  marginTop: "80px",
-                }}
-              >
-                <div
-                  style={{
-                    height: "50px",
-                    width: "50px",
-                    backgroundColor: "#ec1482",
-                    borderRadius: "100%",
-                    marginRight: "10px",
-                  }}
-                ></div>
-                <div>
-                  <h5 className={styles.centroTitle}>MUNICIPIOS </h5>
-                  <h5 className={styles.centroTitleStrong}>
-                    {" "}
-                    CON PROGRAMA PUENTES
-                  </h5>
-                </div>
-              </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                marginTop: "80px",
-              }}
-            >
-              {/*<div style={{ display: "flex", alignItems: "center", height: "40px", minWidth: "200px", paddingLeft: "80px", paddingRight: "80px", paddingTop: "auto", paddingBottom: "auto", backgroundColor: "#1cafc2", cursor: "pointer", borderRadius: "14px", marginRight: "10px" }}>
-                <h6 style={{ margin: "0px" }} className={styles.centroTitleStrong}> MÁS INFO</h6>
-</div>*/}
-            </div>
-          </div>
-          <div
-            style={{
-              position: "relative",
-              width: "40%",
-              height: "90vh",
-              margin: "0px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <SVGMap
-              onLocationMouseOver={(e) =>
-                setSelectedLocation(e.target.ariaLabel)
-              }
-              map={BsAs}
-            />
-            <div
-              style={{
-                //cartel con el nombre del municipio, borde redondeado rosa , fondo azul, con sombra
-                position: "absolute",
-                bottom: 10,
-                zIndex: 1000,
+          <ComponenteMapaWeb></ComponenteMapaWeb>
+        </Section>
+      </div>
 
-                backgroundColor: "#1cafc2",
-                borderRadius: "10px",
-                padding: "10px",
-                boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
+      <div className="d-block d-sm-none" style={{minHeight:"105vw"}}>
+        <ComponenteMapaWobile></ComponenteMapaWobile>
+      </div>
 
-                border: "2px solid #ec1482",
-              }}
-            >
-              <h5
-                style={{ margin: "0px" }}
-                className={styles.centroTitleStrong}
-              >
-                {selectedLocation}
-              </h5>
-              <h5 style={{ margin: "0px" }} className={styles.centroTitle}>
-                UNIVERSIDADES
-              </h5>
-              <h5
-                style={{ margin: "0px" }}
-                className={styles.centroTitleStrong}
-              >
-                CARRERAS
-              </h5>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-
-      <Section id="Oferta" background={BackgroundOferta}>
-
+      <Section id="Oferta"customStyles={{maxHeight:"100vw",minHeight:"105vw"}} background={BackgroundOferta}>
         <MUC></MUC>
       </Section>
-
 
       <Section
         id="Galeria"
@@ -519,7 +405,6 @@ export default function Home() {
             alignItems: "center",
             justifyContent: "center",
             minWidth: "100%",
-        
           }}
         >
           <div
@@ -529,7 +414,8 @@ export default function Home() {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              minWidth: "100vw",
+
+              backgroundColor: "#1cafc2",
             }}
             data-mc-src="e8f096f6-d988-48df-862d-b4a663484442#instagram"
           ></div>

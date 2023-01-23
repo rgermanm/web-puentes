@@ -4,10 +4,10 @@ import logoBsAs from './../public/Assets/logos/gob_prov.png'
 import logoBsAsInverse from './../public/Assets/logos/gob_prov_inverse.png'
 
 
-export default function Section({ background, gradientCode, id,children }) {
+export default function Section({ background, gradientCode, id,children,customStyles }) {
     return (
         <div id =  {id}
-        className="sectionContainer" style={{ background: gradientCode ? gradientCode.background : "" }}>
+        className="sectionContainer" style={{...{ background: gradientCode ? gradientCode.background : "" },...customStyles}}>
             <div className="section" style={background?{
                 backgroundImage: `url("${background.src}")`,
                 backgroundPosition: 'center',

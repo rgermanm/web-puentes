@@ -331,6 +331,11 @@ a {
   fill: #E90084;
   outline: 0;
 }
+.svg-map__location_colored {
+  fill: #E90084;
+  outline: 0;
+
+}
 
 .svg-map__location[aria-checked=true] {
   fill: #E90084;
