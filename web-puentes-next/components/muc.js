@@ -173,7 +173,13 @@ export default function MUC() {
   };
   const MUCMobile = () => {
     return (
-      <div className="d-block d-sm-none">
+      <div className="d-block d-sm-none"
+      style={
+      {
+        minHeight: "130vh",
+
+      }
+      }>
         <div
           style={{
             minWidth: "100vw",

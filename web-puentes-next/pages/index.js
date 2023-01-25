@@ -21,6 +21,7 @@ import Ball from "../public/Assets/ball.png";
 import Ballr from "../public/Assets/ballr.png";
 import ilustracionesPrograma from "../public/Assets/Ilustraciones2.svg";
 import galeria from "../public/Assets/FotoProvisoria-Galeria-01.jpg";
+import { usePathname } from "next/navigation";
 
 import mapaPBA from "../public/Assets/MapaPBA.svg";
 import logosUni from "../public/Assets/LogosUniversidades.svg";
@@ -166,6 +167,10 @@ export default function Home() {
   }
   ,[])*/
 
+  const pathname = usePathname();
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, [pathname]);
   return (
     <div className={styles.container}>
       <Head>
@@ -390,19 +395,12 @@ export default function Home() {
       </div>
 
       <div className="d-none d-sm-block">
-        <Section
-          id="Programa"
-          background={BackgroundPrograma}
-          gradientCode={gradientCodes.programa}
-          name="Programa"
-        >
-          <Section id="Oferta" background={BackgroundOferta}>
-            <MUC></MUC>
-          </Section>
-        </Section>
+      <Section id="Oferta"customStyles={{maxHeight:"100vw",}} background={BackgroundOferta}>
+        <MUC></MUC>
+      </Section>
       </div>
 
-      <div className="d-block d-sm-none" style={{ minHeight: "105vw" }}>
+      <div className="d-block d-sm-none" >
         <Section
           id="Oferta"
           customStyles={{ maxHeight: "100vw", minHeight: "105vw" }}
