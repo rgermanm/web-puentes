@@ -56,9 +56,10 @@ import NavbarMobile from "../components/navbarMobile";
 import SocialFooterIcons from "../components/SocialFooterIcons";
 import ComponenteMapaWeb from "../components/ComponenteMapaWeb";
 import ComponenteMapaWobile from "../components/ComponenteMapaWobile";
+import { scroller } from "react-scroll";
 
 export default function Home() {
-  const [selectedLocation, setSelectedLocation] = useState("Municipios");
+  const [actualPath, setactualPath] = useState("");
 
   const stats = [
     {
@@ -169,7 +170,20 @@ export default function Home() {
 
   const pathname = usePathname();
   useEffect(() => {
-    window.scroll(0, 0);
+ 
+
+    if (window.location.hash) {
+      let localtiontoScroll = window.location.hash.replace("#", "")
+
+      window.location.hash = "";
+      scroller.scrollTo(localtiontoScroll, {
+        duration: 1500,
+        delay: 100,
+        smooth: true,
+        containerId: localtiontoScroll,
+      });
+    }
+
   }, [pathname]);
   return (
     <div className={styles.container}>
@@ -395,12 +409,16 @@ export default function Home() {
       </div>
 
       <div className="d-none d-sm-block">
-      <Section id="Oferta"customStyles={{maxHeight:"100vw",}} background={BackgroundOferta}>
-        <MUC></MUC>
-      </Section>
+        <Section
+          id="Oferta"
+          customStyles={{ maxHeight: "100vw" }}
+          background={BackgroundOferta}
+        >
+          <MUC></MUC>
+        </Section>
       </div>
 
-      <div className="d-block d-sm-none" >
+      <div className="d-block d-sm-none">
         <Section
           id="Oferta"
           customStyles={{ maxHeight: "100vw", minHeight: "105vw" }}

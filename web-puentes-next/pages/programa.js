@@ -20,8 +20,17 @@ import mapaPBA from "../public/Assets/MapaPBA.svg";
 import logosUni from "../public/Assets/LogosUniversidades.svg";
 import MUC from "../components/muc";
 import NavbarMobile from "../components/navbarMobile";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
+
+
+  const pathname = usePathname();
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, [pathname]);
+
   return (
     <div className={styles.container}>
       <Head>

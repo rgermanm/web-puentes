@@ -22,6 +22,8 @@ import MUC from "../components/muc";
 
 import Accordion from "react-bootstrap/Accordion";
 import NavbarMobile from "../components/navbarMobile";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 let acoList =[
   {
     title: "El programa",
@@ -74,6 +76,12 @@ let acoList =[
   },
 ]
 export default function Home() {
+
+  const pathname = usePathname();
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, [pathname]);
+
   return (
     <div className={styles.container}>
       <Head>

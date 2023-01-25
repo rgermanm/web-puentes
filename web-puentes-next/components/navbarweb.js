@@ -21,6 +21,7 @@ export default function NavbarWeb() {
             setBgColor("white")
         }
     })*/
+
     return (
         <nav className="navbar navbar-expand-lg d-none d-lg-flex">
             
@@ -36,14 +37,14 @@ export default function NavbarWeb() {
                     <Link className="nav-item nav-link" href="/programa" legacyBehavior passHref scroll={false}  >
                         <LinkScroll className="nav-item nav-link" spy={true} smooth={false} duration={100}> EL PROGRAMA</LinkScroll>
                     </Link>
-                    <Link className="nav-item nav-link" href="" legacyBehavior passHref scroll={false} >
+                    <Link className="nav-item nav-link" href="/#Programa" legacyBehavior passHref scroll={false} >
                         <LinkScroll className="nav-item nav-link" to="Programa" spy={true} smooth={false} duration={100} >  OFERTA ACADEMICA </LinkScroll>
 
                     </Link>
                     <Link  className="nav-item nav-link " href="/preguntas-frecuentes" legacyBehavior passHref scroll={false}  >
                         <LinkScroll className="nav-item nav-link"  spy={true} smooth={false} duration={100} >PREGUNTAS FRECUENTES</LinkScroll>
                     </Link>
-                    <Link className="nav-item nav-link " href="" legacyBehavior passHref scroll={false}>
+                    <Link className="nav-item nav-link " href="/#Galeria" legacyBehavior passHref scroll={false}>
                         <LinkScroll className="nav-item nav-link" to="Galeria" spy={true} smooth={false} duration={100} >  GALERIA </LinkScroll>
                     </Link>
                 </div>
