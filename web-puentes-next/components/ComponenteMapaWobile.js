@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import BsAs from "./BSASFinalNamed";
 import fondoImage from "../public/Assets/fondo.png";
 import Image from "next/image";
+import DropDownMapaMobile from "./DropDownMapaMobile";
 export default function ComponenteMapaWobile() {
   return (
     <div
@@ -37,26 +38,8 @@ export default function ComponenteMapaWobile() {
           Red de Centros Universitarios{" "}
           <span className={styles.centroTitleStrong}>PUENTES</span>
         </h7>
-        <h7
-          className={styles.centroTitle}
-          style={{
-            width: "90%",
-            textAlign: "center",
-            fontSize: 11,
-            marginTop: 10,
-            padding: 5,
-            color: "#EC1382",
-            backgroundColor: "#fff",
-          }}
-        >
-          SELECCIONAR MUNICIPIO CON{" "}
-          <span
-            className={styles.centroTitleStrong}
-            style={{ color: "#EC1382" }}
-          >
-            PROGRAMA PUENTES
-          </span>
-        </h7>
+        {/* */}
+
       </div>
 
       <Image
@@ -82,6 +65,18 @@ export default function ComponenteMapaWobile() {
       >
         <MapaMobile></MapaMobile>
       </div>
+
+      <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+
+            }}
+          >
+            <DropDownMapaMobile></DropDownMapaMobile>
+          
+          </div>
     </div>
   );
 }
@@ -99,7 +94,7 @@ const MapaMobile = () => {
     "TAPALQUE",
     "SALLIQUELO",
     "LAPRIDA",
-    "ADOLFO GONZALES CHAVES"
+    "ADOLFO GONZALES CHAVES",
   ]);
 
   return (
@@ -112,6 +107,7 @@ const MapaMobile = () => {
         width: "86vw",
         height: "86vw",
         flexDirection: "column",
+        
       }}
     >
       <div
