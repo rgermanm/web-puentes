@@ -121,7 +121,10 @@ export default function MUC() {
 
   const MUCWeb = () => {
     return (
-      <div className="d-none d-sm-block">
+      <div
+        className="d-none d-sm-block"
+        style={{ minHeight: "130vh", maxWidth: "90vw" }}
+      >
         <div style={{ paddingTop: 40 }}>
           <div className="row">
             {muc.map((o, i) => (
@@ -191,12 +194,63 @@ export default function MUC() {
               zIndex: 1,
               width: "100%",
               flexDirection: "column",
-              paddingTop: 10,
             }}
           >
+            <h4 className="title-oferta-academica">Oferta Académica</h4>
+            <div
+              className="row"
+              style={{
+                top: 0,
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "65%",
+              }}
+            >
+              <div className="col-12" style={{}}>
+                <div
+                  className="muc-button"
+                  style={{
+                    backgroundColor: "#1facbe",
+                    borderColor: "#1facbe",
+                    minHeight: 30,
+                  }}
+                >
+                  <p style={{ color: "white" }}>Carreras</p>
+                  
+                </div>
+              </div>
+              <div className="col-12" style={{ marginTop: 20 }}>
+                <div
+                  className="muc-button"
+                  style={{
+                    backgroundColor: "white",
+                    borderColor: "#e94f7d",
+                    minHeight: 30,
+                  }}
+                >
+                  <p style={{ color: "#e94f7d" }}>Universidades</p>
+                </div>
+
+                <div className="col-12" style={{ marginTop: 20 }}>
+                  <div
+                    className="muc-button"
+                    style={{
+                      backgroundColor: "white",
+                      borderColor: "#1facbe",
+                      minHeight: 30,
+                    }}
+                  >
+                    <p style={{ color: "#1facbe" }}>Municipios</p>
+              
+
+                
 
 
-
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <Image
             style={{ width: "100%", position: "absolute" }}
@@ -208,7 +262,13 @@ export default function MUC() {
     );
   };
   return (
-    <div >
+    <div
+      style={{
+        justifyContent: "center",
+        alignItems: "center",
+        display: "flex",
+      }}
+    >
       <MUCWeb></MUCWeb>
       <MUCMobile></MUCMobile>
     </div>

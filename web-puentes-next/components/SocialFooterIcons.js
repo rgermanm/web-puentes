@@ -12,7 +12,7 @@ export default function SocialFooterIcons() {
         style={{ cursor: "pointer" }}
         onClick={() =>
           window.open(
-            "https://www.instagram.com/consejouniversitariopba/",
+            "https://www.youtube.com/@BAProvincia",
             "_blank"
           )
         }
@@ -27,7 +27,7 @@ export default function SocialFooterIcons() {
         style={{ cursor: "pointer" }}
         onClick={() =>
           window.open(
-            "https://www.instagram.com/consejouniversitariopba/",
+            "https://www.facebook.com/profile.php?id=100064229674627",
             "_blank"
           )
         }
@@ -58,7 +58,7 @@ export default function SocialFooterIcons() {
         style={{ cursor: "pointer" }}
         onClick={() =>
           window.open(
-            "https://www.instagram.com/consejouniversitariopba/",
+            "https://twitter.com/ConsejoUniPBA",
             "_blank"
           )
         }

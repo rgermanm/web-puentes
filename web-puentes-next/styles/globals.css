@@ -160,12 +160,24 @@ a {
   color: #1facbe
 }
 
+.title-oferta-academica {
+  font-family: 'EncodeSans-Bold';
+  font-size: 22px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 20%;
+
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  
+  color: #ed1581;
+}
 
 .muc-item-name {
   color: #ed1581;
   margin: 0px;
   margin-right: 10px;
-  font-size: 15px;
+  font-size: 17px;
   cursor: pointer
 }
 
