@@ -440,21 +440,15 @@ export default function Home() {
             alignItems: "center",
             justifyContent: "center",
             minWidth: "100%",
+            position:"relative"
           }}
         >
           <div
             className="instapost"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-
-              backgroundColor: "#1cafc2",
-            }}
+    
             data-mc-src="e8f096f6-d988-48df-862d-b4a663484442#instagram"
           ></div>
-        </div>
+         </div>
       </Section>
       <Section id="Universidades" gradientCode={gradientCodes.universidades}>
         <div className={"uni-section-container"}>

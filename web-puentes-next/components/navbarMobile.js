@@ -135,7 +135,7 @@ const HambuerguerItems = ({ isOpen, setOpen }) => {
                         </li>
                         <li className="mo" onClick={() => setOpen(false)}>
 
-                            <LinkScroll onClick={() => setOpen(false)} className=" men underline-menu-orange" to="Galeria" spy={true} smooth={false} duration={100} >  GALERIA </LinkScroll>
+                            <LinkScroll onClick={() => setOpen(false)}  style={{color:"white"}}className=" men underline-menu-orange" to="Galeria" spy={true} smooth={false} duration={100} >  GALERIA </LinkScroll>
 
                         </li>
                     </ul>
