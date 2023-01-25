@@ -4,6 +4,9 @@ import carreras from "./data/carreras.json";
 import universidades from "./data/universidades.json";
 import fondoImage from "../public/Assets/whitebg.png";
 import Image from "next/image";
+import DropDownCarMobile from "./DropDownCarMobile";
+import DropDownUniMobile from "./DropDownUniMobile";
+import DropDownMuniMobile from "./DropDownMuniMobile";
 export default function MUC() {
   const [muc, setMuc] = useState([
     {
@@ -173,13 +176,12 @@ export default function MUC() {
   };
   const MUCMobile = () => {
     return (
-      <div className="d-block d-sm-none"
-      style={
-      {
-        minHeight: "130vh",
-
-      }
-      }>
+      <div
+        className="d-block d-sm-none"
+        style={{
+          minHeight: "130vh",
+        }}
+      >
         <div
           style={{
             minWidth: "100vw",
@@ -213,30 +215,14 @@ export default function MUC() {
                 width: "65%",
               }}
             >
-              <div className="col-12" style={{}}>
-                <div
-                  className="muc-button"
-                  style={{
-                    backgroundColor: "#1facbe",
-                    borderColor: "#1facbe",
-                    minHeight: 30,
-                  }}
-                >
-                  <p style={{ color: "white" }}>Carreras</p>
-                  
-                </div>
-              </div>
-              <div className="col-12" style={{ marginTop: 20 }}>
-                <div
-                  className="muc-button"
-                  style={{
-                    backgroundColor: "white",
-                    borderColor: "#e94f7d",
-                    minHeight: 30,
-                  }}
-                >
-                  <p style={{ color: "#e94f7d" }}>Universidades</p>
-                </div>
+              <DropDownCarMobile></DropDownCarMobile>
+              <DropDownUniMobile></DropDownUniMobile>
+              <DropDownMuniMobile></DropDownMuniMobile>
+
+
+
+{/*             
+            
 
                 <div className="col-12" style={{ marginTop: 20 }}>
                   <div
@@ -248,14 +234,12 @@ export default function MUC() {
                     }}
                   >
                     <p style={{ color: "#1facbe" }}>Municipios</p>
-              
-
-                
-
-
                   </div>
                 </div>
-              </div>
+              </div> */}
+
+
+
             </div>
           </div>
           <Image
