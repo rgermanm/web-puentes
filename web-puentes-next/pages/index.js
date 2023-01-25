@@ -385,13 +385,32 @@ export default function Home() {
         </Section>
       </div>
 
-      <div className="d-block d-sm-none" style={{minHeight:"105vw"}}>
+      <div className="d-block d-sm-none" style={{ minHeight: "105vw" }}>
         <ComponenteMapaWobile></ComponenteMapaWobile>
       </div>
 
-      <Section id="Oferta"customStyles={{maxHeight:"100vw",minHeight:"105vw"}} background={BackgroundOferta}>
-        <MUC></MUC>
-      </Section>
+      <div className="d-none d-sm-block">
+        <Section
+          id="Programa"
+          background={BackgroundPrograma}
+          gradientCode={gradientCodes.programa}
+          name="Programa"
+        >
+          <Section id="Oferta" background={BackgroundOferta}>
+            <MUC></MUC>
+          </Section>
+        </Section>
+      </div>
+
+      <div className="d-block d-sm-none" style={{ minHeight: "105vw" }}>
+        <Section
+          id="Oferta"
+          customStyles={{ maxHeight: "100vw", minHeight: "105vw" }}
+          background={BackgroundOferta}
+        >
+          <MUC></MUC>
+        </Section>
+      </div>
 
       <Section
         id="Galeria"
