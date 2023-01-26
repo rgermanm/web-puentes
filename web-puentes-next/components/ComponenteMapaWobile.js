@@ -134,7 +134,7 @@ const MapaMobile = ({selLoc}) => {
            // onLocationMouseOver={(e) => setSelectedLocation(e.target.ariaLabel)}
             map={BsAs}
             locationClassName={(item) => {
-              if (selLoc == item.name){
+              if (quitarAcentos(selLoc) == item.name){
                 return "svg-map__location_colored";
               }
               return "svg-map__location";
@@ -145,3 +145,8 @@ const MapaMobile = ({selLoc}) => {
     </div>
   );
 };
+
+function quitarAcentos(cadena){
+	const acentos = {'á':'a','é':'e','í':'i','ó':'o','ú':'u','Á':'A','É':'E','Í':'I','Ó':'O','Ú':'U'};
+	return cadena.split('').map( letra => acentos[letra] || letra).join('').toString();	
+}

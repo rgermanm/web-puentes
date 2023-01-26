@@ -9,7 +9,7 @@ import Dropdown from "./DropDown";
 import ArrowDown from "../public/Assets/ad.png";
 import Image from "next/image";
 export default function ComponenteMapaWeb({}) {
-  const [selectedLocation, setSelectedLocation] = useState([]);
+  const [selectedLocation, setSelectedLocation] = useState("");
   const [RealSelectedId, setRealSelectedId] = useState("");
 
   const onChange = (e) => {
@@ -87,7 +87,7 @@ export default function ComponenteMapaWeb({}) {
           // onLocationMouseOver={(e) => setSelectedLocation(e.target.ariaLabel)}
           map={BsAs}
           locationClassName={(item) => {
-            if (selectedLocation.includes(item.name)) {
+            if (quitarAcentos(selectedLocation) == item.name){
               return "svg-map__location_colored";
             }
             return "svg-map__location";
@@ -136,4 +136,9 @@ export default function ComponenteMapaWeb({}) {
       </div>
     </div>
   );
+}
+
+function quitarAcentos(cadena=""){
+	const acentos = {'á':'a','é':'e','í':'i','ó':'o','ú':'u','Á':'A','É':'E','Í':'I','Ó':'O','Ú':'U'};
+	return cadena.split('').map( letra => acentos[letra] || letra).join('').toString();	
 }
