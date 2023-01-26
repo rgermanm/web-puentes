@@ -170,10 +170,8 @@ export default function Home() {
 
   const pathname = usePathname();
   useEffect(() => {
- 
-
     if (window.location.hash) {
-      let localtiontoScroll = window.location.hash.replace("#", "")
+      let localtiontoScroll = window.location.hash.replace("#", "");
 
       window.location.hash = "";
       scroller.scrollTo(localtiontoScroll, {
@@ -183,7 +181,6 @@ export default function Home() {
         containerId: localtiontoScroll,
       });
     }
-
   }, [pathname]);
   return (
     <div className={styles.container}>
@@ -440,16 +437,14 @@ export default function Home() {
             alignItems: "center",
             justifyContent: "center",
             minWidth: "100%",
-            position:"relative",
-            
+            position: "relative",
           }}
         >
           <div
             className="instapost"
             data-mc-src="e8f096f6-d988-48df-862d-b4a663484442#instagram"
-    
           ></div>
-         </div>
+        </div>
       </Section>
       <Section id="Universidades" gradientCode={gradientCodes.universidades}>
         <div className={"uni-section-container"}>
