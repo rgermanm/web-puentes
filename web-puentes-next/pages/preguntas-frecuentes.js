@@ -189,7 +189,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Web Puentes</title>
+        <title>
+          Puentes | Programa de integración territorial universitaria{" "}
+        </title>
         <meta
           name="description"
           content="Programa de integración territorial universitaria."
