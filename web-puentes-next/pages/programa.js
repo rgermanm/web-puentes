@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import NavbarWeb from "../components/navbarweb";
-import Section from "../components/section";
+import {Section} from "../components/section";
 import BackgroundBanner from "../public/Assets/Banner-SeccionElPrograma.jpg";
 import BackgroundSeccion from "../public/Assets/Background- SeccionPreguntasFrecuentes.png";
 import FotoBanner from "../public/Assets/FotoBanner.jpg";
@@ -230,7 +230,7 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section id="Footer" gradientCode={gradientCodes.footer}>
+        <Section id="Footer" gradientCode={"footer"}>
           <div style={{ height: "100vh", display: "flex" }}>
             <Image
               style={{

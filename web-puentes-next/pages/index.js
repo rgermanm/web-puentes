@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Section from "../components/section";
+import {Section} from "../components/section";
 import BackgroundBanner from "../public/Assets/BackgroundBanner.png";
 import FotoBannerMobile from "../public/Assets/mobilebg.png";
 import FotoBanner from "../public/Assets/FotoBanner.jpg";
@@ -398,7 +398,7 @@ export default function Home() {
         <Section
           id="Programa"
           background={BackgroundPrograma}
-          gradientCode={gradientCodes.programa}
+          gradientCode={"programa"}
           name="Programa"
         >
           <ComponenteMapaWeb></ComponenteMapaWeb>
@@ -450,7 +450,7 @@ export default function Home() {
           ></div>
         </div>
       </SectionGaleria>
-      <Section id="Universidades"  gradientCode={gradientCodes.universidades}>
+      <Section id="Universidades"  gradientCode={"universidades"}>
         <div className={"uni-section-container"}>
           <div className="row" style={{ justifyContent: "center" }}>
             {UnivImages.map((m) => (
@@ -461,7 +461,7 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section id="Footer" gradientCode={gradientCodes.footer} >
+      <Section id="Footer" gradientCode={"universidades"} >
         <div
           style={{
             height: "100vh",
