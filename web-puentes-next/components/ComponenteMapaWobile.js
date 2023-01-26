@@ -2,22 +2,21 @@ import React, { useState } from "react";
 import { SVGMap } from "react-svg-map";
 import styles from "../styles/Home.module.css";
 import municipios from "./data/municipios.json";
+import carreras from "./data/carreras.json";
 
 import BsAs from "./BSASFinalNamed";
 import fondoImage from "../public/Assets/fondo.png";
 import Image from "next/image";
 import DropDownMapaMobile from "./DropDownMapaMobile";
 export default function ComponenteMapaWobile() {
-const [selectedLocation, setSelectedLocation] = useState("");
-const [RealSelectedId, setRealSelectedId] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const [RealSelectedId, setRealSelectedId] = useState("");
   const onChange = (e) => {
     setSelectedLocation(e.toUpperCase());
     console.log(e);
     setRealSelectedId(municipios.find((municipio) => municipio.name == e));
     console.log(municipios.find((municipio) => municipio.name == e));
   };
-
-
 
   return (
     <div
@@ -51,7 +50,6 @@ const [RealSelectedId, setRealSelectedId] = useState("");
           <span className={styles.centroTitleStrong}>PUENTES</span>
         </h7>
         {/* */}
-
       </div>
 
       <Image
@@ -70,33 +68,74 @@ const [RealSelectedId, setRealSelectedId] = useState("");
           flexDirection: "column",
           position: "absolute",
           backgroundColor: "#fff",
-          bottom: -40,
+          bottom: -10,
           borderRadius: 9999,
           right: 30,
         }}
       >
-        <MapaMobile RealSelectedId={RealSelectedId} selLoc={selectedLocation}></MapaMobile>
+        <MapaMobile
+          RealSelectedId={RealSelectedId}
+          selLoc={selectedLocation}
+        ></MapaMobile>
       </div>
 
       <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+        }}
+      >
+        <DropDownMapaMobile onChange={onChange}></DropDownMapaMobile>
+      </div>
 
-            }}
-          >
-            <DropDownMapaMobile onChange={onChange}></DropDownMapaMobile>
-          
-          </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          width: "93vw",
+          position: "absolute",
+          top: "100vw",
+          backgroundColor: "#1facbe",
+          borderRadius: 10,
+          paddingBottom: 8,
+          paddingTop: 8,
+          zIndex: 1,
+          minHeight: 50,
+          //BORDER ROSA
+          border: "3px solid #ec1382",
+          " box-shadow": "10px 10px 55px 0px rgba(0,0,0,0.3)",
+          "-webkit-box-shadow": "10px 10px 55px 0px rgba(0,0,0,0.3)",
+          "-moz-box-shadow": "10px 10px 55px 0px rgba(0,0,0,0.3)",
+        }}
+      >
+        <h7
+          className={styles.centroTitleStrong}
+          style={{ width: "100%", textAlign: "center", color: "white" }}
+        >
+          {RealSelectedId?.name}
+        </h7>
+        <h7
+          className={styles.centroTitle}
+          style={{ width: "100%", textAlign: "center" }}
+        >
+          {RealSelectedId?.carreras?.map((e) => {
+            return (
+              <p style={{ textAlign: "center",fontSize:12 }} className={styles.centroTitle}>
+                {"-" + carreras.find((car) => car.id == e).name}
+              </p>
+            );
+          })}
+        </h7>
+      </div>
     </div>
   );
 }
-const MapaMobile = ({selLoc}) => {
-  if(selLoc != ""){
-
+const MapaMobile = ({ selLoc }) => {
+  if (selLoc != "") {
   }
-
 
   return (
     <div
@@ -108,7 +147,6 @@ const MapaMobile = ({selLoc}) => {
         width: "86vw",
         height: "86vw",
         flexDirection: "column",
-        
       }}
     >
       <div
@@ -131,10 +169,10 @@ const MapaMobile = ({selLoc}) => {
           }}
         >
           <SVGMap
-           // onLocationMouseOver={(e) => setSelectedLocation(e.target.ariaLabel)}
+            // onLocationMouseOver={(e) => setSelectedLocation(e.target.ariaLabel)}
             map={BsAs}
             locationClassName={(item) => {
-              if (quitarAcentos(selLoc) == item.name){
+              if (quitarAcentos(selLoc) == item.name) {
                 return "svg-map__location_colored";
               }
               return "svg-map__location";
@@ -146,7 +184,22 @@ const MapaMobile = ({selLoc}) => {
   );
 };
 
-function quitarAcentos(cadena){
-	const acentos = {'á':'a','é':'e','í':'i','ó':'o','ú':'u','Á':'A','É':'E','Í':'I','Ó':'O','Ú':'U'};
-	return cadena.split('').map( letra => acentos[letra] || letra).join('').toString();	
+function quitarAcentos(cadena) {
+  const acentos = {
+    á: "a",
+    é: "e",
+    í: "i",
+    ó: "o",
+    ú: "u",
+    Á: "A",
+    É: "E",
+    Í: "I",
+    Ó: "O",
+    Ú: "U",
+  };
+  return cadena
+    .split("")
+    .map((letra) => acentos[letra] || letra)
+    .join("")
+    .toString();
 }

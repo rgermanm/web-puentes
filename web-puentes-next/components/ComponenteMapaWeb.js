@@ -56,7 +56,7 @@ export default function ComponenteMapaWeb({}) {
               marginTop: "80px",
             }}
           >
-            <Dropdown onChange={onChange}></Dropdown>
+            <Dropdown setActiveDropdown onChange={onChange}></Dropdown>
           </div>
         </div>
         <div
@@ -66,11 +66,7 @@ export default function ComponenteMapaWeb({}) {
             alignItems: "center",
             marginTop: "80px",
           }}
-        >
-          {/*<div style={{ display: "flex", alignItems: "center", height: "40px", minWidth: "200px", paddingLeft: "80px", paddingRight: "80px", paddingTop: "auto", paddingBottom: "auto", backgroundColor: "#1cafc2", cursor: "pointer", borderRadius: "14px", marginRight: "10px" }}>
-          <h6 style={{ margin: "0px" }} className={styles.centroTitleStrong}> MÁS INFO</h6>
-</div>*/}
-        </div>
+        ></div>
       </div>
       <div
         style={{
@@ -84,16 +80,26 @@ export default function ComponenteMapaWeb({}) {
         }}
       >
         <SVGMap
-          // onLocationMouseOver={(e) => setSelectedLocation(e.target.ariaLabel)}
+          onLocationMouseOver={(e) => {
+            setSelectedLocation(e.target.ariaLabel);
+
+            setRealSelectedId(
+              municipios.find(
+                (municipio) =>
+                  municipio.name.toLowerCase() ==
+                  quitarAcentos(e.target.ariaLabel).toLowerCase()
+              )
+            );
+          }}
           map={BsAs}
           locationClassName={(item) => {
-            if (quitarAcentos(selectedLocation) == item.name){
+            if (quitarAcentos(selectedLocation) == item.name) {
               return "svg-map__location_colored";
             }
             return "svg-map__location";
           }}
         />
-        {
+        {selectedLocation ? (
           <div
             style={{
               //cartel con el nombre del municipio, borde redondeado rosa , fondo azul, con sombra
@@ -132,13 +138,28 @@ export default function ComponenteMapaWeb({}) {
               CARRERAS
             </h5> */}
           </div>
-        }
+        ) : null}
       </div>
     </div>
   );
 }
 
-function quitarAcentos(cadena=""){
-	const acentos = {'á':'a','é':'e','í':'i','ó':'o','ú':'u','Á':'A','É':'E','Í':'I','Ó':'O','Ú':'U'};
-	return cadena.split('').map( letra => acentos[letra] || letra).join('').toString();	
+function quitarAcentos(cadena = "") {
+  const acentos = {
+    á: "a",
+    é: "e",
+    í: "i",
+    ó: "o",
+    ú: "u",
+    Á: "A",
+    É: "E",
+    Í: "I",
+    Ó: "O",
+    Ú: "U",
+  };
+  return cadena
+    .split("")
+    .map((letra) => acentos[letra] || letra)
+    .join("")
+    .toString();
 }

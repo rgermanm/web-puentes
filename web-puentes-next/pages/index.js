@@ -7,7 +7,9 @@ import FotoBannerMobile from "../public/Assets/mobilebg.png";
 import FotoBanner from "../public/Assets/FotoBanner.jpg";
 import FotoProv from "../public/Assets/prov.png";
 import FotoProvWhite from "../public/Assets/provWhite.png";
-import FotoDer from "../public/Assets/derecho.png";
+import FotoDer from "../public/Assets/derecho1.png";
+import FotoLogoDer from "../public/Assets/derechoalfuturo.png";
+
 import BackgroundOferta from "../public/Assets/Background-OfertaAcademica-01.png";
 import BackgroundPrograma from "../public/Assets/Background-ElPrograma1-01.png";
 import BackgroundPrograma2 from "../public/Assets/background-estadisticas.png";
@@ -264,6 +266,7 @@ export default function Home() {
             }}
           >
             <Image style={{ height: "100%", width: "100%" }} src={FotoDer} />
+            {/* <Image style={{ height: "100%", width: "100%" }} src={FotoLogoDer} /> */}
           </div>
         </div>
       </div>
@@ -401,7 +404,7 @@ export default function Home() {
         </Section>
       </div>
 
-      <div className="d-block d-sm-none" style={{ minHeight: "105vw" }}>
+      <div className="d-block d-sm-none" style={{ minHeight: "113vw" }}>
         <ComponenteMapaWobile></ComponenteMapaWobile>
       </div>
 

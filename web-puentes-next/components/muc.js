@@ -128,47 +128,60 @@ export default function MUC() {
         className="d-none d-sm-block"
         style={{ minHeight: "130vh", maxWidth: "90vw" }}
       >
-        <div style={{ paddingTop: 40 }}>
-          <div className="row">
-            {muc.map((o, i) => (
-              <div
-                onClick={() => {
-                  setSelected(i);
-                  setListItemSelected(-1);
-                }}
-                style={{
-                  backgroundColor: selected == i ? o.selectedBgColor : "white",
-                  borderColor: o.selectedBgColor,
-                }}
-                className="muc-button col-2"
-              >
-                <p
-                  style={{ color: selected == i ? "white" : o.selectedBgColor }}
+        <div
+          style={{
+            justifyContent: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <div style={{ paddingTop: 40, width: "74vw" }}>
+            <div className="row">
+              {muc.map((o, i) => (
+                <div
+                  onClick={() => {
+                    setSelected(i);
+                    setListItemSelected(-1);
+                  }}
+                  style={{
+                    backgroundColor:
+                      selected == i ? o.selectedBgColor : "white",
+                    borderColor: o.selectedBgColor,
+                    minHeight: 35,
+                  }}
+                  className="muc-button col-2"
                 >
-                  {o.label}
-                </p>
-              </div>
-            ))}
+                  <p
+                    style={{
+                      color: selected == i ? "white" : o.selectedBgColor,
+                    }}
+                  >
+                    {o.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="muc-list">
-          <div className="row">
-            {muc[selected].data.map((m, index) => (
-              <div
-                onClick={() => setListItemSelected(m.id)}
-                className={`muc-item col-${muc[selected].cols}`}
-              >
-                <p
-                  style={{ color: listItemSelected == m.id ? "#1facbe" : "" }}
-                  className="muc-item-name"
+          <div className="muc-list">
+            <div className="row">
+              {muc[selected].data.map((m, index) => (
+                <div
+                  onClick={() => setListItemSelected(m.id)}
+                  className={`muc-item col-${muc[selected].cols}`}
                 >
-                  {m.name}
-                </p>
-                {listItemSelected == m.id && (
-                  <div style={{ marginTop: "10px" }}>{getInnerList()}</div>
-                )}
-              </div>
-            ))}
+                  <p
+                    style={{ color: listItemSelected == m.id ? "#1facbe" : "" }}
+                    className="muc-item-name"
+                  >
+                    {m.name}
+                  </p>
+                  {listItemSelected == m.id && (
+                    <div style={{ marginTop: "10px" }}>{getInnerList()}</div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -219,9 +232,7 @@ export default function MUC() {
               <DropDownUniMobile></DropDownUniMobile>
               <DropDownMuniMobile></DropDownMuniMobile>
 
-
-
-{/*             
+              {/*             
             
 
                 <div className="col-12" style={{ marginTop: 20 }}>
@@ -237,9 +248,6 @@ export default function MUC() {
                   </div>
                 </div>
               </div> */}
-
-
-
             </div>
           </div>
           <Image
@@ -257,6 +265,7 @@ export default function MUC() {
         justifyContent: "center",
         alignItems: "center",
         display: "flex",
+        width: "100%",
       }}
     >
       <MUCWeb></MUCWeb>
