@@ -44,27 +44,58 @@ class DropDownMapaMobile extends React.Component {
             display: "flex",
           }}
         >
-          <h7
-            className={styles.centroTitle}
-            style={{
-              width: "90%",
-              textAlign: "center",
-              fontSize: 11,
+          {this.state.haveText == "" && (
+            <div>
+              <h7
+                className={styles.centroTitle}
+                style={{
+                  width: "90%",
+                  textAlign: "center",
+                  fontSize: 11,
 
-              padding: 5,
-              color: "#EC1382",
-              backgroundColor: "#fff",
-            }}
-          >
-            SELECCIONAR MUNICIPIO CON{" "}
-            <span
-              className={styles.centroTitleStrong}
-              style={{ color: "#EC1382" }}
-            >
-              PROGRAMA PUENTES
-            </span>
-          </h7>
-          <Image src={ArrowDown} alt="arrow" width={20} height={20} />
+               
+                  color: "#EC1382",
+                  backgroundColor: "#fff",
+                }}
+              >
+                SELECCIONAR MUNICIPIO CON{" "}
+                <span
+                  className={styles.centroTitleStrong}
+                  style={{ color: "#EC1382" }}
+                >
+                  PROGRAMA PUENTES
+                </span>
+              </h7>
+              <Image src={ArrowDown} alt="arrow" width={20} height={20} />
+            </div>
+          )}
+
+          {this.state.haveText != "" && (
+            <div>
+              <div>
+                <h7
+                  className={styles.centroTitle}
+                  style={{
+                    width: "90%",
+                    textAlign: "center",
+                    fontSize: 11,
+
+               
+                    color: "#EC1382",
+                    backgroundColor: "#fff",
+                  }}
+                >
+                  <span
+                    className={styles.centroTitleStrong}
+                    style={{ color: "#EC1382" }}
+                  >
+                    {this.state.haveText}
+                  </span>
+                </h7>
+                <Image src={ArrowDown} alt="arrow" width={20} height={20} />
+              </div>
+            </div>
+          )}
         </div>
 
         {this.itemList(municipios)}
@@ -82,6 +113,8 @@ class DropDownMapaMobile extends React.Component {
     this.setState({
       haveText: ev.currentTarget.textContent,
     });
+    this.props.onChange(ev.currentTarget.textContent)
+
   };
 
   itemList = (props) => {
@@ -90,7 +123,7 @@ class DropDownMapaMobile extends React.Component {
         onClick={this.handleText}
         className="dropdown__item"
         key={item.name.toString()}
-        style={{color:"#EC1382"}}
+        style={{ color: "#EC1382" }}
       >
         {item.name}
       </div>

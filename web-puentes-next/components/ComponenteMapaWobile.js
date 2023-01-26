@@ -1,12 +1,24 @@
 import React, { useState } from "react";
 import { SVGMap } from "react-svg-map";
 import styles from "../styles/Home.module.css";
+import municipios from "./data/municipios.json";
 
 import BsAs from "./BSASFinalNamed";
 import fondoImage from "../public/Assets/fondo.png";
 import Image from "next/image";
 import DropDownMapaMobile from "./DropDownMapaMobile";
 export default function ComponenteMapaWobile() {
+const [selectedLocation, setSelectedLocation] = useState("");
+const [RealSelectedId, setRealSelectedId] = useState("");
+  const onChange = (e) => {
+    setSelectedLocation(e.toUpperCase());
+    console.log(e);
+    setRealSelectedId(municipios.find((municipio) => municipio.name == e));
+    console.log(municipios.find((municipio) => municipio.name == e));
+  };
+
+
+
   return (
     <div
       style={{
@@ -63,7 +75,7 @@ export default function ComponenteMapaWobile() {
           right: 30,
         }}
       >
-        <MapaMobile></MapaMobile>
+        <MapaMobile RealSelectedId={RealSelectedId} selLoc={selectedLocation}></MapaMobile>
       </div>
 
       <div
@@ -74,28 +86,17 @@ export default function ComponenteMapaWobile() {
 
             }}
           >
-            <DropDownMapaMobile></DropDownMapaMobile>
+            <DropDownMapaMobile onChange={onChange}></DropDownMapaMobile>
           
           </div>
     </div>
   );
 }
-const MapaMobile = () => {
-  const [selectedLocation, setSelectedLocation] = useState([
-    "PATAGONIA",
-    "CABA",
-    "AZUL",
-    "JUNIN",
-    "PINAMAR",
-    "CARMEN DE ARECO",
-    "LAS FLORES",
-    "ALMIRANTE BROWN",
-    "GENERAL LA MADRID",
-    "TAPALQUE",
-    "SALLIQUELO",
-    "LAPRIDA",
-    "ADOLFO GONZALES CHAVES",
-  ]);
+const MapaMobile = ({selLoc}) => {
+  if(selLoc != ""){
+
+  }
+
 
   return (
     <div
@@ -130,10 +131,10 @@ const MapaMobile = () => {
           }}
         >
           <SVGMap
-            onLocationMouseOver={(e) => setSelectedLocation(e.target.ariaLabel)}
+           // onLocationMouseOver={(e) => setSelectedLocation(e.target.ariaLabel)}
             map={BsAs}
             locationClassName={(item) => {
-              if (selectedLocation.includes(item.name)) {
+              if (selLoc == item.name){
                 return "svg-map__location_colored";
               }
               return "svg-map__location";
