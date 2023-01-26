@@ -312,7 +312,7 @@ export default function Home() {
                 cursor: "pointer",
               }}
               onClick={() => {
-                window.location.href = "/municipios";
+                window.location.href = "/programa";
               }}
             >
               <h3
@@ -381,7 +381,7 @@ export default function Home() {
                 cursor: "pointer",
               }}
               onClick={() => {
-                window.location.href = "/municipios";
+                window.location.href = "/programa";
               }}
             >
               <h3

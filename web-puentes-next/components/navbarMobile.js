@@ -31,7 +31,7 @@ const NavbarMobile = () => {
                     className={"nav-black-mobile"}
                     style={{ maxHeight: 97, zIndex: 9999 }}
                 >
-                    <Image className="imgmob" alt="Agencia Enero" src={coverLogo}></Image>
+                    <Image className="imgmob" alt="Agencia Enero" onClick={()=>   window.location.href = "/"} src={coverLogo}></Image>
 
                     <HambuerguerItems
                         isOpen={isOpen}
