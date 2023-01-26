@@ -59,6 +59,7 @@ import SocialFooterIcons from "../components/SocialFooterIcons";
 import ComponenteMapaWeb from "../components/ComponenteMapaWeb";
 import ComponenteMapaWobile from "../components/ComponenteMapaWobile";
 import { scroller } from "react-scroll";
+import SectionGaleria from "../components/sectionGaleria";
 
 export default function Home() {
   const [actualPath, setactualPath] = useState("");
@@ -428,10 +429,9 @@ export default function Home() {
         </Section>
       </div>
 
-      <Section
+      <SectionGaleria
         id="Galeria"
         background={BackgroundGaleria}
-        gradientCode={gradientCodes.galeria}
       >
         <div
           style={{
@@ -440,6 +440,7 @@ export default function Home() {
             alignItems: "center",
             justifyContent: "center",
             minWidth: "100%",
+            height:"400px",
             position: "relative",
           }}
         >
@@ -448,8 +449,8 @@ export default function Home() {
             data-mc-src="e8f096f6-d988-48df-862d-b4a663484442#instagram"
           ></div>
         </div>
-      </Section>
-      <Section id="Universidades" gradientCode={gradientCodes.universidades}>
+      </SectionGaleria>
+      <Section id="Universidades"  gradientCode={gradientCodes.universidades}>
         <div className={"uni-section-container"}>
           <div className="row" style={{ justifyContent: "center" }}>
             {UnivImages.map((m) => (
@@ -460,7 +461,7 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section id="Footer" gradientCode={gradientCodes.footer}>
+      <Section id="Footer" gradientCode={gradientCodes.footer} >
         <div
           style={{
             height: "100vh",
