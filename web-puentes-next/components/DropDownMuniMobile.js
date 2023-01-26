@@ -23,13 +23,15 @@ class DropDownMuniMobile extends React.Component {
 
     return (
       <div
-        className={isOpen ? "col-12 dropdown active mt-3" : "col-12 dropdown mt-3"}
+        className={
+          isOpen ? "col-12 dropdown active mt-3" : "col-12 dropdown mt-3"
+        }
         onClick={this.handleClick}
         style={{
           cursor: "pointer",
-      
+
           backgroundColor: "white",
-      
+
           width: "80%",
         }}
       >
@@ -41,19 +43,18 @@ class DropDownMuniMobile extends React.Component {
           }}
         >
           <div className="col-12" style={{}}>
-                <div
-                  className="muc-button"
-                  style={{
-                    backgroundColor: "#1facbe",
-                    borderColor: "#1facbe",
-                    minHeight: 30,
-                  }}
-                >
-                  <p style={{ color: "white" }}>Carreras</p>
-          <Image src={ArrowDown} alt="arrow" width={20} height={20} />
-
-                </div>
-              </div>
+            <div
+              className="muc-button"
+              style={{
+                backgroundColor: "white",
+                borderColor: "#1facbe",
+                minHeight: 30,
+              }}
+            >
+              <p style={{ color: "#1facbe" }}>Carreras</p>
+              <Image src={ArrowDown} alt="arrow" width={20} height={20} />
+            </div>
+          </div>
         </div>
 
         {this.itemList(municipios)}
@@ -79,7 +80,7 @@ class DropDownMuniMobile extends React.Component {
         onClick={this.handleText}
         className="dropdown__item"
         key={item.name.toString()}
-        style={{color:"#EC1382"}}
+        style={{ color: "#EC1382" }}
       >
         {item.name}
       </div>

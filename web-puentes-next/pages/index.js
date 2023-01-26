@@ -440,13 +440,14 @@ export default function Home() {
             alignItems: "center",
             justifyContent: "center",
             minWidth: "100%",
-            position:"relative"
+            position:"relative",
+            
           }}
         >
           <div
             className="instapost"
-    
             data-mc-src="e8f096f6-d988-48df-862d-b4a663484442#instagram"
+    
           ></div>
          </div>
       </Section>
