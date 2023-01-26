@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import { SVGMap } from "react-svg-map";
 import styles from "../styles/Home.module.css";
 import municipios from "./data/municipios.json";
+import carreras from "./data/carreras.json";
 
 import BsAs from "./BSASFinalNamed";
 import Dropdown from "./DropDown";
 import ArrowDown from "../public/Assets/ad.png";
 import Image from "next/image";
-export default function ComponenteMapaWeb() {
-  const [selectedLocation, setSelectedLocation] = useState("Municipios");
+export default function ComponenteMapaWeb({}) {
+  const [selectedLocation, setSelectedLocation] = useState([]);
+  const [RealSelectedId, setRealSelectedId] = useState("");
+
+  const onChange = (e) => {
+    setSelectedLocation(e.toUpperCase());
+    console.log(e);
+    setRealSelectedId(municipios.find((municipio) => municipio.name == e));
+    console.log(municipios.find((municipio) => municipio.name == e));
+  };
 
   return (
     <div
@@ -47,8 +56,7 @@ export default function ComponenteMapaWeb() {
               marginTop: "80px",
             }}
           >
-            <Dropdown></Dropdown>
-          
+            <Dropdown onChange={onChange}></Dropdown>
           </div>
         </div>
         <div
@@ -76,38 +84,55 @@ export default function ComponenteMapaWeb() {
         }}
       >
         <SVGMap
-          onLocationMouseOver={(e) => setSelectedLocation(e.target.ariaLabel)}
+          // onLocationMouseOver={(e) => setSelectedLocation(e.target.ariaLabel)}
           map={BsAs}
-        />
-        <div
-          style={{
-            //cartel con el nombre del municipio, borde redondeado rosa , fondo azul, con sombra
-            position: "absolute",
-            bottom: 10,
-            zIndex: 1000,
-
-            backgroundColor: "#1cafc2",
-            borderRadius: "10px",
-            padding: "10px",
-            boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-
-            border: "2px solid #ec1482",
+          locationClassName={(item) => {
+            if (selectedLocation.includes(item.name)) {
+              return "svg-map__location_colored";
+            }
+            return "svg-map__location";
           }}
-        >
-          <h5 style={{ margin: "0px" }} className={styles.centroTitleStrong}>
-            {selectedLocation}
-          </h5>
-          <h5 style={{ margin: "0px" }} className={styles.centroTitle}>
-            UNIVERSIDADES
-          </h5>
-          <h5 style={{ margin: "0px" }} className={styles.centroTitleStrong}>
-            CARRERAS
-          </h5>
-        </div>
+        />
+        {
+          <div
+            style={{
+              //cartel con el nombre del municipio, borde redondeado rosa , fondo azul, con sombra
+              position: "absolute",
+              bottom: 10,
+              zIndex: 1000,
+
+              backgroundColor: "#1cafc2",
+              borderRadius: "10px",
+              padding: "10px",
+              boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+
+              border: "2px solid #ec1482",
+            }}
+          >
+            <h5 style={{ margin: "0px" }} className={styles.centroTitleStrong}>
+              {selectedLocation}
+            </h5>
+
+            {RealSelectedId?.carreras?.map((e) => {
+              return (
+                <p
+                  style={{ textAlign: "center" }}
+                  className={styles.centroTitle}
+                >
+                  {"-" + carreras.find((car) => car.id == e).name}
+                </p>
+              );
+            })}
+
+            {/* <h5 style={{ margin: "0px" }} className={styles.centroTitleStrong}>
+              CARRERAS
+            </h5> */}
+          </div>
+        }
       </div>
     </div>
   );

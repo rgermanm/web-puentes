@@ -42,13 +42,13 @@ class Dropdown extends React.Component {
                 height: "50px",
                 width: "100%",
                 backgroundColor: "#ec1482",
-
+                
                 justifyContent: "center",
                 alignItems: "center",
                 display: "flex",
               }}
             >
-              <div>
+              {this.state.haveText == "" && <div >
                 <h5 className={styles.centroTitle}>
                   MUNICIPIOS
                   <span className={styles.centroTitleStrong}>
@@ -56,7 +56,16 @@ class Dropdown extends React.Component {
                     CON PROGRAMA PUENTES
                   </span>
                 </h5>
-              </div>
+              </div>}
+              {this.state.haveText != "" && <div>
+                <h5 className={styles.centroTitle}>
+              
+                  <span className={styles.centroTitleStrong} >
+                    {" "}
+                    {this.state.haveText}
+                  </span>
+                </h5>
+              </div>}
               <Image src={ArrowDown} alt="arrow" width={20} height={20} />
             </div>
 
@@ -76,6 +85,7 @@ class Dropdown extends React.Component {
     this.setState({
       haveText: ev.currentTarget.textContent
     })
+    this.props.onChange(ev.currentTarget.textContent)
   }
 
   itemList = props => {
