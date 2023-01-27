@@ -74,6 +74,8 @@ export default function ComponenteMapaWobile() {
         }}
       >
         <MapaMobile
+          setSelectedLocation={setSelectedLocation}
+          setRealSelectedId={setRealSelectedId}
           RealSelectedId={RealSelectedId}
           selLoc={selectedLocation}
         ></MapaMobile>
@@ -89,51 +91,56 @@ export default function ComponenteMapaWobile() {
         <DropDownMapaMobile onChange={onChange}></DropDownMapaMobile>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "flex-start",
-          width: "93vw",
-          position: "absolute",
-          top: "100vw",
-          backgroundColor: "#1facbe",
-          borderRadius: 10,
-          paddingBottom: 8,
-          paddingTop: 8,
-          zIndex: 1,
-          minHeight: 50,
-          //BORDER ROSA
-          border: "3px solid #ec1382",
-          " box-shadow": "10px 10px 55px 0px rgba(0,0,0,0.3)",
-          "-webkit-box-shadow": "10px 10px 55px 0px rgba(0,0,0,0.3)",
-          "-moz-box-shadow": "10px 10px 55px 0px rgba(0,0,0,0.3)",
-        }}
-      >
-        <h7
-          className={styles.centroTitleStrong}
-          style={{ width: "100%", textAlign: "center", color: "white" }}
+      {true && (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "flex-start",
+            width: "93vw",
+            position: "absolute",
+            top: "100vw",
+            backgroundColor: "#1facbe",
+            borderRadius: 10,
+            paddingBottom: 8,
+            paddingTop: 8,
+            zIndex: 1,
+            minHeight: 50,
+            //BORDER ROSA
+            border: "3px solid #ec1382",
+            " box-shadow": "10px 10px 55px 0px rgba(0,0,0,0.3)",
+            "-webkit-box-shadow": "10px 10px 55px 0px rgba(0,0,0,0.3)",
+            "-moz-box-shadow": "10px 10px 55px 0px rgba(0,0,0,0.3)",
+          }}
         >
-          {RealSelectedId?.name}
-        </h7>
-        <h7
-          className={styles.centroTitle}
-          style={{ width: "100%", textAlign: "center" }}
-        >
-          {RealSelectedId?.carreras?.map((e) => {
-            return (
-              <p style={{ textAlign: "center",fontSize:12 }} className={styles.centroTitle}>
-                {"-" + carreras.find((car) => car.id == e).name}
-              </p>
-            );
-          })}
-        </h7>
-      </div>
+          <h7
+            className={styles.centroTitleStrong}
+            style={{ width: "100%", textAlign: "center", color: "white" }}
+          >
+            {RealSelectedId?.name || selectedLocation || "Seleccione un municipio"}
+          </h7>
+          <h7
+            className={styles.centroTitle}
+            style={{ width: "100%", textAlign: "center" }}
+          >
+            {RealSelectedId?.carreras?.map((e) => {
+              return (
+                <p
+                  style={{ textAlign: "center", fontSize: 12 }}
+                  className={styles.centroTitle}
+                >
+                  {"-" + carreras.find((car) => car.id == e).name}
+                </p>
+              );
+            })}
+          </h7>
+        </div>
+      )}
     </div>
   );
 }
-const MapaMobile = ({ selLoc }) => {
+const MapaMobile = ({ selLoc, setSelectedLocation, setRealSelectedId }) => {
   if (selLoc != "") {
   }
 
@@ -169,7 +176,16 @@ const MapaMobile = ({ selLoc }) => {
           }}
         >
           <SVGMap
-            // onLocationMouseOver={(e) => setSelectedLocation(e.target.ariaLabel)}
+            onLocationClick={(e) => {
+              setSelectedLocation(e.target.ariaLabel);
+              setRealSelectedId(
+                municipios.find(
+                  (municipio) =>
+                    municipio.name.toLowerCase() ==
+                    quitarAcentos(e.target.ariaLabel).toLowerCase()
+                )
+              );
+            }}
             map={BsAs}
             locationClassName={(item) => {
               if (quitarAcentos(selLoc) == item.name) {
