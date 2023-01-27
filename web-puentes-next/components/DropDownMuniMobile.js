@@ -86,7 +86,7 @@ class DropDownMuniMobile extends React.Component {
       </div>
     ));
 
-    return <div className="dropdown__items"> {list} </div>;
+    return <div className="dropdown__items"style={{fontSize:13}}> {list} </div>;
   };
 }
 
