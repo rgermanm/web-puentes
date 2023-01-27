@@ -268,7 +268,7 @@ export default function Home() {
                                     padding: 0,
                                     margin: 0,
                                     color: "#52ABBF",
-                                    fontFamily: "EncodeSans-Bold",
+                                    fontFamily: "EncodeSans",
                                   }}
                                 >
                                   {acorData.title}
