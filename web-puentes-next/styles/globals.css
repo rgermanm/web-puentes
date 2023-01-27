@@ -95,10 +95,10 @@ a {
   height: fit-content;
 }
 
-.sectionContainer {
-  min-height: 100vh;
+.sectionGaleria{
+
   width: 100vw;
-  height: fit-content;
+  height: fit-content
 }
 
 .nav-item:hover {
@@ -312,6 +312,7 @@ a {
 
 .instapost article {
   min-width: 45vw;
+  height: 400px;
 }
 
 .inner-bold {
@@ -629,4 +630,32 @@ height: auto;
 .dropdown__item:hover {
 color: white;
  background: #3a4143;
+}
+
+@media (min-width:900px) {
+.sectionGaleriaContainer{
+  width: 100vw;
+  height: 100vh
+}
+
+}
+
+@media (max-width:900px) {
+  .sectionGaleriaContainer{
+    width: 100vw;
+    height: 40vh
+  }
+
+  }
+
+
+#Programa {
+  background: linear-gradient(76deg, rgba(255,115,54,1) 0%, rgba(255,32,210,1) 100%)
+}
+
+#Universidades {
+  background: linear-gradient(40deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%)
+}
+#Footer{
+  background:  linear-gradient(40deg, rgba(220,25,138,1) 0%, rgba(0,172,192,1) 100%)
 }
