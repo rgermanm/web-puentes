@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import ArrowDown from "../public/Assets/ad.png";
+import ArrowDown from "../public/Assets/ad-rosa.png";
 
 import styles from "../styles/Home.module.css";
-import municipios from "./data/municipios.json";
+import municipios from "./data/universidades.json";
 
 const race = [];
 

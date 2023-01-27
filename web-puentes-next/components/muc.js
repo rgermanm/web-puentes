@@ -188,6 +188,7 @@ export default function MUC() {
     );
   };
   const MUCMobile = () => {
+    const [Active,setActive] = useState(0)
     return (
       <div
         className="d-block d-sm-none"
@@ -225,13 +226,21 @@ export default function MUC() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                width: "65%",
+                width: "85%",
               }}
             >
+              <div onClick={()=>setActive(Active==1?0:1)}> 
               <DropDownCarMobile></DropDownCarMobile>
-              <DropDownUniMobile></DropDownUniMobile>
-              <DropDownMuniMobile></DropDownMuniMobile>
+              </div>
+              <div onClick={()=>setActive(Active==2?0:2)}>  
 
+            {Active != 1 && <DropDownUniMobile></DropDownUniMobile> }
+              </div>
+              <div onClick={()=>setActive(Active==3?0:3)}>  
+
+              {Active != 1 && Active != 2  && <DropDownMuniMobile></DropDownMuniMobile>}
+              </div>
+              
               {/*             
             
 

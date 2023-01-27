@@ -558,6 +558,12 @@ ul .mo {
 
 }
 
+
+
+
+
+
+
 .dropdown__text {
  color: black;
  padding: 10px 16px;
@@ -644,6 +650,9 @@ color: white;
   .sectionGaleriaContainer{
     width: 100vw;
     height: 40vh
+  }
+  .dropdown{
+    min-width: 60vw
   }
 
   }
