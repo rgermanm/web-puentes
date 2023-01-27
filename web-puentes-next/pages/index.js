@@ -461,7 +461,7 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      <Section id="Footer" gradientCode={"universidades"} >
+      <Section id="Footer" gradientCode={"footer"} >
         <div
           style={{
             height: "100vh",
