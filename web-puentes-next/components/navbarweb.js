@@ -39,8 +39,9 @@ export default function NavbarWeb() {
                   style={{
                     left: 0,
                     width: 130,
+                    height:90,
                     position: "absolute",
-                    top: "-38vh",
+                    top: -20,
                   }}
                 ></Image>
               </Link>
