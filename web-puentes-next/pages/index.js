@@ -442,6 +442,7 @@ export default function Home() {
             minWidth: "100%",
             height:"400px",
             position: "relative",
+            zIndex:9999
           }}
         >
           <div
