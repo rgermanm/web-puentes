@@ -8,6 +8,8 @@ import FotoBanner from "../public/Assets/FotoBanner.jpg";
 import FotoProv from "../public/Assets/prov.png";
 import FotoProvWhite from "../public/Assets/provWhite.png";
 import FotoDer from "../public/Assets/derecho1.png";
+import FotoProvMob from "../public/Assets/provMob.png";
+
 import FotoLogoDer from "../public/Assets/derechoalfuturo.png";
 
 import BackgroundOferta from "../public/Assets/Background-OfertaAcademica-01.png";
@@ -244,9 +246,13 @@ export default function Home() {
               width: "100%",
               bottom: "0%",
               zIndex: 999,
+            
             }}
           >
-            <Image style={{ height: "100%", width: "100%" }} src={FotoProv} />
+            {/* <Image style={{ height: "100%", width: "80%" ,right:0}} src={FotoDer} /> */}
+
+            <Image style={{ height: "100%", width: "100%" }} src={FotoProvMob} />
+            
           </div>
           <Image className={styles.backgroundBanner} src={BackgroundBanner} />
           <div className="d-none d-sm-block ">
