@@ -447,7 +447,22 @@ export default function Home() {
           <div
             className="instapost"
             data-mc-src="e8f096f6-d988-48df-862d-b4a663484442#instagram"
-          ></div>
+          > 
+          <div
+          className="cover-instagram"
+          style={{
+            backgroundColor: "white",
+            position: "absolute",
+           
+            width: "100%",
+          
+            zIndex:999
+          }}
+        ></div>
+        </div>
+      
+         
+
         </div>
       </SectionGaleria>
       <Section id="Universidades"  gradientCode={"universidades"}>

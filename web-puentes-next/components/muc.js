@@ -187,7 +187,7 @@ export default function MUC() {
                     style={{ color: listItemSelected == m.id ? "#1facbe" : "" }}
                     className="muc-item-name"
                   >
-                    {m.name}
+                    {m.spanishName?m.spanishName:m.name}
                   </p>
                   {listItemSelected == m.id && (
                     <div style={{ marginTop: "10px" }}>{getInnerList() == "" ? getInnerPlacerHolder() : getInnerList()}</div>

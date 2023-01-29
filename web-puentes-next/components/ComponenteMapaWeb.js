@@ -13,7 +13,7 @@ export default function ComponenteMapaWeb({}) {
   const [RealSelectedId, setRealSelectedId] = useState("");
 
   const onChange = (e) => {
-    setSelectedLocation(e.toUpperCase());
+    setSelectedLocation(findRealName(e.toUpperCase(),municipios));
     console.log(e);
     setRealSelectedId(municipios.find((municipio) => municipio.name == e));
     console.log(municipios.find((municipio) => municipio.name == e));
@@ -88,9 +88,9 @@ export default function ComponenteMapaWeb({}) {
                 (municipio) =>
                   municipio.name.toLowerCase() ==
                   quitarAcentos(e.target.ariaLabel).toLowerCase()
-              )?.carreras?.length > 0
+              )
             ) {
-              setSelectedLocation(e.target.ariaLabel);
+              setSelectedLocation(findRealName(e.target.ariaLabel,municipios));
 
               setRealSelectedId(
                 municipios.find(
@@ -188,4 +188,11 @@ function quitarAcentos(cadena = "") {
     .map((letra) => acentos[letra] || letra)
     .join("")
     .toString();
+}
+
+
+const findRealName = (name, list) => {
+  const realName = list.find((e) =>{console.log(e.name,name); return e.name.toLowerCase() == name.toLowerCase()});
+  
+  return realName ? realName.spanishName : name;
 }
