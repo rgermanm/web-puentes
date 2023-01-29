@@ -308,7 +308,7 @@ a {
 
 .svg-map__location {
   fill: #01aec3;
-  cursor: pointer;
+  
 }
 
 .svg-map__location:focus,
