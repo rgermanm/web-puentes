@@ -12,7 +12,7 @@ export default function ComponenteMapaWobile() {
   const [selectedLocation, setSelectedLocation] = useState("");
   const [RealSelectedId, setRealSelectedId] = useState("");
   const onChange = (e) => {
-    setSelectedLocation(e.toUpperCase());
+    setSelectedLocation(findRealName(e.toUpperCase(),municipios));
     console.log(e);
     setRealSelectedId(municipios.find((municipio) => municipio.name == e));
     console.log(municipios.find((municipio) => municipio.name == e));
@@ -176,20 +176,45 @@ const MapaMobile = ({ selLoc, setSelectedLocation, setRealSelectedId }) => {
           }}
         >
           <SVGMap
-            onLocationClick={(e) => {
-              setSelectedLocation(e.target.ariaLabel);
-              setRealSelectedId(
+             onLocationClick={(e) => {
+              if (
                 municipios.find(
                   (municipio) =>
                     municipio.name.toLowerCase() ==
                     quitarAcentos(e.target.ariaLabel).toLowerCase()
                 )
-              );
+              ) {
+                setSelectedLocation(findRealName(e.target.ariaLabel,municipios));
+  
+                setRealSelectedId(
+                  municipios.find(
+                    (municipio) =>
+                      municipio.name.toLowerCase() ==
+                      quitarAcentos(e.target.ariaLabel).toLowerCase()
+                  )
+                );
+              }
             }}
+            
             map={BsAs}
             locationClassName={(item) => {
-              if (quitarAcentos(selLoc) == item.name) {
-                return "svg-map__location_colored";
+              //check if item.name is inside the municipios array
+  
+              if (
+                municipios.find(
+                  (municipio) =>
+                    quitarAcentos(municipio.name.toLowerCase()) ==
+                    quitarAcentos(item.name.toLowerCase())
+                )
+              ) {
+                if (
+                  quitarAcentos(selLoc.toLowerCase()) ==
+                  quitarAcentos(item.name.toLowerCase())
+                ) {
+                  return "svg-map__location_colored";
+                }
+  
+                return "svg-map__location_colored_first";
               }
               return "svg-map__location";
             }}
@@ -218,4 +243,10 @@ function quitarAcentos(cadena) {
     .map((letra) => acentos[letra] || letra)
     .join("")
     .toString();
+}
+
+const findRealName = (name, list) => {
+  const realName = list.find((e) =>{console.log(e.name,name); return e.name.toLowerCase() == name.toLowerCase()});
+  
+  return realName ? realName.spanishName : name;
 }

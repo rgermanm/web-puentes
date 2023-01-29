@@ -247,11 +247,11 @@ export default function MUC() {
               </div>
               <div onClick={() => setActive(Active == 2 ? 0 : 2)}>
 
-                {Active != 1 && <DropDownUniMobile></DropDownUniMobile>}
+                <DropDownUniMobile></DropDownUniMobile>
               </div>
               <div onClick={() => setActive(Active == 3 ? 0 : 3)}>
 
-                {Active != 1 && Active != 2 && <DropDownMuniMobile></DropDownMuniMobile>}
+                 <DropDownMuniMobile></DropDownMuniMobile>
               </div>
 
               {/*             

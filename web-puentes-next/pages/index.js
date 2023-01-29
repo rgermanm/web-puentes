@@ -454,7 +454,7 @@ export default function Home() {
             backgroundColor: "white",
             position: "absolute",
            
-            width: "100%",
+            width: "80%",
           
             zIndex:999
           }}

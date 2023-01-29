@@ -765,8 +765,8 @@ a {
 }
 @media (max-width: 390px) {
   .cover-instagram {
-    height: 15vw;
-    top: 90vw;
+    height: 20vw;
+    top: 86vw;
   }
 }
 @media (max-width: 360px) {
