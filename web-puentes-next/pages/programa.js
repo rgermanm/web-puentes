@@ -25,6 +25,9 @@ import { useEffect } from "react";
 
 export default function Home() {
   const pathname = usePathname();
+  const getSpace=()=>{
+    return ' '
+  }
   useEffect(() => {
     window.scroll(0, 0);
   }, [pathname]);
@@ -138,7 +141,7 @@ export default function Home() {
                 </span>{" "}
                 La oferta académica abarca
                 <span style={{ fontFamily: "EncodeSans-Bold" }}></span>
-                diplomaturas, tecnicaturas y licenciaturas, con modalidad
+                <span>{`${getSpace()}`}</span>diplomaturas, tecnicaturas y licenciaturas, con modalidad
                 presencial, semipresencial y virtual. Además se promueve la
                 creación de centros universitarios locales, con aporte de fondos
                 para la construcción y/o refacción de estos espacios educativos
@@ -220,7 +223,7 @@ export default function Home() {
                 </span>{" "}
                 La oferta académica abarca
                 <span style={{ fontFamily: "EncodeSans-Bold" }}></span>
-                diplomaturas, tecnicaturas y licenciaturas, con modalidad
+                <span>{`${getSpace()}`}</span>diplomaturas, tecnicaturas y licenciaturas, con modalidad
                 presencial, semipresencial y virtual. Además se promueve la
                 creación de centros universitarios locales, con aporte de fondos
                 para la construcción y/o refacción de estos espacios educativos
