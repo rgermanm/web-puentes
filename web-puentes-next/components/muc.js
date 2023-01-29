@@ -13,7 +13,7 @@ export default function MUC() {
       label: "MUNICIPIOS",
       selectedBgColor: "#1facbe",
       selected: true,
-      data: municipios,
+      data: chunk_inefficient(12,municipios),
 
       cols: "4",
     },
@@ -21,14 +21,14 @@ export default function MUC() {
       label: "UNIVERSIDADES",
       selectedBgColor: "#ed1581",
       selected: false,
-      data: universidades,
+      data: chunk_inefficient(6,universidades),
       cols: "6",
     },
     {
       label: "CARRERAS",
       selectedBgColor: "#1facbe",
       selected: false,
-      data: carreras,
+      data: chunk_inefficient(16,carreras),
       cols: "6",
     },
   ]);
@@ -176,12 +176,17 @@ export default function MUC() {
               ))}
             </div>
           </div>
-          <div className="muc-list">
+          <div className="muc-list" style={{width:"100%"}}>
             <div className="row">
               {muc[selected].data.map((m, index) => (
                 <div
+             
+                  className={`col-${muc[selected].cols}`}
+                >
+                  {m.map((m, index) =>
+                 <div
                   onClick={() => setListItemSelected(m.id)}
-                  className={`muc-item col-${muc[selected].cols}`}
+                  className={`muc-item col-12`}
                 >
                   <p
                     style={{ color: listItemSelected == m.id ? "#1facbe" : "" }}
@@ -192,6 +197,7 @@ export default function MUC() {
                   {listItemSelected == m.id && (
                     <div style={{ marginTop: "10px" }}>{getInnerList() == "" ? getInnerPlacerHolder() : getInnerList()}</div>
                   )}
+                </div>)}
                 </div>
               ))}
             </div>
@@ -293,5 +299,14 @@ export default function MUC() {
       <MUCWeb></MUCWeb>
       <MUCMobile></MUCMobile>
     </div>
+  );
+}
+
+function chunk_inefficient(chunkSize,array) {
+
+  return [].concat.apply([],
+    array.map(function(elem, i) {
+      return i % chunkSize ? [] : [array.slice(i, i + chunkSize)];
+    })
   );
 }
