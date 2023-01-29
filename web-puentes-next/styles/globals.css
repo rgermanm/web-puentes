@@ -397,6 +397,7 @@ a {
 
 .imgmob {
   width: 140px;
+  max-height: 97px;
   margin: 0;
   position: absolute;
   top: 50%;

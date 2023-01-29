@@ -43,8 +43,8 @@ export default function ComponenteMapaWeb({}) {
         }}
       >
         <div>
-          <h3 className={styles.centroTitle}>RED DE CENTROS</h3>
-          <h3 className={styles.centroTitle}>
+          <h3 className={styles.centroTitle} style={{color:"white"}}>RED DE CENTROS</h3>
+          <h3 className={styles.centroTitle} style={{color:"white"}}>
             UNIVERSITARIOS{" "}
             <strong className={styles.centroTitleStrong}>PUENTES</strong>
           </h3>

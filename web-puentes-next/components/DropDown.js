@@ -49,7 +49,7 @@ class Dropdown extends React.Component {
               }}
             >
               {this.state.haveText == "" && <div >
-                <h5 className={styles.centroTitle}>
+                <h5 className={styles.centroTitle} style={{color:"white"}}>
                   MUNICIPIOS
                   <span className={styles.centroTitleStrong}>
                     {" "}

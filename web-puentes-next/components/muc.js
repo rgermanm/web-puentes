@@ -36,6 +36,19 @@ export default function MUC() {
   const [selected, setSelected] = useState(0);
   const [listItemSelected, setListItemSelected] = useState(-1);
 
+  const getInnerPlacerHolder = () => {
+    switch (selected) {
+      case 0:
+        return <p className="list-item-inner"><strong className="inner-bold">Oferta académica aún no definida.</strong></p>
+        break;
+      case 1:
+        return <p className="list-item-inner"><strong className="inner-bold">Oferta académica aún no definida.</strong></p>
+        break;
+      case 2:
+        return <p className="list-item-inner"><strong className="inner-bold">Oferta académica aún no definida.</strong></p>
+    }
+  }
+
   const getInnerList = () => {
     switch (selected) {
       case 0:
@@ -177,7 +190,7 @@ export default function MUC() {
                     {m.name}
                   </p>
                   {listItemSelected == m.id && (
-                    <div style={{ marginTop: "10px" }}>{getInnerList()}</div>
+                    <div style={{ marginTop: "10px" }}>{getInnerList() == "" ? getInnerPlacerHolder() : getInnerList()}</div>
                   )}
                 </div>
               ))}
@@ -188,7 +201,7 @@ export default function MUC() {
     );
   };
   const MUCMobile = () => {
-    const [Active,setActive] = useState(0)
+    const [Active, setActive] = useState(0)
     return (
       <div
         className="d-block d-sm-none"
@@ -229,18 +242,18 @@ export default function MUC() {
                 width: "85%",
               }}
             >
-              <div onClick={()=>setActive(Active==1?0:1)}> 
-              <DropDownCarMobile></DropDownCarMobile>
+              <div onClick={() => setActive(Active == 1 ? 0 : 1)}>
+                <DropDownCarMobile></DropDownCarMobile>
               </div>
-              <div onClick={()=>setActive(Active==2?0:2)}>  
+              <div onClick={() => setActive(Active == 2 ? 0 : 2)}>
 
-            {Active != 1 && <DropDownUniMobile></DropDownUniMobile> }
+                {Active != 1 && <DropDownUniMobile></DropDownUniMobile>}
               </div>
-              <div onClick={()=>setActive(Active==3?0:3)}>  
+              <div onClick={() => setActive(Active == 3 ? 0 : 3)}>
 
-              {Active != 1 && Active != 2  && <DropDownMuniMobile></DropDownMuniMobile>}
+                {Active != 1 && Active != 2 && <DropDownMuniMobile></DropDownMuniMobile>}
               </div>
-              
+
               {/*             
             
 

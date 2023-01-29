@@ -44,7 +44,7 @@ export default function ComponenteMapaWobile() {
       >
         <h7
           className={styles.centroTitle}
-          style={{ width: "100%", textAlign: "center" }}
+          style={{ width: "100%", textAlign: "center",color:"white" }}
         >
           Red de Centros Universitarios{" "}
           <span className={styles.centroTitleStrong}>PUENTES</span>

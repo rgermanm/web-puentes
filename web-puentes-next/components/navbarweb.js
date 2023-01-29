@@ -14,7 +14,7 @@ export default function NavbarWeb() {
       window.addEventListener("scroll", () => {
         let y = 1 + (window.scrollY || window.pageYOffset) / 150;
         y = y < 1 ? 1 : y; // ensure y is always >= 1 (due to Safari's elastic scroll)
-        console.log(y);
+
         if (y > 5) {
           setcanShowIcon(true);
         } else {
@@ -90,7 +90,7 @@ export default function NavbarWeb() {
               duration={100}
             >
               {" "}
-              OFERTA ACADEMICA{" "}
+              MAPA{" "}
             </LinkScroll>
           </Link>
           <Link

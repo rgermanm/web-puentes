@@ -4,21 +4,10 @@ import styles from "../styles/Home.module.css";
 import NavbarWeb from "../components/navbarweb";
 import {Section} from "../components/section";
 import BackgroundBanner from "../public/Assets/Banner-SeccionPreguntasFrecuentes.jpg";
-import FotoBanner from "../public/Assets/FotoBanner.jpg";
-import BackgroundOferta from "../public/Assets/Background-OfertaAcademica-01.png";
-import BackgroundPrograma from "../public/Assets/Background-ElPrograma1-01.png";
-import BackgroundPrograma2 from "../public/Assets/Background-ElPrograma2-01.png";
-import BackgroundGaleria from "../public/Assets/Background-Galeria-01.png";
 import LogoPuentes from "../public/Assets/logos/LogoPuentes.svg";
-import gradientCodes from "../public/gradientCodes.json";
 import BackgroundSeccion from "../public/Assets/Background- SeccionPreguntasFrecuentes.png";
 
-import ilustracionesPrograma from "../public/Assets/Ilustraciones2.svg";
-import galeria from "../public/Assets/FotoProvisoria-Galeria-01.jpg";
 
-import mapaPBA from "../public/Assets/MapaPBA.svg";
-import logosUni from "../public/Assets/LogosUniversidades.svg";
-import MUC from "../components/muc";
 
 import Accordion from "react-bootstrap/Accordion";
 import NavbarMobile from "../components/navbarMobile";
@@ -180,7 +169,7 @@ let acoList = [
     ]
   },
 ];
-export default function Home() {
+export default function PreguntasFrecuentes() {
   const pathname = usePathname();
   useEffect(() => {
     window.scroll(0, 0);

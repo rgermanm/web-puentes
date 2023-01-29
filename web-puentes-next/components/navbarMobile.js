@@ -31,7 +31,7 @@ const NavbarMobile = () => {
                     className={"nav-black-mobile"}
                     style={{ maxHeight: 97, zIndex: 9999 }}
                 >
-                    <Image className="imgmob" alt="Agencia Enero" onClick={()=>   window.location.href = "/"} src={coverLogo}></Image>
+                    <Image className="imgmob" alt="Puentes" onClick={()=>   window.location.href = "/"} src={coverLogo}></Image>
 
                     <HambuerguerItems
                         isOpen={isOpen}
@@ -90,8 +90,9 @@ const HambuerguerItems = ({ isOpen, setOpen }) => {
                             }}
                         >
                             <Image
-                                alt="Agencia Enero"
-                                style={{ width: 140 }}
+                                alt="Puentes"
+                                style={{ width: 140,height:97 }}
+
                                 src={coverLogo}
                             ></Image>
                             <Hamburger color="white" toggled={isOpen} toggle={setOpen} />
@@ -120,7 +121,7 @@ const HambuerguerItems = ({ isOpen, setOpen }) => {
 
                             <LinkScroll
                                 onClick={() => setOpen(false)} className=" men underline-menu-pink"
-                                style={{ color: "white" }} to="Programa" spy={true} smooth={false} duration={100}>OFERTA ACADÉMICA</LinkScroll>
+                                style={{ color: "white" }} to="Programa" spy={true} smooth={false} duration={100}>MAPA</LinkScroll>
 
 
                         </li>
