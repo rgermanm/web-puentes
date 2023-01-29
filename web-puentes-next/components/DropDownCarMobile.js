@@ -49,7 +49,7 @@ class DropDownCarMobile extends React.Component {
                 minHeight: 30,
               }}
             >
-              <p style={{ color: "white" }}>Minucipios</p>
+              <p style={{ color: "white" }}>Municipios</p>
               <Image src={ArrowDown} alt="arrow" width={20} height={20} />
             </div>
           </div>
