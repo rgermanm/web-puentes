@@ -411,7 +411,7 @@ export default function Home() {
         </Section>
       </div>
 
-      <div className="d-block d-sm-none" style={{ minHeight: "113vw" }}>
+      <div className="d-block d-sm-none"id="ProgramaMobile"name="ProgramaMobile" style={{ minHeight: "113vw" }}>
         <ComponenteMapaWobile></ComponenteMapaWobile>
       </div>
 
