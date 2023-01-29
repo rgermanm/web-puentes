@@ -43,8 +43,10 @@ export default function ComponenteMapaWeb({}) {
         }}
       >
         <div>
-          <h3 className={styles.centroTitle} style={{color:"white"}}>RED DE CENTROS</h3>
-          <h3 className={styles.centroTitle} style={{color:"white"}}>
+          <h3 className={styles.centroTitle} style={{ color: "white" }}>
+            RED DE CENTROS
+          </h3>
+          <h3 className={styles.centroTitle} style={{ color: "white" }}>
             UNIVERSITARIOS{" "}
             <strong className={styles.centroTitleStrong}>PUENTES</strong>
           </h3>
@@ -81,20 +83,43 @@ export default function ComponenteMapaWeb({}) {
       >
         <SVGMap
           onLocationMouseOver={(e) => {
-            setSelectedLocation(e.target.ariaLabel);
-
-            setRealSelectedId(
+            if (
               municipios.find(
                 (municipio) =>
                   municipio.name.toLowerCase() ==
                   quitarAcentos(e.target.ariaLabel).toLowerCase()
-              )
-            );
+              )?.carreras?.length > 0
+            ) {
+              setSelectedLocation(e.target.ariaLabel);
+
+              setRealSelectedId(
+                municipios.find(
+                  (municipio) =>
+                    municipio.name.toLowerCase() ==
+                    quitarAcentos(e.target.ariaLabel).toLowerCase()
+                )
+              );
+            }
           }}
           map={BsAs}
           locationClassName={(item) => {
-            if (quitarAcentos(selectedLocation) == item.name) {
-              return "svg-map__location_colored";
+            //check if item.name is inside the municipios array
+
+            if (
+              municipios.find(
+                (municipio) =>
+                  quitarAcentos(municipio.name.toLowerCase()) ==
+                  quitarAcentos(item.name.toLowerCase())
+              )
+            ) {
+              if (
+                quitarAcentos(selectedLocation.toLowerCase()) ==
+                quitarAcentos(item.name.toLowerCase())
+              ) {
+                return "svg-map__location_colored";
+              }
+
+              return "svg-map__location_colored_first";
             }
             return "svg-map__location";
           }}
@@ -156,6 +181,7 @@ function quitarAcentos(cadena = "") {
     Í: "I",
     Ó: "O",
     Ú: "U",
+    í: "i",
   };
   return cadena
     .split("")

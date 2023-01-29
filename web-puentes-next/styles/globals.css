@@ -341,17 +341,28 @@ a {
 
 .svg-map__location:focus,
 .svg-map__location:hover {
-  fill: #E90084;
+  /* fill: #E90084; */
   outline: 0;
 }
-.svg-map__location_colored {
-  fill: #E90084;
+
+.svg-map__location_colored_first {
+  fill: rgba(220,25,138,1);
   outline: 0;
+
+
+}
+.svg-map__location_colored {
+  fill: #FF655A !important;
+  outline: 0;
+  stroke: #FF655A;
+  stroke-width: 4;
+  z-index: 999;
 
 }
 
 .svg-map__location[aria-checked=true] {
   fill: #E90084;
+
 }
 
 

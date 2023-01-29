@@ -3,12 +3,16 @@ import Image from "next/image";
 import logoBsAs from "./../public/Assets/logos/gob_prov.png";
 import logoBsAsInverse from "./../public/Assets/logos/gob_prov_inverse.png";
 import LogoPuentes from "./../public/Assets/LogoPuentesPrograma.svg";
+import { useRouter } from 'next/router'
 
 import { Link as LinkScroll } from "react-scroll";
 import { useEffect, useState } from "react";
 
 export default function NavbarWeb() {
+  const router = useRouter()
+  console.log(router)
   const [canShowIcon, setcanShowIcon] = useState(false);
+  const [isHomeScreen, setisHomeScreen] = useState(router.pathname == "/");
   useEffect(() => {
     if (window) {
       window.addEventListener("scroll", () => {
@@ -23,6 +27,13 @@ export default function NavbarWeb() {
       });
     }
   }, []);
+useEffect(() => {
+  if (router.pathname == "/") {
+    setisHomeScreen(true);
+  } else {
+    setisHomeScreen(false);
+  }
+}, [router.pathname]);
   return (
     <nav className="navbar navbar-expand-lg d-none d-lg-flex">
       <div
@@ -77,14 +88,17 @@ export default function NavbarWeb() {
           </Link>
           <Link
             className="nav-item nav-link"
-            href="/#Programa"
+      
+            {...(!isHomeScreen ? {href:"/#Programa"} : {href:"/"})}
+
             legacyBehavior
             passHref
             scroll={false}
           >
             <LinkScroll
               className="nav-item nav-link"
-              to="Programa"
+              {...(isHomeScreen ? {to:"Programa"} : {})}
+             
               spy={true}
               smooth={false}
               duration={100}
@@ -111,14 +125,17 @@ export default function NavbarWeb() {
           </Link>
           <Link
             className="nav-item nav-link "
-            href="/#Galeria"
+
+            {...(!isHomeScreen ? {href:"/#Galeria"} : {href:"/"})}
             legacyBehavior
             passHref
             scroll={false}
           >
             <LinkScroll
               className="nav-item nav-link"
-              to="Galeria"
+             
+              {...(isHomeScreen ? {to:"Galeria"} : {})}
+
               spy={true}
               smooth={false}
               duration={100}
