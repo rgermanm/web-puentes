@@ -32,6 +32,7 @@ const NavbarMobile = () => {
             alt="Puentes"
             onClick={() => (window.location.href = "/")}
             src={coverLogo}
+            style={{ width: 140, height: 97 }}
           ></Image>
 
           <HambuerguerItems

@@ -39,13 +39,13 @@ export default function MUC() {
   const getInnerPlacerHolder = () => {
     switch (selected) {
       case 0:
-        return <p className="list-item-inner"><strong className="inner-bold">Oferta académica aún no definida.</strong></p>
+        return <p className="list-item-inner">Oferta académica aún no definida</p>
         break;
       case 1:
-        return <p className="list-item-inner"><strong className="inner-bold">Oferta académica aún no definida.</strong></p>
+        return <p className="list-item-inner">Oferta académica aún no definida</p>
         break;
       case 2:
-        return <p className="list-item-inner"><strong className="inner-bold">Oferta académica aún no definida.</strong></p>
+        return <p className="list-item-inner">Oferta académica aún no definida</p>
     }
   }
 

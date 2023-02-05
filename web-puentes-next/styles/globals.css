@@ -164,8 +164,10 @@ a {
   color: #ed1581;
   margin: 0px;
   margin-right: 10px;
-  font-size: 17px;
+  font-size: 18px;
   cursor: pointer;
+  font-family: "EncodeSans";
+  font-weight: bold;
 }
 
 .muc-container {
@@ -294,7 +296,7 @@ a {
 .list-item-inner {
   font-family: "EncodeSans";
   color: gray;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .svg-map {
@@ -322,9 +324,9 @@ a {
   outline: 0;
 }
 .svg-map__location_colored {
-  fill: #ff655a !important;
+  fill: #F08BBF !important;
   outline: 0;
-  stroke: #ff655a;
+  stroke: #F08BBF;
   stroke-width: 4;
   z-index: 999;
 }
@@ -491,9 +493,19 @@ a {
   }
 }
 
+.titleMobile{
+  font-size: 20px;
+
+}
 @media (max-width: 800px) {
+
+.titleMobile{
+  font-size: 14px;
+
+
+}
   .marginMobile {
-    margin-top: 90px;
+    margin-top: 20vw;
   }
   .pageTitle {
     color: white;
@@ -510,7 +522,7 @@ a {
   .pageTitle {
     color: white;
     position: absolute;
-    top: 120px;
+    top: 12vw;
     margin-left: 52px;
     font-family: "EncodeSans-Bold";
     text-transform: uppercase;

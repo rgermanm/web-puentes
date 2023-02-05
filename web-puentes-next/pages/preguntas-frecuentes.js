@@ -4,8 +4,11 @@ import styles from "../styles/Home.module.css";
 import NavbarWeb from "../components/navbarweb";
 import {Section} from "../components/section";
 import BackgroundBanner from "../public/Assets/Banner-SeccionPreguntasFrecuentes.jpg";
+import BackgroundBannerMOBILE from "../public/Assets/Banner-SeccionPreguntasFrecuentes.PNG";
 import LogoPuentes from "../public/Assets/logos/LogoPuentes.svg";
 import BackgroundSeccion from "../public/Assets/Background- SeccionPreguntasFrecuentes.png";
+import BackgroundSeccionMobile from "../public/Assets/Background- SeccionPreguntasFrecuentesMobile.png";
+import LogoPuentesNoBottom from "../public/Assets/LogoPuentesProgramaNoBottom.svg";
 
 
 
@@ -13,6 +16,7 @@ import Accordion from "react-bootstrap/Accordion";
 import NavbarMobile from "../components/navbarMobile";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import SocialFooterIcons from "../components/SocialFooterIcons";
 let acoList = [
   {
     title: "El programa",
@@ -195,15 +199,32 @@ export default function PreguntasFrecuentes() {
             width: "100vw",
             height: "65vw",
             position: "absolute",
-            top: "23vw",
+            top: "20vw",
           }}
+          className="d-none d-sm-block"
           src={BackgroundSeccion}
+        />
+          <Image
+          style={{
+            width: "100vw",
+            height: "65vw",
+            position: "absolute",
+            top: "20vw",
+          }}
+          className="d-block d-sm-none"
+          src={BackgroundSeccionMobile}
         />
         <Image
           style={{ width: "100vw", height: "25vw" }}
+          className="d-none d-sm-block"
           src={BackgroundBanner}
         />
-        <h1 className="pageTitle">Preguntas Frecuentes</h1>
+         <Image
+          style={{ width: "100vw", height: "25vw" }}
+          className="d-block d-sm-none"
+          src={BackgroundBannerMOBILE}
+        />
+        <h1 className="d-none d-sm-block pageTitle">Preguntas Frecuentes</h1>
 
         <Section id="Programa2">
           <div
@@ -238,8 +259,8 @@ export default function PreguntasFrecuentes() {
                         style={{
                           width: "95%",
                           paddingLeft: "1vw",
-                          marginTop: 20,
-                          marginBottom:10
+                        
+                   
                         }}
                       >
                         <Accordion>
@@ -258,7 +279,9 @@ export default function PreguntasFrecuentes() {
                                     margin: 0,
                                     color: "#52ABBF",
                                     fontFamily: "EncodeSans",
+                              
                                   }}
+                                  className="titleMobile"
                                 >
                                   {acorData.title}
                                 </h5>
@@ -277,17 +300,27 @@ export default function PreguntasFrecuentes() {
         </Section>
 
         <Section id="Footer" gradientCode={"footer"}>
-          <div style={{ height: "100vh", display: "flex" }}>
-            <Image
+          <div style={{ height: "100vh", display: "flex",justifyContent:"center",alignItems:"center" }}>
+            <div
               style={{
-                width: "auto",
-                maxWidth: "60%",
-                height: "auto",
-                margin: "auto",
-                maxHeight: "60%",
+                height: "100vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+                position: "relative",
               }}
-              src={LogoPuentes}
-            ></Image>
+            >
+              <Image
+                style={{
+                  height: "50%",
+                  maxWidth: "100%",
+                }}
+                src={LogoPuentesNoBottom}
+              ></Image>
+
+              <SocialFooterIcons></SocialFooterIcons>
+            </div>
           </div>
         </Section>
         <footer className={styles.footer}></footer>

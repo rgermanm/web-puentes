@@ -2,8 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import NavbarWeb from "../components/navbarweb";
-import {Section} from "../components/section";
+import { Section } from "../components/section";
 import BackgroundBanner from "../public/Assets/Banner-SeccionElPrograma.jpg";
+import BackgroundBannerMobile from "../public/Assets/Banner-SeccionElProgramaMobile.png";
 import BackgroundSeccion from "../public/Assets/Background- SeccionPreguntasFrecuentes.png";
 import FotoBanner from "../public/Assets/FotoBanner.jpg";
 import BackgroundOferta from "../public/Assets/Background-OfertaAcademica-01.png";
@@ -12,6 +13,7 @@ import BackgroundPrograma2 from "../public/Assets/Background-ElPrograma2-01.png"
 import BackgroundGaleria from "../public/Assets/Background-Galeria-01.png";
 import LogoPuentes from "../public/Assets/logos/LogoPuentes.svg";
 import gradientCodes from "../public/gradientCodes.json";
+import LogoPuentesNoBottom from "../public/Assets/LogoPuentesProgramaNoBottom.svg";
 
 import ilustracionesPrograma from "../public/Assets/Ilustraciones2.svg";
 import galeria from "../public/Assets/FotoProvisoria-Galeria-01.jpg";
@@ -22,12 +24,13 @@ import MUC from "../components/muc";
 import NavbarMobile from "../components/navbarMobile";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import SocialFooterIcons from "../components/SocialFooterIcons";
 
 export default function Home() {
   const pathname = usePathname();
-  const getSpace=()=>{
-    return ' '
-  }
+  const getSpace = () => {
+    return " ";
+  };
   useEffect(() => {
     window.scroll(0, 0);
   }, [pathname]);
@@ -47,30 +50,27 @@ export default function Home() {
       <NavbarWeb />
       <NavbarMobile></NavbarMobile>
       <div className="marginMobile">
-        {/* <Image
-          style={{
-            width: "100vw",
-            height: "65vw",
-            position: "absolute",
-            top: "23vw",
-          }}
-          src={BackgroundSeccion}
-        /> */}
         <Image
           style={{ width: "100vw", height: "25vw" }}
           src={BackgroundBanner}
+          className="d-none d-sm-block"
         />
-        <h1 className={"pageTitle"}>El Programa</h1>
+        <Image
+          style={{ width: "100vw", height: "25vw" }}
+          src={BackgroundBannerMobile}
+          className="d-block d-sm-none"
+        />
+        <h1 className={"pageTitle d-none d-sm-block"}>El Programa</h1>
 
         <Section id="Programa2" background={BackgroundPrograma2}>
-        <div className="muc-list d-block d-sm-none">
+          <div className="muc-list d-block d-sm-none" style={{padding:15}}>
             <div
               className=" w-100 align-items-center justify-center"
               style={{
                 justifyContent: "center",
                 alignItems: "center",
                 display: "flex",
-                
+
                 flexDirection: "column",
               }}
             >
@@ -80,10 +80,11 @@ export default function Home() {
                   margin: "0px",
                   cursor: "pointer",
                   fontFamily: "EncodeSans",
-                  fontSize: "3.3vw",
+                  fontSize: "2.8vw",
                   lineHeight: 2,
                   maxWidth: "94%",
-                  marginTop:40
+                  textAlign:"justify"
+                  
                 }}
               >
                 <span style={{ fontFamily: "EncodeSans-Bold" }}>PUENTES</span>{" "}
@@ -109,10 +110,11 @@ export default function Home() {
                   margin: "0px",
                   cursor: "pointer",
                   fontFamily: "EncodeSans",
-                  fontSize: "3.3vw",
+                  fontSize: "2.8vw",
                   lineHeight: 2,
                   maxWidth: "94%",
                   marginTop: "7vh",
+                  textAlign:"justify"
                 }}
               >
                 A través de Puentes, el gobierno provincial realiza acuerdos con
@@ -127,10 +129,11 @@ export default function Home() {
                   margin: "0px",
                   cursor: "pointer",
                   fontFamily: "EncodeSans",
-                  fontSize: "3.3vw",
+                  fontSize: "2.8vw",
                   lineHeight: 2,
                   maxWidth: "94%",
                   marginTop: "7vh",
+                  textAlign:"justify"
                 }}
               >
                 En los distritos que adhieren al programa, el Estado provincial
@@ -141,11 +144,12 @@ export default function Home() {
                 </span>{" "}
                 La oferta académica abarca
                 <span style={{ fontFamily: "EncodeSans-Bold" }}></span>
-                <span>{`${getSpace()}`}</span>diplomaturas, tecnicaturas y licenciaturas, con modalidad
-                presencial, semipresencial y virtual. Además se promueve la
-                creación de centros universitarios locales, con aporte de fondos
-                para la construcción y/o refacción de estos espacios educativos
-                o su equipamiento para la creación de aulas bimodales.
+                <span>{`${getSpace()}`}</span>diplomaturas, tecnicaturas y
+                licenciaturas, con modalidad presencial, semipresencial y
+                virtual. Además se promueve la creación de centros
+                universitarios locales, con aporte de fondos para la
+                construcción y/o refacción de estos espacios educativos o su
+                equipamiento para la creación de aulas bimodales.
               </p>
             </div>
           </div>
@@ -168,6 +172,7 @@ export default function Home() {
                   fontFamily: "EncodeSans",
                   fontSize: "1.5vw",
                   maxWidth: "65%",
+                  textAlign:"justify"
                 }}
               >
                 <span style={{ fontFamily: "EncodeSans-Bold" }}>PUENTES</span>{" "}
@@ -213,6 +218,7 @@ export default function Home() {
                   fontSize: "1.5vw",
                   maxWidth: "65%",
                   marginTop: "10vh",
+                  textAlign:"justify"
                 }}
               >
                 En los distritos que adhieren al programa, el Estado provincial
@@ -223,28 +229,40 @@ export default function Home() {
                 </span>{" "}
                 La oferta académica abarca
                 <span style={{ fontFamily: "EncodeSans-Bold" }}></span>
-                <span>{`${getSpace()}`}</span>diplomaturas, tecnicaturas y licenciaturas, con modalidad
-                presencial, semipresencial y virtual. Además se promueve la
-                creación de centros universitarios locales, con aporte de fondos
-                para la construcción y/o refacción de estos espacios educativos
-                o su equipamiento para la creación de aulas bimodales.
+                <span>{`${getSpace()}`}</span>diplomaturas, tecnicaturas y
+                licenciaturas, con modalidad presencial, semipresencial y
+                virtual. Además se promueve la creación de centros
+                universitarios locales, con aporte de fondos para la
+                construcción y/o refacción de estos espacios educativos o su
+                equipamiento para la creación de aulas bimodales.
               </p>
             </div>
           </div>
         </Section>
 
         <Section id="Footer" gradientCode={"footer"}>
-          <div style={{ height: "100vh", display: "flex" }}>
-            <Image
+        <div style={{ height: "100vh", display: "flex",justifyContent:"center",alignItems:"center" }}>
+
+            <div
               style={{
-                width: "auto",
-                maxWidth: "60%",
-                height: "auto",
-                margin: "auto",
-                maxHeight: "60%",
+                height: "100vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+                position: "relative",
               }}
-              src={LogoPuentes}
-            ></Image>
+            >
+              <Image
+                style={{
+                  height: "50%",
+                  maxWidth: "100%",
+                }}
+                src={LogoPuentesNoBottom}
+              ></Image>
+
+              <SocialFooterIcons></SocialFooterIcons>
+            </div>
           </div>
         </Section>
         <footer className={styles.footer}></footer>

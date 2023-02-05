@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import {Section} from "../components/section";
+import { Section } from "../components/section";
 import BackgroundBanner from "../public/Assets/BackgroundBanner.png";
 import FotoBannerMobile from "../public/Assets/mobilebg.png";
 import FotoBanner from "../public/Assets/FotoBanner.jpg";
@@ -244,15 +244,17 @@ export default function Home() {
             style={{
               position: "absolute",
               width: "100%",
-              bottom: "0%",
+              bottom: "10%",
               zIndex: 999,
-            
+           
             }}
           >
             {/* <Image style={{ height: "100%", width: "80%" ,right:0}} src={FotoDer} /> */}
 
-            <Image style={{ height: "100%", width: "100%" }} src={FotoProvMob} />
-            
+            <Image
+              style={{ height: "100%", width: "100%" }}
+              src={FotoProvMob}
+            />
           </div>
           <Image className={styles.backgroundBanner} src={BackgroundBanner} />
           <div className="d-none d-sm-block ">
@@ -411,7 +413,12 @@ export default function Home() {
         </Section>
       </div>
 
-      <div className="d-block d-sm-none"id="ProgramaMobile"name="ProgramaMobile" style={{ minHeight: "113vw" }}>
+      <div
+        className="d-block d-sm-none"
+        id="ProgramaMobile"
+        name="ProgramaMobile"
+        style={{ minHeight: "113vw" }}
+      >
         <ComponenteMapaWobile></ComponenteMapaWobile>
       </div>
 
@@ -435,10 +442,7 @@ export default function Home() {
         </Section>
       </div>
 
-      <SectionGaleria
-        id="Galeria"
-        background={BackgroundGaleria}
-      >
+      <SectionGaleria id="Galeria" background={BackgroundGaleria}>
         <div
           style={{
             display: "flex",
@@ -446,44 +450,49 @@ export default function Home() {
             alignItems: "center",
             justifyContent: "center",
             minWidth: "100%",
-            height:"400px",
+            height: "400px",
             position: "relative",
-            zIndex:3
+            zIndex: 3,
           }}
         >
           <div
             className="instapost"
             data-mc-src="e8f096f6-d988-48df-862d-b4a663484442#instagram"
-          > 
-          <div
-          className="cover-instagram"
-          style={{
-            backgroundColor: "white",
-            position: "absolute",
-           
-            width: "80%",
-          
-            zIndex:999
-          }}
-        ></div>
-        </div>
-      
-         
+          >
+            <div
+              className="cover-instagram"
+              style={{
+                backgroundColor: "white",
+                position: "absolute",
 
+                width: "80%",
+
+                zIndex: 999,
+              }}
+            ></div>
+          </div>
         </div>
       </SectionGaleria>
-      <Section id="Universidades"  gradientCode={"universidades"}>
+      <Section id="Universidades" gradientCode={"universidades"}>
         <div className={"uni-section-container"}>
-          <div className="row" style={{ justifyContent: "center" }}>
+          <div
+            className="row"
+            style={{ justifyContent: "center", marginTop: 30 }}
+          >
             {UnivImages.map((m) => (
               <div className="col-lg-3 col-6 uni-image-container">
-                <Image className="uni-image" src={m}></Image>
+                <Image className="uni-image d-none d-sm-block" src={m}></Image>
+                <Image
+                  className="uni-image d-block d-sm-none"
+                  style={{ width: "100%" }}
+                  src={m}
+                ></Image>
               </div>
             ))}
           </div>
         </div>
       </Section>
-      <Section id="Footer" gradientCode={"footer"} >
+      <Section id="Footer" gradientCode={"footer"}>
         <div
           style={{
             height: "100vh",
