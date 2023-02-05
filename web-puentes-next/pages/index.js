@@ -70,7 +70,7 @@ export default function Home() {
     {
       number: 36,
       image: ilustracion1,
-      label: "Municipios en Puentes",
+      label:<p>Municipios<br/> en Puentes</p> ,
       color: "#1facbe",
     },
     {
@@ -82,7 +82,7 @@ export default function Home() {
     {
       number: 60,
       image: ilustracion3,
-      label: "Ofertas academicas en 2023",
+      label: <p>Ofertas academicas<br/> en 2023</p>,
       color: "#ed1581",
     },
     {
@@ -94,13 +94,13 @@ export default function Home() {
     {
       number: 1531,
       image: ilustracion5,
-      label: "Millones de pesos en inversión",
+      label: <p>Millones<br/>de pesos en inversión</p>,
       color: "#1facbe",
     },
     {
       number: 36,
       image: ilustracion6,
-      label: "Centros universitarios en construcción, ampliación o refacción",
+      label:  <p>Centros universitarios<br/>en construcción, ampliación o refacción</p>,
       color: "#ed1581",
     },
   ];
@@ -342,7 +342,7 @@ export default function Home() {
 
       <div
         className="d-block d-sm-none"
-        style={{ position: "relative", maxHeight: "65vh", paddingTop: 15 }}
+        style={{ position: "relative", maxHeight: "65vh",minHeight:600, paddingTop: 15 }}
       >
         <Section
           style={{ maxWidth: "100%", maxHeight: "100vh" }}
