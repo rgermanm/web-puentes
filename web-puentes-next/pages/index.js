@@ -188,7 +188,7 @@ export default function Home() {
     }
   }, [pathname]);
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{overflow:"hidden"}}>
       <Head>
         <title>
           Puentes | Programa de integración territorial universitaria{" "}
