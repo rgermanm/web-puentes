@@ -91,7 +91,7 @@ export default function ComponenteMapaWobile() {
         <DropDownMapaMobile onChange={onChange}></DropDownMapaMobile>
       </div>
 
-      {true && (
+      {true && RealSelectedId?.name &&(
         <div
           style={{
             display: "flex",
@@ -118,7 +118,7 @@ export default function ComponenteMapaWobile() {
             className={styles.centroTitleStrong}
             style={{ width: "100%", textAlign: "center", color: "white" }}
           >
-            {RealSelectedId?.name || selectedLocation || "Seleccione un municipio"}
+            {RealSelectedId?.name || selectedLocation }
           </h7>
           <h7
             className={styles.centroTitle}

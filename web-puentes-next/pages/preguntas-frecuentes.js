@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 import NavbarWeb from "../components/navbarweb";
 import {Section} from "../components/section";
 import BackgroundBanner from "../public/Assets/Banner-SeccionPreguntasFrecuentes.jpg";
-import BackgroundBannerMOBILE from "../public/Assets/Banner-SeccionPreguntasFrecuentes.PNG";
+import BackgroundBannerMOBILE from "../public/Assets/Banner-SeccionPreguntasFrecuentes.png";
 import LogoPuentes from "../public/Assets/logos/LogoPuentes.svg";
 import BackgroundSeccion from "../public/Assets/Background- SeccionPreguntasFrecuentes.png";
 import BackgroundSeccionMobile from "../public/Assets/Background- SeccionPreguntasFrecuentesMobile.png";

@@ -49,7 +49,7 @@ class DropDownCarMobile extends React.Component {
                 minHeight: 30,
               }}
             >
-              <p style={{ color: "white" }}>Municipios</p>
+              <p style={{ color: "white",marginRight:5  }}>Municipios</p>
               <Image src={ArrowDown} alt="arrow" width={20} height={20} />
             </div>
           </div>
@@ -77,7 +77,7 @@ class DropDownCarMobile extends React.Component {
     const list = props.map((item) => (
       <div
         onClick={this.handleText}
-        className="dropdown__item"
+        className="dropdown__item "
         key={item.name.toString()}
         style={{ color: "#EC1382" }}
       >
@@ -85,7 +85,7 @@ class DropDownCarMobile extends React.Component {
       </div>
     ));
 
-    return <div className="dropdown__items"> {list} </div>;
+    return <div className="dropdown__items "> {list} </div>;
   };
 }
 
