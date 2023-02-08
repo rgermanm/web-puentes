@@ -134,7 +134,10 @@ export default function ComponenteMapaWeb({ }) {
 
               backgroundColor: "#1cafc2",
               borderRadius: "10px",
-              padding: "10px",
+              paddingTop: "10px",
+              paddingBottom:"10px",
+              paddingLeft:"20px",
+              paddingRight:"20px",
               boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
               display: "flex",
               flexDirection: "column",
@@ -144,7 +147,7 @@ export default function ComponenteMapaWeb({ }) {
               border: "2px solid #ec1482",
             }}
           >
-            <h5 style={{ margin: "0px", alignSelf: "center" }} className={styles.centroTitleStrong}>
+            <h5 style={{ margin: "0px" }} className={styles.centroTitleStrong}>
               {selectedLocation}
             </h5>
             {RealSelectedId?.carreras.length == 0 &&
