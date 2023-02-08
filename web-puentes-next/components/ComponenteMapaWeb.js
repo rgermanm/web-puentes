@@ -135,9 +135,9 @@ export default function ComponenteMapaWeb({ }) {
               backgroundColor: "#1cafc2",
               borderRadius: "10px",
               paddingTop: "10px",
-              paddingBottom:"10px",
-              paddingLeft:"20px",
-              paddingRight:"20px",
+              paddingBottom: "10px",
+              paddingLeft: "20px",
+              paddingRight: "20px",
               boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
               display: "flex",
               flexDirection: "column",
@@ -164,12 +164,20 @@ export default function ComponenteMapaWeb({ }) {
 
             {RealSelectedId?.carreras?.map((e) => {
               return (
-                <p
-                  style={{ textAlign: "left" }}
-                  className={styles.centroTitle}
-                >
-                  {"•  " + carreras.find((car) => car.id == e).name}
-                </p>
+                <div style={{display:"flex",flexDirection:"row"}}>
+                  <p
+                    style={{ textAlign: "left",marginRight:"5px" }}
+                    className={styles.centroTitle}
+                  >
+                    {"•  " }
+                  </p>
+                  <p
+                    style={{ textAlign: "left" }}
+                    className={styles.centroTitle}
+                  >
+                    {carreras.find((car) => car.id == e).name}
+                  </p>
+                </div>
               );
             })}
 
