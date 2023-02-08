@@ -504,11 +504,8 @@ export default function Home() {
           }}
         >
           <Image
-            style={{
-              marginTop: 30,
-              maxWidth: "50%",
-              maxHeight: "50%",
-            }}
+
+            className={"logoPuentesFooter"}
             src={LogoPuentesNoBottom}
           ></Image>
           <SocialFooterIcons></SocialFooterIcons>

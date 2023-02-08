@@ -171,5 +171,17 @@
     "id": 38,
     "carreras": [20],
     "spanishName": "Tres Lomas"
+  },
+  {
+    "name": "Monte Hermoso",
+    "id": 39,
+    "carreras": [],
+    "spanishName": "Monte Hermoso"
+  },
+  {
+    "name": "Tres Arroyos",
+    "id": 40,
+    "carreras": [],
+    "spanishName": "Tres Arroyos"
   }
 ]
