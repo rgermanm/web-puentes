@@ -12,7 +12,7 @@ export default function ComponenteMapaWobile() {
   const [selectedLocation, setSelectedLocation] = useState("");
   const [RealSelectedId, setRealSelectedId] = useState("");
   const onChange = (e) => {
-    setSelectedLocation(findRealName(e.toUpperCase(),municipios));
+    setSelectedLocation(findRealName(e.toUpperCase(), municipios));
     console.log(e);
     setRealSelectedId(municipios.find((municipio) => municipio.name == e));
     console.log(municipios.find((municipio) => municipio.name == e));
@@ -44,7 +44,7 @@ export default function ComponenteMapaWobile() {
       >
         <h7
           className={styles.centroTitle}
-          style={{ width: "100%", textAlign: "center",color:"white" }}
+          style={{ width: "100%", textAlign: "center", color: "white" }}
         >
           Red de Centros Universitarios{" "}
           <span className={styles.centroTitleStrong}>PUENTES</span>
@@ -91,7 +91,7 @@ export default function ComponenteMapaWobile() {
         <DropDownMapaMobile onChange={onChange}></DropDownMapaMobile>
       </div>
 
-      {true && RealSelectedId?.name &&(
+      {true && RealSelectedId?.name && (
         <div
           style={{
             display: "flex",
@@ -103,8 +103,10 @@ export default function ComponenteMapaWobile() {
             top: "100vw",
             backgroundColor: "#1facbe",
             borderRadius: 10,
-            paddingBottom: 8,
-            paddingTop: 8,
+            paddingLeft: 20,
+            paddingRight: 20,
+            paddingTop: 10,
+            paddingBottom: 10,
             zIndex: 1,
             minHeight: 50,
             //BORDER ROSA
@@ -116,21 +118,30 @@ export default function ComponenteMapaWobile() {
         >
           <h7
             className={styles.centroTitleStrong}
-            style={{ width: "100%", textAlign: "center", color: "white" }}
+            style={{ width: "100%", textAlign: "left", color: "white" }}
           >
-            {RealSelectedId?.name || selectedLocation }
+            {RealSelectedId?.name || selectedLocation}
           </h7>
           <h7
             className={styles.centroTitle}
             style={{ width: "100%", textAlign: "center" }}
           >
+            {RealSelectedId?.carreras?.length==0&&
+                <p
+                  style={{ textAlign: "left", fontSize: 12 }}
+                  className={styles.centroTitle}
+                >
+                       Oferta académica aún no definida
+                </p>
+       
+            }
             {RealSelectedId?.carreras?.map((e) => {
               return (
                 <p
-                  style={{ textAlign: "center", fontSize: 12 }}
+                  style={{ textAlign: "left", fontSize: 12 }}
                   className={styles.centroTitle}
                 >
-                  {"-" + carreras.find((car) => car.id == e).name}
+                  {"•  " + carreras.find((car) => car.id == e).name}
                 </p>
               );
             })}
@@ -176,7 +187,7 @@ const MapaMobile = ({ selLoc, setSelectedLocation, setRealSelectedId }) => {
           }}
         >
           <SVGMap
-             onLocationClick={(e) => {
+            onLocationClick={(e) => {
               if (
                 municipios.find(
                   (municipio) =>
@@ -184,8 +195,8 @@ const MapaMobile = ({ selLoc, setSelectedLocation, setRealSelectedId }) => {
                     quitarAcentos(e.target.ariaLabel).toLowerCase()
                 )
               ) {
-                setSelectedLocation(findRealName(e.target.ariaLabel,municipios));
-  
+                setSelectedLocation(findRealName(e.target.ariaLabel, municipios));
+
                 setRealSelectedId(
                   municipios.find(
                     (municipio) =>
@@ -195,11 +206,11 @@ const MapaMobile = ({ selLoc, setSelectedLocation, setRealSelectedId }) => {
                 );
               }
             }}
-            
+
             map={BsAs}
             locationClassName={(item) => {
               //check if item.name is inside the municipios array
-  
+
               if (
                 municipios.find(
                   (municipio) =>
@@ -213,7 +224,7 @@ const MapaMobile = ({ selLoc, setSelectedLocation, setRealSelectedId }) => {
                 ) {
                   return "svg-map__location_colored";
                 }
-  
+
                 return "svg-map__location_colored_first";
               }
               return "svg-map__location";
@@ -246,7 +257,7 @@ function quitarAcentos(cadena) {
 }
 
 const findRealName = (name, list) => {
-  const realName = list.find((e) =>{console.log(e.name,name); return e.name.toLowerCase() == name.toLowerCase()});
-  
+  const realName = list.find((e) => { console.log(e.name, name); return e.name.toLowerCase() == name.toLowerCase() });
+
   return realName ? realName.spanishName : name;
 }

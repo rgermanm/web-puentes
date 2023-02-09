@@ -8,12 +8,12 @@ import BsAs from "./BSASFinalNamed";
 import Dropdown from "./DropDown";
 import ArrowDown from "../public/Assets/ad.png";
 import Image from "next/image";
-export default function ComponenteMapaWeb({}) {
+export default function ComponenteMapaWeb({ }) {
   const [selectedLocation, setSelectedLocation] = useState("");
   const [RealSelectedId, setRealSelectedId] = useState("");
 
   const onChange = (e) => {
-    setSelectedLocation(findRealName(e.toUpperCase(),municipios));
+    setSelectedLocation(findRealName(e.toUpperCase(), municipios));
     console.log(e);
     setRealSelectedId(municipios.find((municipio) => municipio.name == e));
     console.log(municipios.find((municipio) => municipio.name == e));
@@ -90,7 +90,7 @@ export default function ComponenteMapaWeb({}) {
                   quitarAcentos(e.target.ariaLabel).toLowerCase()
               )
             ) {
-              setSelectedLocation(findRealName(e.target.ariaLabel,municipios));
+              setSelectedLocation(findRealName(e.target.ariaLabel, municipios));
 
               setRealSelectedId(
                 municipios.find(
@@ -134,12 +134,15 @@ export default function ComponenteMapaWeb({}) {
 
               backgroundColor: "#1cafc2",
               borderRadius: "10px",
-              padding: "10px",
+              paddingTop: "10px",
+              paddingBottom: "10px",
+              paddingLeft: "20px",
+              paddingRight: "20px",
               boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
+              alignItems: "flex-start",
+              justifyContent: "flex-start",
 
               border: "2px solid #ec1482",
             }}
@@ -147,15 +150,34 @@ export default function ComponenteMapaWeb({}) {
             <h5 style={{ margin: "0px" }} className={styles.centroTitleStrong}>
               {selectedLocation}
             </h5>
+            {RealSelectedId?.carreras.length == 0 &&
+
+              <p
+                style={{ textAlign: "left" }}
+                className={styles.centroTitle}
+              >
+                Oferta académica aún no definida
+
+              </p>
+
+            }
 
             {RealSelectedId?.carreras?.map((e) => {
               return (
-                <p
-                  style={{ textAlign: "center" }}
-                  className={styles.centroTitle}
-                >
-                  {"-" + carreras.find((car) => car.id == e).name}
-                </p>
+                <div style={{display:"flex",flexDirection:"row"}}>
+                  <p
+                    style={{ textAlign: "left",marginRight:"5px" }}
+                    className={styles.centroTitle}
+                  >
+                    {"•  " }
+                  </p>
+                  <p
+                    style={{ textAlign: "left" }}
+                    className={styles.centroTitle}
+                  >
+                    {carreras.find((car) => car.id == e).name}
+                  </p>
+                </div>
               );
             })}
 
@@ -192,7 +214,7 @@ function quitarAcentos(cadena = "") {
 
 
 const findRealName = (name, list) => {
-  const realName = list.find((e) =>{console.log(e.name,name); return e.name.toLowerCase() == name.toLowerCase()});
-  
+  const realName = list.find((e) => { console.log(e.name, name); return e.name.toLowerCase() == name.toLowerCase() });
+
   return realName ? realName.spanishName : name;
 }

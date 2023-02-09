@@ -27,7 +27,7 @@ export default function SocialFooterIcons() {
         style={{ cursor: "pointer" }}
         onClick={() =>
           window.open(
-            "https://www.facebook.com/profile.php?id=100064229674627",
+            "https://www.facebook.com/ConsejoUniversitarioPBA",
             "_blank"
           )
         }
