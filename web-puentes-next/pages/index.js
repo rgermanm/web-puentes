@@ -12,7 +12,7 @@ import FotoProvMob from "../public/Assets/provMob.png";
 
 import FotoLogoDer from "../public/Assets/derechoalfuturo.png";
 
-import BackgroundOferta from "../public/Assets/Background-OfertaAcademica-01.png";
+import BackgroundOferta from "../public/Assets/Background-OfertaAcademica-011.png";
 import BackgroundPrograma from "../public/Assets/Background-ElPrograma1-01.png";
 import BackgroundPrograma2 from "../public/Assets/background-estadisticas.png";
 import BackgroundGaleria from "../public/Assets/Background-Galeria-01.png";
@@ -71,7 +71,12 @@ export default function Home() {
     {
       number: 37,
       image: ilustracion1,
-      label:<p>Municipios<br/> en Puentes</p> ,
+      label: (
+        <p>
+          Municipios
+          <br /> en Puentes
+        </p>
+      ),
       color: "#1facbe",
     },
     {
@@ -83,7 +88,12 @@ export default function Home() {
     {
       number: 60,
       image: ilustracion3,
-      label: <p>Carreras<br/> en 2023</p>,
+      label: (
+        <p>
+          Carreras
+          <br /> en 2023
+        </p>
+      ),
       color: "#ed1581",
     },
     {
@@ -95,13 +105,25 @@ export default function Home() {
     {
       number: 1624,
       image: ilustracion5,
-      label: <p>Millones<br/>de pesos en inversión</p>,
+      label: (
+        <p>
+          Millones
+          <br />
+          de pesos en inversión
+        </p>
+      ),
       color: "#1facbe",
     },
     {
       number: 37,
       image: ilustracion6,
-      label:  <p>Centros universitarios<br/>en construcción, ampliación o refacción</p>,
+      label: (
+        <p>
+          Centros universitarios
+          <br />
+          en construcción, ampliación o refacción
+        </p>
+      ),
       color: "#ed1581",
     },
   ];
@@ -189,7 +211,7 @@ export default function Home() {
     }
   }, [pathname]);
   return (
-    <div className={styles.container} style={{overflow:"hidden"}}>
+    <div className={styles.container} style={{ overflow: "hidden" }}>
       <Head>
         <title>
           Puentes | Programa de integración territorial universitaria{" "}
@@ -222,7 +244,7 @@ export default function Home() {
           ></Image>
           <Image
             className="col-lg-5 col-md-5-col-sm-12 d-none d-sm-block "
-            style={{ objectFit: "contain",marginLeft:"13vw" }}
+            style={{ objectFit: "contain", marginLeft: "13vw" }}
             src={LogoPuentesLeft}
           ></Image>
         </div>
@@ -235,8 +257,7 @@ export default function Home() {
               width: "30%",
               bottom: "0%",
               zIndex: 9999,
-              left: "13vw"
-            
+              left: "13vw",
             }}
           >
             <Image style={{ height: "100%", width: "100%" }} src={FotoProv} />
@@ -248,7 +269,6 @@ export default function Home() {
               width: "100%",
               bottom: "10%",
               zIndex: 999,
-           
             }}
           >
             {/* <Image style={{ height: "100%", width: "80%" ,right:0}} src={FotoDer} /> */}
@@ -273,7 +293,7 @@ export default function Home() {
               width: "30%",
               bottom: "0%",
               zIndex: 9999,
-              right: "13vw"
+              right: "13vw",
             }}
           >
             <Image style={{ height: "100%", width: "100%" }} src={FotoDer} />
@@ -344,7 +364,12 @@ export default function Home() {
 
       <div
         className="d-block d-sm-none"
-        style={{ position: "relative", maxHeight: "65vh",minHeight:600, paddingTop: 15 }}
+        style={{
+          position: "relative",
+          maxHeight: "65vh",
+          minHeight: 600,
+          paddingTop: 15,
+        }}
       >
         <Section
           style={{ maxWidth: "100%", maxHeight: "100vh" }}
@@ -506,7 +531,6 @@ export default function Home() {
           }}
         >
           <Image
-
             className={"logoPuentesFooter"}
             src={LogoPuentesNoBottom}
           ></Image>
