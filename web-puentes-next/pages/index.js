@@ -5,7 +5,7 @@ import { Section } from "../components/section";
 import BackgroundBanner from "../public/Assets/BackgroundBanner.png";
 import FotoBannerMobile from "../public/Assets/mobilebg.png";
 import FotoBanner from "../public/Assets/FotoBanner.jpg";
-import FotoProv from "../public/Assets/provleft.png";
+import FotoProv from "../public/Assets/provLeft.png";
 import FotoProvWhite from "../public/Assets/provWhite.png";
 import FotoDer from "../public/Assets/derecho1mini.png";
 import FotoProvMob from "../public/Assets/provMob.png";
