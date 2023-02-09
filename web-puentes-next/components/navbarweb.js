@@ -66,7 +66,7 @@ useEffect(() => {
 
           <Link
             className="nav-item nav-link"
-            style={{ textAlign:"left",paddingLeft:0,marginLeft:0 }}
+            style={{ textAlign:"left",paddingLeft:1,marginLeft:0 }}
             href="/"
           >
             INICIO
