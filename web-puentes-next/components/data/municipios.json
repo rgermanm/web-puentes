@@ -346,7 +346,8 @@
     "carreras": [
       20
     ],
-    "spanishName": "Tres Lomas"
+    "spanishName": "Tres Lomas",
+    "adress":"Juan Bautista Alberdi 555"
   },
   {
     "name": "Monte Hermoso",
@@ -359,6 +360,7 @@
     "name": "Tres Arroyos",
     "id": 40,
     "carreras": [],
-    "spanishName": "Tres Arroyos"
+    "spanishName": "Tres Arroyos",
+    "adress":"Maipu 270"
   }
 ]
