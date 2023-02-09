@@ -39,32 +39,34 @@ useEffect(() => {
       <div
         className="collapse navbar-collapse"
         id="navbarNavAltMarkup"
-        style={{ position: "relative" }}
+        style={{ position: "relative",marginLeft:"13vw" }}
       >
         <div className="navbar-nav">
           {canShowIcon && (
-            <div className="d-none d-sm-block">
+            <div className="d-none d-sm-block" style={{position:"absolute"}}>
               <Link className="nav-item nav-link" href="/">
                 <Image
                   src={LogoPuentes}
                   style={{
-                    left: 0,
+                    left: "-13vw",
                     width: 130,
                     height:90,
                     position: "absolute",
-                    top: -20,
+                    top: -15,
                   }}
                 ></Image>
               </Link>
             </div>
           )}
-          {!canShowIcon && (
+          {/* {!canShowIcon && (
             <div className="d-none d-sm-block" style={{ minWidth: 56 }}></div>
-          )}
+          )} */}
+
+   
 
           <Link
             className="nav-item nav-link"
-            style={{ marginLeft: "8vw" }}
+            style={{ textAlign:"left",paddingLeft:0,marginLeft:0 }}
             href="/"
           >
             INICIO

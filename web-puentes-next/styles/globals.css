@@ -60,7 +60,9 @@ a {
 
 .navbar-brand {
   z-index: 150;
-  margin-right: 20px;
+  /* margin-right: 20px; */
+  margin:0px;
+  margin-right:13vw;
 }
 
 .nav-logo {
