@@ -1,182 +1,359 @@
 [
-  { "name": "Pehuajo", "id": 1, "carreras": [7, 22], "spanishName": "Pehuajó" },
+  {
+    "name": "Pehuajo",
+    "id": 1,
+    "carreras": [
+      7,
+      22
+    ],
+    "adress": "Calle Dean Funes 180",
+    "spanishName": "Pehuajó"
+  },
   {
     "name": "Coronel Suarez",
     "id": 2,
-    "carreras": [22, 23],
+    "carreras": [
+      22,
+      23
+    ],
+    "adress": "Lamadrid 1087",
     "spanishName": "Coronel Suárez"
   },
-  { "name": "Bolivar", "id": 3, "carreras": [2, 10], "spanishName": "Bolívar" },
-  { "name": "Colon", "id": 4, "carreras": [4, 10], "spanishName": "Colón" },
+  {
+    "name": "Bolivar",
+    "adress": "Av. Cacique Cloqueo 950",
+    "id": 3,
+    "carreras": [
+      2,
+      10
+    ],
+    "spanishName": "Bolívar"
+  },
+  {
+    "name": "Colon",
+    "id": 4,
+    "carreras": [
+      4,
+      10
+    ],
+    "adress":"Calle 44 E/ 10 Y 11 (Plaza Oeste)",
+    "spanishName": "Colón"
+  },
   {
     "name": "Villa Gesell",
     "id": 5,
-    "carreras": [8, 9],
+    "carreras": [
+      8,
+      9
+    ],
+    "adress":"Av. 3 1305",
     "spanishName": "Villa Gesell"
   },
   {
     "name": "La Costa",
     "id": 6,
-    "carreras": [5, 12],
+    "carreras": [
+      5,
+      12
+    ],
+    "adress":"Calle 3 y Calle 36",
     "spanishName": "La Costa"
   },
   {
     "name": "Las Flores",
     "id": 7,
-    "carreras": [10, 24],
+    "carreras": [
+      10,
+      24
+    ],
+    "adress":"Gral. Paz y Alem (1er piso)",
     "spanishName": "Las Flores"
   },
   {
     "name": "Exaltacion de la Cruz",
     "id": 8,
-    "carreras": [3, 9],
+    "carreras": [
+      3,
+      9
+    ],
+    "adress":"San Martín 1025",
     "spanishName": "Exaltación de la Cruz"
   },
-  { "name": "Loberia", "id": 9, "carreras": [32], "spanishName": "Lobería" },
+  {
+    "name": "Loberia",
+    "id": 9,
+    "carreras": [
+      32
+    ],
+    "spanishName": "Lobería",
+    "adress":"Calle Alem 127"
+  },
   {
     "name": "25 de Mayo",
     "id": 10,
-    "carreras": [6, 21, 25],
-    "spanishName": "25 de Mayo"
+    "carreras": [
+      6,
+      21,
+      25
+    ],
+    "spanishName": "25 de Mayo",
+    "adress":"Calle 10 E/ 26 y 27"
   },
-  { "name": "Puan", "id": 11, "carreras": [7], "spanishName": "Puán" },
+  {
+    "name": "Puan",
+    "id": 11,
+    "carreras": [
+      7
+    ],
+    "spanishName": "Puán",
+    "adress":"Calle Garay 37"
+  },
   {
     "name": "Carmen de Areco",
     "id": 12,
-    "carreras": [4],
-    "spanishName": "Carmen de Areco"
+    "carreras": [
+      4
+    ],
+    "spanishName": "Carmen de Areco",
+    "adress":"Calle Duffi E/ Artiro Diaz y Pje. Del Rosario"
   },
   {
     "name": "San Vicente",
     "id": 13,
-    "carreras": [14, 15],
-    "spanishName": "San Vicente"
+    "carreras": [
+      14,
+      15
+    ],
+    "spanishName": "San Vicente",
+    "adress":"Aa. Presidente Perón 1185 (1er piso)"
   },
   {
     "name": "Pellegrini",
     "id": 14,
     "carreras": [],
-    "spanishName": "Pellegrini"
+    "spanishName": "Pellegrini",
+    "adress":"Calle Belgrano 135"
   },
-  { "name": "Alberti", "id": 15, "carreras": [1, 4], "spanishName": "Alberti" },
+  {
+    "name": "Alberti",
+    "id": 15,
+    "carreras": [
+      1,
+      4
+    ],
+    "spanishName": "Alberti",
+    "adress":"Int. Rivara y 9 de Julio"
+  },
   {
     "name": "Coronel Pringles",
     "id": 16,
-    "carreras": [25],
-    "spanishName": "Coronel Pringles"
+    "carreras": [
+      25
+    ],
+    "spanishName": "Coronel Pringles",
+    "adress":"Av. 25 de Mayo E/Barros y Spika"
   },
-  { "name": "Alem", "id": 17, "carreras": [4, 26], "spanishName": "Alem" },
+  {
+    "name": "Alem",
+    "id": 17,
+    "carreras": [
+      4,
+      26
+    ],
+    "spanishName": "Alem",
+    "adress":"Vedia 6030 E/ Chubut y Cte. Escribano"
+  },
   {
     "name": "General Pinto",
     "id": 18,
-    "carreras": [16, 27],
-    "spanishName": "General Pinto"
+    "carreras": [
+      16,
+      27
+    ],
+    "spanishName": "General Pinto",
+    "adress":"Av. Mitre y Roque Saens Peña"
   },
   {
     "name": "Daireaux",
     "id": 19,
-    "carreras": [18, 19],
-    "spanishName": "Daireaux"
+    "carreras": [
+      18,
+      19
+    ],
+    "spanishName": "Daireaux",
+    "adress":"Av. Roca y Lugones"
   },
   {
     "name": "La Madrid",
     "id": 20,
-    "carreras": [27],
-    "spanishName": "La Madrid"
+    "carreras": [
+      27
+    ],
+    "spanishName": "La Madrid",
+    "adress":"Combate de Paragüil 332"
   },
   {
     "name": "General Paz",
     "id": 21,
-    "carreras": [1, 26],
-    "spanishName": "General Paz"
+    "carreras": [
+      1,
+      26
+    ],
+    "spanishName": "General Paz",
+    "adress":"Hipólito Yrigoyen y Luis Giles (Ranchos)"
   },
   {
     "name": "Hipolito Yrigoyen",
     "id": 22,
     "carreras": [],
-    "spanishName": "Hipólito Yrigoyen"
+    "spanishName": "Hipólito Yrigoyen",
+    "adress":"Av. Centenario y 9 de Julio (Henderson)"
   },
-  { "name": "Balcarce", "id": 23, "carreras": [28], "spanishName": "Balcarce" },
+  {
+    "name": "Balcarce",
+    "id": 23,
+    "carreras": [
+      28
+    ],
+    "spanishName": "Balcarce",
+    "adress":"Av. Suipacha 32 (E/31 y 35)"
+  },
   {
     "name": "Saladillo",
     "id": 24,
-    "carreras": [26],
-    "spanishName": "Saladillo"
+    "carreras": [
+      26
+    ],
+    "spanishName": "Saladillo",
+    "adress":"Calle Zamorano 2960"
   },
   {
     "name": "Trenque Lauquen",
     "id": 25,
     "carreras": [],
-    "spanishName": "Trenque Lauquen"
+    "spanishName": "Trenque Lauquen",
+  "adress":"Calle Hernandez 816"
   },
   {
     "name": "Adolfo Alsina",
     "id": 26,
-    "carreras": [26],
-    "spanishName": "Adolfo Alsina"
+    "carreras": [
+      26
+    ],
+    "spanishName": "Adolfo Alsina",
+    "adress":"Mitre y Urquiza (Casa de la Cultura-Cahué)"
   },
   {
     "name": "General Alvarado",
     "id": 27,
-    "carreras": [33],
-    "spanishName": "General Alvarado"
+    "carreras": [
+      33
+    ],
+    "spanishName": "General Alvarado",
+    "adress":"Av. 9 E7 48 y 52 (Parque Centenario)"
   },
   {
     "name": "Carlos Tejedor",
     "id": 28,
-    "carreras": [27],
-    "spanishName": "Carlos Tejedor"
+    "carreras": [
+      27
+    ],
+    "spanishName": "Carlos Tejedor",
+    "adress":"Calle San Martín y Lary Storch"
   },
   {
     "name": "Punta Indio",
     "id": 29,
-    "carreras": [22, 31],
-    "spanishName": "Punta Indio"
+    "carreras": [
+      22,
+      31
+    ],
+    "spanishName": "Punta Indio",
+    "adress":"Predio Loma Negra Esq. 30 (CIC Localidad de Pipinas)"
   },
-  { "name": "Salto", "id": 30, "carreras": [29], "spanishName": "Salto" },
+  {
+    "name": "Salto",
+    "id": 30,
+    "carreras": [
+      29
+    ],
+    "spanishName": "Salto",
+    "adress":"Calle Moreno 310"
+  },
   {
     "name": "Guamini",
     "id": 31,
-    "carreras": [13, 23],
-    "spanishName": "Guaminí"
+    "carreras": [
+      13,
+      23
+    ],
+    "spanishName": "Guaminí",
+    "adress":"Hipólito Yrigoyen 586 (CASBAS)"
   },
   {
     "name": "Mar Chiquita",
     "id": 32,
     "carreras": [],
-    "spanishName": "Mar Chiquita"
+    "spanishName": "Mar Chiquita",
+    "adress":"Av. del Arroyo E/ Viña del Mar y Via Reggio (Santa Clara del Mar)"
   },
   {
     "name": "Roque Perez",
     "id": 33,
-    "carreras": [26],
-    "spanishName": "Roque Perez"
+    "carreras": [
+      26
+    ],
+    "spanishName": "Roque Perez",
+    "adress":"Calle Alem E/ Yrigoyen y Belgrano"
   },
   {
     "name": "San Cayetano",
     "id": 34,
     "carreras": [],
-    "spanishName": "San Cayetano"
+    "spanishName": "San Cayetano",
+    "adress":"Calle 1º de Mayo 685"
   },
   {
     "name": "Marcos Paz",
     "id": 35,
-    "carreras": [30, 33],
-    "spanishName": "Marcos Paz"
+    "carreras": [
+      30,
+      33
+    ],
+    "spanishName": "Marcos Paz",
+    "adress":"Av. Libertad E/ Cochabamba y Almte. Brown 67 (Bario San Eduardo)"
   },
-  { "name": "Tapalque", "id": 36, "carreras": [26], "spanishName": "Tapalqué" },
-  { "name": "Ramallo", "id": 37, "carreras": [17], "spanishName": "Ramallo" },
+  {
+    "name": "Tapalque",
+    "id": 36,
+    "carreras": [
+      26
+    ],
+    "spanishName": "Tapalqué",
+    "adress":"Av. Belgrano E/ Av. 25 de Mayo y Máximo Gómez"
+  },
+  {
+    "name": "Ramallo",
+    "id": 37,
+    "carreras": [
+      17
+    ],
+    "spanishName": "Ramallo"
+  },
   {
     "name": "Tres Lomas",
     "id": 38,
-    "carreras": [20],
+    "carreras": [
+      20
+    ],
     "spanishName": "Tres Lomas"
   },
   {
     "name": "Monte Hermoso",
     "id": 39,
     "carreras": [],
-    "spanishName": "Monte Hermoso"
+    "spanishName": "Monte Hermoso",
+    "adress":"Av. Sansot E/ Calle el Chimango y El Pato"
   },
   {
     "name": "Tres Arroyos",
