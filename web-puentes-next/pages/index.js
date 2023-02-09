@@ -68,7 +68,7 @@ export default function Home() {
 
   const stats = [
     {
-      number: 36,
+      number: 37,
       image: ilustracion1,
       label:<p>Municipios<br/> en Puentes</p> ,
       color: "#1facbe",
@@ -82,23 +82,23 @@ export default function Home() {
     {
       number: 60,
       image: ilustracion3,
-      label: <p>Ofertas academicas<br/> en 2023</p>,
+      label: <p>Carreras<br/> en 2023</p>,
       color: "#ed1581",
     },
     {
-      number: 350,
+      number: 2200,
       image: ilustracion4,
-      label: "Estudiantes inscriptos e inscriptas",
+      label: "Personas inscriptas",
       color: "#1facbe",
     },
     {
-      number: 1531,
+      number: 1624,
       image: ilustracion5,
       label: <p>Millones<br/>de pesos en inversión</p>,
       color: "#1facbe",
     },
     {
-      number: 36,
+      number: 37,
       image: ilustracion6,
       label:  <p>Centros universitarios<br/>en construcción, ampliación o refacción</p>,
       color: "#ed1581",
