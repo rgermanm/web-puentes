@@ -107,7 +107,7 @@ export default function ComponenteMapaWobile() {
             paddingRight: 20,
             paddingTop: 10,
             paddingBottom: 10,
-            zIndex: 1,
+            zIndex: 2,
             minHeight: 50,
             //BORDER ROSA
             border: "3px solid #ec1382",
@@ -126,14 +126,23 @@ export default function ComponenteMapaWobile() {
             className={styles.centroTitle}
             style={{ width: "100%", textAlign: "center" }}
           >
-            {RealSelectedId?.carreras?.length==0&&
-                <p
-                  style={{ textAlign: "left", fontSize: 12 }}
-                  className={styles.centroTitle}
-                >
-                       Oferta académica aún no definida
-                </p>
-       
+            {RealSelectedId?.adress &&
+              <p
+                style={{ textAlign: "left", fontSize: 12 }}
+                className={styles.centroTitle}
+              >
+                <strong style={{fontWeight:"bolder"}}>Centro Universitario:</strong> {RealSelectedId?.adress}
+              </p>
+
+            }
+            {RealSelectedId?.carreras?.length == 0 &&
+              <p
+                style={{ textAlign: "left", fontSize: 12 }}
+                className={styles.centroTitle}
+              >
+                Oferta académica aún no definida
+              </p>
+
             }
             {RealSelectedId?.carreras?.map((e) => {
               return (
