@@ -146,11 +146,28 @@ export default function Home() {
                 <span style={{ fontFamily: "EncodeSans-Bold" }}></span>
                 <span>{`${getSpace()}`}</span>diplomaturas, tecnicaturas y
                 licenciaturas, con modalidad presencial, semipresencial y
-                virtual. <br/>Además se promueve <span style={{ fontFamily: "EncodeSans-Bold" }}>la creación de centros
-                universitarios locales,</span> con aporte de fondos para la
+                virtual.
+              </p>
+              <p
+                style={{
+                  color: "#ed1581",
+                  margin: "0px",
+                  cursor: "pointer",
+                  fontFamily: "EncodeSans",
+                  fontSize: "2.8vw",
+                  lineHeight: 2,
+                  maxWidth: "94%",
+                  marginTop: "7vh",
+                  textAlign: "justify"
+                }}
+              >
+                Además se promueve <span style={{ fontFamily: "EncodeSans-Bold" }}>la creación de centros
+                  universitarios locales,</span> con aporte de fondos para la
                 construcción y/o refacción de estos espacios educativos o su
                 equipamiento para la creación de aulas bimodales.
               </p>
+
+
             </div>
           </div>
           <div className="muc-list d-none d-sm-block">
@@ -231,12 +248,27 @@ export default function Home() {
                 <span style={{ fontFamily: "EncodeSans-Bold" }}></span>
                 <span>{`${getSpace()}`}</span>diplomaturas, tecnicaturas y
                 licenciaturas, con modalidad presencial, semipresencial y
-                virtual.<br/> Además se promueve  <span style={{ fontFamily: "EncodeSans-Bold" }}>
+                virtual.
+              </p>
+              <p
+                style={{
+                  color: "#ed1581",
+                  margin: "0px",
+                  cursor: "pointer",
+                  fontFamily: "EncodeSans",
+                  fontSize: "1.5vw",
+                  maxWidth: "65%",
+                  marginTop: "10vh",
+                  textAlign: "justify"
+                }}
+              >
+                Además se promueve  <span style={{ fontFamily: "EncodeSans-Bold" }}>
                   la creación de centros
-                universitarios locales,</span>{" "} con aporte de fondos para la
+                  universitarios locales,</span>{" "} con aporte de fondos para la
                 construcción y/o refacción de estos espacios educativos o su
                 equipamiento para la creación de aulas bimodales.
               </p>
+
             </div>
           </div>
         </Section>
