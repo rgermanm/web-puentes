@@ -143,13 +143,13 @@ export default function Home() {
     {
       number: 60,
       image: ilustracion3,
-      label: "Ofertas academicas en 2023",
+      label: "Carreras en 2023",
       color: "#1facbe",
     },
     {
       number: 2200,
       image: ilustracion4,
-      label: "Estudiantes inscriptos e inscriptas",
+      label: "Personas inscriptas",
       color: "#ed1581",
     },
     {
