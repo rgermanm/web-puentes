@@ -244,7 +244,7 @@ export default function Home() {
           ></Image>
           <Image
             className="col-lg-5 col-md-5-col-sm-12 d-none d-sm-block "
-            style={{ objectFit: "contain", marginLeft: "13vw" }}
+            style={{ objectFit: "contain", marginLeft: "16vw" }}
             src={LogoPuentesLeft}
           ></Image>
         </div>
