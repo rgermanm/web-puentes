@@ -129,7 +129,7 @@ export default function Home() {
   ];
   const statsWeb = [
     {
-      number: 36,
+      number: 37,
       image: ilustracion1,
       label: "Municipios en Puentes",
       color: "#1facbe",
@@ -143,23 +143,23 @@ export default function Home() {
     {
       number: 60,
       image: ilustracion3,
-      label: "Ofertas academicas en 2023",
+      label: "Carreras en 2023",
       color: "#1facbe",
     },
     {
-      number: 350,
+      number: 2200,
       image: ilustracion4,
-      label: "Estudiantes inscriptos e inscriptas",
+      label: "Personas inscriptas",
       color: "#ed1581",
     },
     {
-      number: 1531,
+      number: 1624,
       image: ilustracion5,
       label: "Millones de pesos en inversión",
       color: "#1facbe",
     },
     {
-      number: 36,
+      number: 37,
       image: ilustracion6,
       label: "Centros universitarios en construcción, ampliación o refacción",
       color: "#ed1581",

@@ -21,7 +21,7 @@
   },
   {
     "name": "Bolivar",
-    "adress": "Av. Cacique Cloqueo 950",
+    "adress": "Av. Cacique Coliqueo 950",
     "id": 3,
     "carreras": [
       2,
@@ -241,7 +241,7 @@
       26
     ],
     "spanishName": "Adolfo Alsina",
-    "adress":"Mitre y Urquiza (Casa de la Cultura-Cahué)"
+    "adress":"Mitre y Urquiza (Casa de la Cultura-Carhué)"
   },
   {
     "name": "General Alvarado",
@@ -346,7 +346,8 @@
     "carreras": [
       20
     ],
-    "spanishName": "Tres Lomas"
+    "spanishName": "Tres Lomas",
+    "adress":"Juan Bautista Alberdi 555"
   },
   {
     "name": "Monte Hermoso",
@@ -359,6 +360,7 @@
     "name": "Tres Arroyos",
     "id": 40,
     "carreras": [],
-    "spanishName": "Tres Arroyos"
+    "spanishName": "Tres Arroyos",
+    "adress":"Maipu 270"
   }
 ]

@@ -63,7 +63,7 @@ export default function Home() {
         <h1 className={"pageTitle d-none d-sm-block"}>El Programa</h1>
 
         <Section id="Programa2" background={BackgroundPrograma2}>
-          <div className="muc-list d-block d-sm-none" style={{padding:15}}>
+          <div className="muc-list d-block d-sm-none" style={{ padding: 15 }}>
             <div
               className=" w-100 align-items-center justify-center"
               style={{
@@ -83,8 +83,8 @@ export default function Home() {
                   fontSize: "2.8vw",
                   lineHeight: 2,
                   maxWidth: "94%",
-                  textAlign:"justify"
-                  
+                  textAlign: "justify"
+
                 }}
               >
                 <span style={{ fontFamily: "EncodeSans-Bold" }}>PUENTES</span>{" "}
@@ -114,7 +114,7 @@ export default function Home() {
                   lineHeight: 2,
                   maxWidth: "94%",
                   marginTop: "7vh",
-                  textAlign:"justify"
+                  textAlign: "justify"
                 }}
               >
                 A través de Puentes, el gobierno provincial realiza acuerdos con
@@ -133,7 +133,7 @@ export default function Home() {
                   lineHeight: 2,
                   maxWidth: "94%",
                   marginTop: "7vh",
-                  textAlign:"justify"
+                  textAlign: "justify"
                 }}
               >
                 En los distritos que adhieren al programa, el Estado provincial
@@ -146,11 +146,28 @@ export default function Home() {
                 <span style={{ fontFamily: "EncodeSans-Bold" }}></span>
                 <span>{`${getSpace()}`}</span>diplomaturas, tecnicaturas y
                 licenciaturas, con modalidad presencial, semipresencial y
-                virtual. Además se promueve la creación de centros
-                universitarios locales, con aporte de fondos para la
+                virtual.
+              </p>
+              <p
+                style={{
+                  color: "#ed1581",
+                  margin: "0px",
+                  cursor: "pointer",
+                  fontFamily: "EncodeSans",
+                  fontSize: "2.8vw",
+                  lineHeight: 2,
+                  maxWidth: "94%",
+                  marginTop: "7vh",
+                  textAlign: "justify"
+                }}
+              >
+                Además se promueve <span style={{ fontFamily: "EncodeSans-Bold" }}>la creación de centros
+                  universitarios locales,</span> con aporte de fondos para la
                 construcción y/o refacción de estos espacios educativos o su
                 equipamiento para la creación de aulas bimodales.
               </p>
+
+
             </div>
           </div>
           <div className="muc-list d-none d-sm-block">
@@ -172,7 +189,7 @@ export default function Home() {
                   fontFamily: "EncodeSans",
                   fontSize: "1.5vw",
                   maxWidth: "65%",
-                  textAlign:"justify"
+                  textAlign: "justify"
                 }}
               >
                 <span style={{ fontFamily: "EncodeSans-Bold" }}>PUENTES</span>{" "}
@@ -218,7 +235,7 @@ export default function Home() {
                   fontSize: "1.5vw",
                   maxWidth: "65%",
                   marginTop: "10vh",
-                  textAlign:"justify"
+                  textAlign: "justify"
                 }}
               >
                 En los distritos que adhieren al programa, el Estado provincial
@@ -231,17 +248,33 @@ export default function Home() {
                 <span style={{ fontFamily: "EncodeSans-Bold" }}></span>
                 <span>{`${getSpace()}`}</span>diplomaturas, tecnicaturas y
                 licenciaturas, con modalidad presencial, semipresencial y
-                virtual. Además se promueve la creación de centros
-                universitarios locales, con aporte de fondos para la
+                virtual.
+              </p>
+              <p
+                style={{
+                  color: "#ed1581",
+                  margin: "0px",
+                  cursor: "pointer",
+                  fontFamily: "EncodeSans",
+                  fontSize: "1.5vw",
+                  maxWidth: "65%",
+                  marginTop: "10vh",
+                  textAlign: "justify"
+                }}
+              >
+                Además se promueve  <span style={{ fontFamily: "EncodeSans-Bold" }}>
+                  la creación de centros
+                  universitarios locales,</span>{" "} con aporte de fondos para la
                 construcción y/o refacción de estos espacios educativos o su
                 equipamiento para la creación de aulas bimodales.
               </p>
+
             </div>
           </div>
         </Section>
 
         <Section id="Footer" gradientCode={"footer"}>
-        <div style={{ height: "100vh", display: "flex",justifyContent:"center",alignItems:"center" }}>
+          <div style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
 
             <div
               style={{

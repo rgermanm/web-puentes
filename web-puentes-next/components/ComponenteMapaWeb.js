@@ -150,6 +150,15 @@ export default function ComponenteMapaWeb({ }) {
             <h5 style={{ margin: "0px" }} className={styles.centroTitleStrong}>
               {selectedLocation}
             </h5>
+            {RealSelectedId?.adress &&
+              <p
+                style={{ textAlign: "left", fontSize: 12 }}
+                className={styles.centroTitle}
+              >
+                <strong style={{fontWeight:"bolder"}}>Centro Universitario:</strong> {RealSelectedId?.adress}
+              </p>
+
+            }
             {RealSelectedId?.carreras.length == 0 &&
 
               <p
@@ -164,12 +173,12 @@ export default function ComponenteMapaWeb({ }) {
 
             {RealSelectedId?.carreras?.map((e) => {
               return (
-                <div style={{display:"flex",flexDirection:"row"}}>
+                <div style={{ display: "flex", flexDirection: "row" }}>
                   <p
-                    style={{ textAlign: "left",marginRight:"5px" }}
+                    style={{ textAlign: "left", marginRight: "5px" }}
                     className={styles.centroTitle}
                   >
-                    {"•  " }
+                    {"•  "}
                   </p>
                   <p
                     style={{ textAlign: "left" }}
