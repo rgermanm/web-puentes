@@ -73,7 +73,7 @@ export default function ComponenteMapaWeb({ }) {
       <div
         style={{
           position: "relative",
-          width: "40%",
+          width: "30%",
           height: "90vh",
           margin: "0px",
           display: "flex",

@@ -147,7 +147,7 @@ export default function Home() {
       color: "#1facbe",
     },
     {
-      number: 2200,
+      number: 2500,
       image: ilustracion4,
       label: "Personas inscriptas",
       color: "#ed1581",

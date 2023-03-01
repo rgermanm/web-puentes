@@ -27,7 +27,7 @@ export default function SocialFooterIcons() {
         style={{ cursor: "pointer" }}
         onClick={() =>
           window.open(
-            "https://www.facebook.com/ConsejoUniversitarioPBA",
+            "https://www.facebook.com/ConsejoUniPBA",
             "_blank"
           )
         }

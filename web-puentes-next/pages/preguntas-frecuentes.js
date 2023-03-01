@@ -24,7 +24,12 @@ let acoList = [
     secondBody: [
       {
         title: "¿Qué es Puentes?",
-        body: "Es un programa para el desarrollo de la educación superior universitaria en territorio bonaerense. Tiene como objetivos generar y ampliar oferta educativa (carreras universitarias) y construir/ampliar centros educativos en municipios, para tender así _puentes_ entre las universidades, el territorio y las y los potenciales estudiantes.",
+        body: "Es un programa para el desarrollo de la educación superior universitaria en territorio bonaerense. Tiene como objetivos generar y ampliar la oferta educativa (carreras universitarias) y construir/ampliar centros educativos en municipios, para tender así _puentes_ entre las universidades, el territorio y las y los potenciales estudiantes.",
+      },
+
+      {
+        title: "Beneficiarios y beneficiarias",
+        body: "Las y los habitantes de los municipios adheridos a Puentes que decidan cursar una carrera universitaria.",
       },
 
       {
@@ -39,10 +44,7 @@ let acoList = [
     ],
   },
 
-  {
-    title: "Beneficiarios y beneficiarias",
-    body: "Las y los habitantes de los municipios adheridos actualmente a Puentes y los que adhieran en el futuro, que decidan cursar una carrera universitaria",
-  },
+  
 
   {
     title: "Las carreras",
@@ -50,7 +52,7 @@ let acoList = [
     secondBody: [
       {
         title: "¿Qué carreras hay en mi municipio?",
-        body: "Si sabés qué Puentes ya está en tu municipio o en algún municipio cercano a tu domicilio, consultá el botón “Carreras” en la página de Inicio de este sitio.",
+        body: "Si sabés que Puentes ya está en tu municipio o en algún municipio cercano a tu domicilio, consultá el botón “Carreras” en la página de Inicio de este sitio.",
       },
       {
         title: "¿Tengo que pagar la carrera?",
@@ -63,7 +65,7 @@ let acoList = [
     ],
   },
 
-  {
+  /* {
     title: "Las cursadas",
     body: "",
     secondBody: [
@@ -76,20 +78,11 @@ let acoList = [
         body: "Sí, podés inscribirte en más de una carrera de la oferta académica de Puentes.",
       },
     ],
-  },
+  }, */
 
-  {
-    title: "La inscripción",
-    body: "",
-    secondBody: [
-      {
-        title: "¿Dónde y cuándo me inscribo?",
-        body:"Podés consultar las fechas y lugares de inscripción a las carreras en el área de Educación de tu municipio, en las redes de tu municipio o en la sección “Inscripciones abiertas” de este sitio."
-      }
-    ] 
-  },
+  
 
-  {
+  /* {
     title: "Requisitos",
     body: "",
     secondBody: [
@@ -102,15 +95,19 @@ let acoList = [
         body:"La documentación que necesitás para inscribirte en cada carrera podés consultarla en el área de Educación o en las redes de tu municipio."
       }
     ]
-  },
+  }, */
 
   {
-    title: "Cursadas",
+    title: "Las cursadas",
     body: "",
     secondBody:[
       {
         title: "¿Hasta dónde tengo que viajar para cursar?",
         body: "Con Puentes no tenés que viajar grandes distancias. Podés elegir entre las carreras que se ofrecen en el centro universitario de tu municipio o de algún municipio vecino.",
+      },
+      {
+        title: "¿Cuáles son los horarios y lugares de cursada?",
+        body: "Si ya sabés la carrera que querés cursar en tu municipio, consultá la fecha de inicio, los horarios y los lugares de cursada en el área de Educación local.",
       },
       {
         title: "¿El personal docente es el mismo que si estudio en la sede de la universidad?",
@@ -128,8 +125,31 @@ let acoList = [
         title: "¿Qué validez tendrá mi título?",
         body: "Tu título será expedido por la Universidad a la que corresponde tu carrera, de la misma manera que si cursaras en su sede central.",
       },
+      {
+        title: "¿Puedo cursar más de una carrera?",
+        body: "Sí, podés inscribirte en más de una carrera de la oferta académica de Puentes.",
+      },
     
     ]
+  },
+
+  {
+    title: "La inscripción",
+    body: "",
+    secondBody: [
+      {
+        title: "¿Dónde y cuándo me inscribo?",
+        body:"Podés consultar las fechas y lugares de inscripción a las carreras en el área de Educación y en las redes de tu municipio en las redes de tu municipio o en la sección “Inscripciones abiertas” de este sitio."
+      },
+      {
+        title: "¿Qué requisitos debo tener para inscribirme?",
+        body: "Para inscribirte a las carreras debés tener el secundario completo (para las tecnicaturas y licenciaturas) y cumplir con la documentación que te solicite la Universidad a través de tu municipio.",
+      },
+      {
+        title: "¿Qué documentación necesito?",
+        body:"La documentación que necesitás para inscribirte en cada carrera podés consultarla en el área de Educación o en las redes de tu municipio."
+      }
+    ] 
   },
 
   {
@@ -138,7 +158,7 @@ let acoList = [
     secondBody: [
       {
         title: "¿Qué es un centro Puentes?",
-        body:"Los centros Puentes son espacios físicos construidos en los municipios con aporte del gobierno provincial para el desarrollo de clases presenciales, semipresenciales y virtuales. En estos centros se realiza también la asistencia administrativa y académica a estudiantes, en articulación con los municipios y las universidades."
+        body:"Los centros Puentes son espacios físicos construidos en los municipios con aporte del Gobierno provincial para el desarrollo de clases presenciales, semipresenciales y virtuales. En estos centros se realiza también la asistencia administrativa y académica a estudiantes, en articulación con los municipios y las universidades."
       },
       {
         title: "¿Hay en mi municipio un centro Puentes?",
@@ -146,7 +166,7 @@ let acoList = [
       },
       {
         title: "¿Qué puedo hacer si todavía no llegó Puentes a mi municipio?",
-        body:"Si Puentes todavía no está en tu municipio, consulta la oferta del programa en municipios cercanos en el botón “Municipios” o el mapa de la “Red de centros universitarios Puentes” en la página de Inicio de este sitio."
+        body:"Si Puentes todavía no está en tu municipio, consultá la oferta del programa en municipios cercanos en el botón “Municipios” o el mapa de la “Red de centros universitarios Puentes” en la página de Inicio de este sitio."
 
       }
     ]
@@ -286,7 +306,7 @@ export default function PreguntasFrecuentes() {
                                   {acorData.title}
                                 </h5>
                               </Accordion.Header>
-                              <Accordion.Body>{acorData.body}</Accordion.Body>
+                              <Accordion.Body><div dangerouslySetInnerHTML={{ __html: acorData.body.replace("_","<i>").replace("_","</i>") }} /></Accordion.Body>
                             </Accordion.Item>
                           ))}
                         </Accordion>
