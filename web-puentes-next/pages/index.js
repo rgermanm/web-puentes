@@ -229,7 +229,7 @@ export default function Home() {
           style={{
             zIndex: 1500,
             height: "100vh",
-            width: "100vw",
+            width: "100%",
             position: "absolute",
             alignItems: "center",
 
