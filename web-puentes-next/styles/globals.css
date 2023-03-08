@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "EncodeSans";
   src: url("../public/Fonts/EncodeSans-Regular.ttf");
@@ -113,14 +117,12 @@ a {
 }
 
 .muc-button {
-  padding: 40px, 10px, 40px, 10px;
   border-style: solid;
   display: flex;
   align-items: center;
   justify-items: center;
   justify-content: center;
   align-content: center;
-  margin-right: 20px;
   cursor: pointer;
 }
 
@@ -579,6 +581,7 @@ a {
 
 .dropdown__items {
   position: relative;
+
   visibility: hidden;
   opacity: 0;
   max-height: 0px;
@@ -588,10 +591,11 @@ a {
 
 .dropdown.active .dropdown__items {
   visibility: visible;
-
-  border-top: 1px solid #666;
+z-index: 9999;
+  border-top: 0.2px solid #666;
   height: auto;
   max-height: 290px;
+
   opacity: 1;
   transition: max-height 0.7s, opacity 3s, visibility 4s ease;
   overflow-y: scroll;
@@ -601,7 +605,7 @@ a {
 .dropdown__item {
   cursor: pointer;
   padding: 5px 9px;
-  font-size: 11px;
+  font-size: 8px;
 }
 
 .dropdown__item:not(:last-child) {

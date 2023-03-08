@@ -7,13 +7,15 @@ import Image from "next/image";
 import DropDownCarMobile from "./DropDownCarMobile";
 import DropDownUniMobile from "./DropDownUniMobile";
 import DropDownMuniMobile from "./DropDownMuniMobile";
+
+import Example from "./TailwindDropdown";
 export default function MUC() {
   const [muc, setMuc] = useState([
     {
       label: "MUNICIPIOS",
       selectedBgColor: "#1facbe",
       selected: true,
-      data: chunk_inefficient(12,municipios),
+      data: chunk_inefficient(12, municipios),
 
       cols: "4",
     },
@@ -21,14 +23,14 @@ export default function MUC() {
       label: "UNIVERSIDADES",
       selectedBgColor: "#ed1581",
       selected: false,
-      data: chunk_inefficient(6,universidades),
+      data: chunk_inefficient(6, universidades),
       cols: "6",
     },
     {
       label: "CARRERAS",
       selectedBgColor: "#1facbe",
       selected: false,
-      data: chunk_inefficient(16,carreras),
+      data: chunk_inefficient(16, carreras),
       cols: "6",
     },
   ]);
@@ -39,15 +41,21 @@ export default function MUC() {
   const getInnerPlacerHolder = () => {
     switch (selected) {
       case 0:
-        return <p className="list-item-inner">Oferta académica aún no definida</p>
+        return (
+          <p className="list-item-inner">Oferta académica aún no definida</p>
+        );
         break;
       case 1:
-        return <p className="list-item-inner">Oferta académica aún no definida</p>
+        return (
+          <p className="list-item-inner">Oferta académica aún no definida</p>
+        );
         break;
       case 2:
-        return <p className="list-item-inner">Oferta académica aún no definida</p>
+        return (
+          <p className="list-item-inner">Oferta académica aún no definida</p>
+        );
     }
-  }
+  };
 
   const getInnerList = () => {
     switch (selected) {
@@ -176,28 +184,32 @@ export default function MUC() {
               ))}
             </div>
           </div>
-          <div className="muc-list" style={{width:"100%"}}>
+          <div className="muc-list" style={{ width: "100%" }}>
             <div className="row">
               {muc[selected].data.map((m, index) => (
-                <div
-             
-                  className={`col-${muc[selected].cols}`}
-                >
-                  {m.map((m, index) =>
-                 <div
-                  onClick={() => setListItemSelected(m.id)}
-                  className={`muc-item col-12`}
-                >
-                  <p
-                    style={{ color: listItemSelected == m.id ? "#1facbe" : "" }}
-                    className="muc-item-name"
-                  >
-                    {m.spanishName?m.spanishName:m.name}
-                  </p>
-                  {listItemSelected == m.id && (
-                    <div style={{ marginTop: "10px" }}>{getInnerList() == "" ? getInnerPlacerHolder() : getInnerList()}</div>
-                  )}
-                </div>)}
+                <div className={`col-${muc[selected].cols}`}>
+                  {m.map((m, index) => (
+                    <div
+                      onClick={() => setListItemSelected(m.id)}
+                      className={`muc-item col-12`}
+                    >
+                      <p
+                        style={{
+                          color: listItemSelected == m.id ? "#1facbe" : "",
+                        }}
+                        className="muc-item-name"
+                      >
+                        {m.spanishName ? m.spanishName : m.name}
+                      </p>
+                      {listItemSelected == m.id && (
+                        <div style={{ marginTop: "10px" }}>
+                          {getInnerList() == ""
+                            ? getInnerPlacerHolder()
+                            : getInnerList()}
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
@@ -207,7 +219,7 @@ export default function MUC() {
     );
   };
   const MUCMobile = () => {
-    const [Active, setActive] = useState(0)
+    const [Active, setActive] = useState(0);
     return (
       <div
         className="d-block d-sm-none"
@@ -248,18 +260,31 @@ export default function MUC() {
                 width: "85%",
               }}
             >
-              <div onClick={() => setActive(Active == 1 ? 0 : 1)}>
-                <DropDownCarMobile></DropDownCarMobile>
-              </div>
-              <div onClick={() => setActive(Active == 2 ? 0 : 2)}>
+              {/* <div onClick={() => setActive(Active == 1 ? 0 : 1)}>
+              <DropDownCarMobile></DropDownCarMobile>
+            </div>
+            <div onClick={() => setActive(Active == 2 ? 0 : 2)}>
+              <DropDownUniMobile></DropDownUniMobile>
+            </div>
+            <div onClick={() => setActive(Active == 3 ? 0 : 3)}>
+              <DropDownMuniMobile></DropDownMuniMobile>
+            </div> */}
 
-                <DropDownUniMobile></DropDownUniMobile>
-              </div>
-              <div onClick={() => setActive(Active == 3 ? 0 : 3)}>
+              <div
+                style={{
+                  height: "25vh",
+                  display: "flex",
+                  justifyContent: "space-around",
+                  flexDirection: "column",
+                  marginTop: 30,
+                }}
+              >
+                <Example text="POR MUNICIPIO" items={municipios} color="#1facbe"></Example>
 
-                 <DropDownMuniMobile></DropDownMuniMobile>
-              </div>
+                <Example text="POR CARRERAS" items={carreras} color="#EC1382"></Example>
 
+                <Example text="POR UNIVERSIDAD" items={universidades} color="#1facbe"></Example>
+              </div>
               {/*             
             
 
@@ -302,10 +327,10 @@ export default function MUC() {
   );
 }
 
-function chunk_inefficient(chunkSize,array) {
-
-  return [].concat.apply([],
-    array.map(function(elem, i) {
+function chunk_inefficient(chunkSize, array) {
+  return [].concat.apply(
+    [],
+    array.map(function (elem, i) {
       return i % chunkSize ? [] : [array.slice(i, i + chunkSize)];
     })
   );

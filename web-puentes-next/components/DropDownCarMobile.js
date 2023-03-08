@@ -40,7 +40,7 @@ class DropDownCarMobile extends React.Component {
             display: "flex",
           }}
         >
-          <div className="col-12" style={{}}>
+          <div  style={{width:"100%"}}>
             <div
               className="muc-button"
               style={{
@@ -49,7 +49,7 @@ class DropDownCarMobile extends React.Component {
                 minHeight: 30,
               }}
             >
-              <p style={{ color: "white",marginRight:5  }}>Municipios</p>
+              <p style={{ color: "white" }}>Municipios</p>
               <Image src={ArrowDown} alt="arrow" width={20} height={20} />
             </div>
           </div>
@@ -79,7 +79,7 @@ class DropDownCarMobile extends React.Component {
         onClick={this.handleText}
         className="dropdown__item "
         key={item.name.toString()}
-        style={{ color: "#EC1382" }}
+        style={{ color: "#EC1382",height:20, }}
       >
         {item.name}
       </div>
