@@ -63,7 +63,6 @@ export default function Example({ items, color,text }) {
           maxHeight: "35vh",
           overflow: "scroll",
           padding: 0,
-        minWidth:window.innerWidth
    
         }}
       >
