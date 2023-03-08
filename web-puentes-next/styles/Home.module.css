@@ -1,13 +1,13 @@
 .welcome {
   height: 100vh;
-  width: 100vw;
+  max-width: 100%;
 }
 
 
 @media (min-width: 800px) {
   .backgroundBannerContainer {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: absolute;
   }
 
@@ -18,11 +18,12 @@
     left: 0px;
     object-fit: contain;
     width: auto;
+    max-width:100%;
   }
 
   .fotoBanner {
     height: 100%;
-    width: 100%;
+    max-width: 100%;
     position: absolute;
     z-index: 99;
     object-fit: contain;
@@ -34,7 +35,7 @@
 @media (max-width: 800px) {
   .backgroundBannerContainer {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: absolute;
   }
 

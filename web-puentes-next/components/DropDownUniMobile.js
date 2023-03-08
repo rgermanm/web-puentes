@@ -33,6 +33,10 @@ class DropDownUniMobile extends React.Component {
           backgroundColor: "white",
 
           width: "80%",
+
+          "max-height": "170px",
+        "overflow-y": "auto",
+        "display": "block",
         }}
       >
         <div

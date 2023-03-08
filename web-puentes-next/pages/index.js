@@ -212,21 +212,118 @@ export default function Home() {
     }
   }, [pathname]);
   return (
-    <ChakraProvider>
-      <div className={styles.container} style={{ overflow: "hidden" }}>
-        <Head>
-          <title>
-            Puentes | Programa de integración territorial universitaria{" "}
-          </title>
-          <meta
-            name="description"
-            content="Programa de integración territorial universitaria."
-          />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <NavbarWeb />
-        <NavbarMobile></NavbarMobile>
-        <div className={styles.welcome}>
+    <div className={styles.container} style={{ overflow: "hidden" }}>
+      <Head>
+        <title>
+          Puentes | Programa de integración territorial universitaria{" "}
+        </title>
+        <meta
+          name="description"
+          content="Programa de integración territorial universitaria."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <NavbarWeb />
+      <NavbarMobile></NavbarMobile>
+      <div className={styles.welcome}>
+        <div
+          style={{
+            zIndex: 1500,
+            height: "100vh",
+            width: "100%",
+            position: "absolute",
+            alignItems: "center",
+
+            display: "flex",
+          }}
+          className="row"
+        >
+          <Image
+            className=" d-block d-sm-none "
+            style={{ objectFit: "contain", width: "100%", left: 0 }}
+            src={LogoPuentesMobile}
+          ></Image>
+          <Image
+            className="col-lg-5 col-md-5-col-sm-12 d-none d-sm-block "
+            style={{ objectFit: "contain", marginLeft: "16vw" }}
+            src={LogoPuentesLeft}
+          ></Image>
+        </div>
+
+        <div className={styles.backgroundBannerContainer}>
+          <div
+            className="d-none d-sm-block "
+            style={{
+              position: "absolute",
+              width: "30%",
+              bottom: "0%",
+              zIndex: 9999,
+              left: "13vw",
+            }}
+          >
+            <Image style={{ height: "100%", width: "100%" }} src={FotoProv} />
+          </div>
+          <div
+            className="d-block d-sm-none "
+            style={{
+              position: "absolute",
+              width: "100%",
+              bottom: "10%",
+              zIndex: 999,
+            }}
+          >
+            {/* <Image style={{ height: "100%", width: "80%" ,right:0}} src={FotoDer} /> */}
+
+            <Image
+              style={{ height: "100%", width: "100%" }}
+              src={FotoProvMob}
+            />
+          </div>
+          <Image className={styles.backgroundBanner} src={BackgroundBanner} />
+          <div className="d-none d-sm-block ">
+            <Image className={styles.fotoBanner} src={FotoBanner} />
+          </div>
+          <div className="d-block d-sm-none ">
+            <Image className={styles.fotoBanner} src={FotoBannerMobile} />
+          </div>
+
+          <div
+            className="d-none d-sm-block "
+            style={{
+              position: "absolute",
+              width: "30%",
+              bottom: "0%",
+              zIndex: 9999,
+              right: "13vw",
+            }}
+          >
+            <Image style={{ height: "100%", width: "100%" }} src={FotoDer} />
+            {/* <Image style={{ height: "100%", width: "100%" }} src={FotoLogoDer} /> */}
+          </div>
+        </div>
+      </div>
+
+      <div className="d-none d-sm-block" style={{ position: "relative" }}>
+        <Section
+          style={{ maxWidth: "100%" }}
+          id="Programa2"
+          background={BackgroundPrograma2}
+        >
+          <div className={styles.statsContainer}>
+            <div className="row">
+              {statsWeb.map((s, i) => (
+                <div className="col-lg-4 col-6">
+                  <StatsCard
+                    fontColor={s.color}
+                    ilustracion={s.image}
+                    stat={s.number}
+                    label={s.label}
+                  ></StatsCard>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div
             style={{
               zIndex: 1500,
