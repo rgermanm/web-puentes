@@ -454,9 +454,7 @@ export default function Home() {
         <div className="d-none d-sm-block">
           <Section
             id="Oferta"
-            customStyles={{ maxHeight: "100vw",
-            position: "relative",
-          }}
+            customStyles={{ maxHeight: "100vw", position: "relative" }}
             background={BackgroundOferta}
           >
             <MUC></MUC>
@@ -491,8 +489,12 @@ export default function Home() {
             }}
           >
             <div
-              className="instapost"
+              className="instapost widthsm"
               data-mc-src="e8f096f6-d988-48df-862d-b4a663484442#instagram"
+              style={{
+                zIndex: 99,
+               
+              }}
             >
               <div
                 className="cover-instagram"

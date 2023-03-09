@@ -829,6 +829,9 @@ z-index: 9999;
     height: 15vw;
     top: 90vw;
   }
+  .widthsm{
+    width: 75%;
+  }
 }
 
 @media (max-width: 340px) {
