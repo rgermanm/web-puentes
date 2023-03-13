@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logoBsAs from "./../public/Assets/logos/gob_prov.png";
 import logoBsAsInverse from "./../public/Assets/logos/gob_prov_inverse.png";
-import LogoPuentes from "./../public/Assets/LogoPuentesPrograma.svg";
+import LogoPuentes from "./../public/Assets/logofull.svg";
 import { useRouter } from 'next/router'
 
 import { Link as LinkScroll } from "react-scroll";
@@ -55,6 +55,7 @@ useEffect(() => {
                     top: -15,
                   }}
                 ></Image>
+                
               </Link>
             </div>
           )}

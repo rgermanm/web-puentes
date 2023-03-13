@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import {
   Menu,
@@ -13,7 +13,8 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example({ items, color,text }) {
+export default function Example({ items, color,text,filter }) {
+  const [isSelected,setIsSelected] = React.useState("")
   return (
     <Menu>
       <MenuButton
@@ -48,7 +49,7 @@ export default function Example({ items, color,text }) {
           }}
         >
           <p style={{ color: color, "font-family": "EncodeSans-Bold" }}>
-           {text}
+           {isSelected || text}
           </p>{" "}
           <ChevronDownIcon
             style={{ color: color }}
@@ -79,6 +80,10 @@ export default function Example({ items, color,text }) {
                 textOverflow: "ellipsis",
            
              
+              }}
+              onClick={() => {
+                setIsSelected(item.name)
+                filter(item.name,text)
               }}
             >
               {item.name}

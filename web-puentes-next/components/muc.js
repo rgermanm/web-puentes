@@ -220,6 +220,83 @@ export default function MUC() {
   };
   const MUCMobile = () => {
     const [Active, setActive] = useState(0);
+    const [munifilter, setMunifilter] = useState(municipios);
+    const [carrerafilter, setcarrerafilter] = useState(carreras);
+    const [universidadfilter, setuniversidadfilter] = useState(universidades);
+
+    const filterData = (data, type) => {
+      switch (type) {
+        case "POR MUNICIPIO":
+          let munipioName = data;
+          let municipioList = munifilter;
+          let carrerasF = [];
+          let universidadesF = [];
+
+          //find all carreras in municipio and add to list
+          //from carreras list find all universidades and add to list
+          for (let i = 0; i < municipioList.length; i++) {
+            if (municipioList[i].name == munipioName) {
+              for (let j = 0; j < municipioList[i].carreras.length; j++) {
+                for (let k = 0; k < carreras.length; k++) {
+                  if (municipioList[i].carreras[j] == carreras[k].id) {
+                    carrerasF.push(carreras[k]);
+                    for (let l = 0; l < universidades.length; l++) {
+                      if (carreras[k].idUniversidad == universidades[l].id) {
+                        //check if universidad is already in list
+                        let found = false;
+                        for (let m = 0; m < universidadesF.length; m++) {
+                          if (universidadesF[m].id == universidades[l].id) {
+                            found = true;
+                            break;
+                          }
+                        }
+                        if (!found) universidadesF.push(universidades[l]);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          setcarrerafilter(carrerasF);
+          setuniversidadfilter(universidadesF);
+
+          return;
+
+        case "POR CARRERAS":
+          // if (carrerafilter.length == carreras.length) {
+          //   return;
+          // }
+     
+          let carreraName = data;
+          let carreraList = carrerafilter;
+          let selectedCarreraObj = null;
+          let unis = [];
+
+          for (let i = 0; i < carreraList.length; i++) {
+            if (carreraList[i].name == carreraName) {
+              selectedCarreraObj = carreraList[i];
+              break;
+            }
+          }
+         
+
+          for (let i = 0; i < universidades.length; i++) {
+            if (universidades[i].id == selectedCarreraObj.idUniversidad) {
+              unis.push(universidades[i]);
+              break;
+            }
+          }
+
+          setuniversidadfilter(unis);
+
+          return;
+        case "POR UNIVERSIDAD":
+          return;
+      }
+    };
+
     return (
       <div
         className="d-block d-sm-none"
@@ -279,11 +356,26 @@ export default function MUC() {
                   marginTop: 30,
                 }}
               >
-                <Example text="POR MUNICIPIO" items={municipios} color="#1facbe"></Example>
+                <Example
+                  filter={filterData}
+                  text="POR MUNICIPIO"
+                  items={municipios}
+                  color="#1facbe"
+                ></Example>
 
-                <Example text="POR CARRERAS" items={carreras} color="#EC1382"></Example>
+                <Example
+                  filter={filterData}
+                  text="POR CARRERAS"
+                  items={carrerafilter}
+                  color="#EC1382"
+                ></Example>
 
-                <Example text="POR UNIVERSIDAD" items={universidades} color="#1facbe"></Example>
+                <Example
+                  filter={filterData}
+                  text="POR UNIVERSIDAD"
+                  items={universidadfilter}
+                  color="#1facbe"
+                ></Example>
               </div>
               {/*             
             
