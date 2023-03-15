@@ -88,7 +88,7 @@ class Dropdown extends React.Component {
         key={item.name.toString()}
         style={{ color: "white", fontFamily: "EncodeSans-Bold",fontSize:14 }}
       >
-        {item.name}
+        {item.spanishName}
       </div>
     ));
 
