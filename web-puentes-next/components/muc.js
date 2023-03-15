@@ -324,6 +324,7 @@ export default function MUC() {
               zIndex: 1,
               width: "100%",
               flexDirection: "column",
+              marginTop:10
             }}
           >
             <h4 className="title-oferta-academica">Oferta Académica</h4>
