@@ -46,12 +46,13 @@ class DropDownMapaMobile extends React.Component {
             justifyContent: "center",
             alignItems: "center",
             display: "flex",
+            height:"30px"
           }}
         >
           {this.state.haveText == "" && (
             <div
               style={{
-                height: 30,
+                height: "30px",
                 display:"flex",
                 alignItems:"center",
                 width:"100%"
