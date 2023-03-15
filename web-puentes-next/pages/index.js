@@ -280,7 +280,11 @@ export default function Home() {
                 src={FotoProvMob}
               />
             </div>
+            <div className="d-none d-sm-block ">
+
             <Image className={styles.backgroundBanner} src={BackgroundBanner} />
+            </div>
+
             <div className="d-none d-sm-block ">
               <Image className={styles.fotoBanner} src={FotoBanner} />
             </div>
