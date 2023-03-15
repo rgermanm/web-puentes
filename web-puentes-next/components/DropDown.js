@@ -51,12 +51,8 @@ class Dropdown extends React.Component {
           )}
           {this.state.haveText != "" && (
             <div>
-              <h5 className={styles.centroTitle}
-                         style={{ fontFamily: "EncodeSans-Bold",color:"white" }}>
-                <span
-                  className={styles.centroTitleStrong}
-                  style={{ fontFamily: "EncodeSans-Bold",color:"white" }}
-                >
+              <h5 className={styles.centroTitle}>
+                <span className={styles.centroTitleStrong}>
                   {" "}
                   {this.state.haveText}
                 </span>
@@ -90,6 +86,7 @@ class Dropdown extends React.Component {
         onClick={this.handleText}
         className="dropdown__item"
         key={item.name.toString()}
+        style={{ color: "white", fontFamily: "EncodeSans-Bold",fontSize:14 }}
       >
         {item.name}
       </div>
