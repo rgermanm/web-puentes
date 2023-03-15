@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import {
   Menu,
@@ -15,6 +15,8 @@ function classNames(...classes) {
 
 export default function Example({ items, color,text,filter }) {
   const [isSelected,setIsSelected] = React.useState("")
+  const size = useWindowSize();
+
   return (
     <Menu>
       <MenuButton
@@ -76,8 +78,9 @@ export default function Example({ items, color,text,filter }) {
                 "font-family": "EncodeSans-Bold",
                 zIndex: 99,
                 fontSize: 10,
-                maxWidth: "90%",
+              
                 textOverflow: "ellipsis",
+                width:size.width
            
              
               }}
@@ -94,4 +97,35 @@ export default function Example({ items, color,text,filter }) {
       </MenuList>
     </Menu>
   );
+}
+
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    // only execute all the code below in client side
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+     
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+    
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
 }
