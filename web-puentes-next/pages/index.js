@@ -75,7 +75,7 @@ export default function Home() {
       label: (
         <p>
           Municipios
-          <br /> en Puentes
+           en Puentes
         </p>
       ),
       color: "#1facbe",
@@ -92,7 +92,7 @@ export default function Home() {
       label: (
         <p>
           Carreras
-          <br /> en 2023
+           en 2023
         </p>
       ),
       color: "#ed1581",
@@ -109,7 +109,6 @@ export default function Home() {
       label: (
         <p>
           Millones
-          <br />
           de pesos en inversión
         </p>
       ),
@@ -121,7 +120,6 @@ export default function Home() {
       label: (
         <p>
           Centros universitarios
-          <br />
           en construcción, ampliación o refacción
         </p>
       ),
