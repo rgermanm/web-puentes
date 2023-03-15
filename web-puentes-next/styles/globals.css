@@ -585,6 +585,7 @@ a {
   visibility: hidden;
   opacity: 0;
   max-height: 0px;
+  margin-bottom: 0px;
   z-index: 999999;
   transition: max-height 0.6s ease;
 }
