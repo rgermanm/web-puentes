@@ -14,7 +14,7 @@ export default function ComponenteMapaWobile() {
   const onChange = (e) => {
     setSelectedLocation(findRealName(e.toUpperCase(), municipios));
     console.log(e);
-    setRealSelectedId(municipios.find((municipio) => municipio.name == e));
+    setRealSelectedId(municipios.find((municipio) => municipio.spanishName == e));
     console.log(municipios.find((municipio) => municipio.name == e));
   };
 
@@ -91,7 +91,7 @@ export default function ComponenteMapaWobile() {
         <DropDownMapaMobile onChange={onChange}></DropDownMapaMobile>
       </div>
 
-      {true && RealSelectedId?.name && (
+      {RealSelectedId?.name && (
         <div
           style={{
             display: "flex",
