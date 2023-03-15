@@ -34,7 +34,7 @@ class DropDownMapaMobile extends React.Component {
           left: 0,
           right: 0,
           top: "10vw",
-          width: "80%",
+          width: "90%",
           " box-shadow": "0px 0px 10px 0px rgba(0,0,0,0.5)",
           "-webkit-box-shadow": "0px 0px 10px 0px rgba(0,0,0,0.5)",
           "-moz-box-shadow": "0px 0px 10px 0px rgba(0,0,0,0.5)",
@@ -51,41 +51,44 @@ class DropDownMapaMobile extends React.Component {
           {this.state.haveText == "" && (
             <div
               style={{
-                paddingBottom: 9,
-                height:30,
-             
+                height: 30,
+                display:"flex",
+                alignItems:"center",
+                width:"100%"
               }}
             >
-              <h7
-                className={styles.centroTitle}
-                style={{
-                  width: "90%",
-                  textAlign: "center",
-                  fontSize: 10,
+                <h7
+                  className={styles.centroTitle}
+                  style={{
+                    width: "90%",
+                    textAlign: "center",
+                    fontSize: 10,
 
-                  color: "#EC1382",
-                  backgroundColor: "#fff",
-                }}
-              >
-                SELECCIONAR MUNICIPIO CON{" "}
-                <span
-                  className={styles.centroTitleStrong}
-                  style={{ color: "#EC1382" }}
+                    color: "#EC1382",
+                    backgroundColor: "#fff",
+                  }}
                 >
-                  PROGRAMA PUENTES
-                </span>
-              </h7>
-              <Image src={ArrowDownRosa} alt="arrow" width={20} height={20} />
+                  SELECCIONAR MUNICIPIO CON{" "}
+                  <span
+                    className={styles.centroTitleStrong}
+                    style={{ color: "#EC1382" }}
+                  >
+                    PROGRAMA PUENTES
+                  </span>
+                </h7>
+                <Image src={ArrowDownRosa} alt="arrow" width={20} height={20} />
             </div>
           )}
 
           {this.state.haveText != "" && (
             <div
             style={{
-              paddingBottom: 9,
-              height:30
+              height: 30,
+              display:"flex",
+              alignItems:"center",
+              width:"100%"
             }}>
-              <div>
+           
                 <h7
                   className={styles.centroTitle}
                   style={{
@@ -105,7 +108,7 @@ class DropDownMapaMobile extends React.Component {
                   </span>
                 </h7>
                 <Image src={ArrowDownRosa} alt="arrow" width={20} height={20} />
-              </div>
+         
             </div>
           )}
         </div>
