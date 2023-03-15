@@ -524,7 +524,7 @@ export default function Home() {
                   ></Image>
                   <Image
                     className="uni-image d-block d-sm-none"
-                    style={{ width: "100%" }}
+                    style={{ width: "80%" }}
                     src={m}
                   ></Image>
                 </div>
