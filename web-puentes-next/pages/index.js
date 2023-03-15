@@ -408,7 +408,7 @@ export default function Home() {
                 bottom: 0,
                 left: "50%",
                 transform: "translate(-50%, 0)",
-                marginBottom: 20,
+                marginBottom: 40,
               }}
             >
               <div
