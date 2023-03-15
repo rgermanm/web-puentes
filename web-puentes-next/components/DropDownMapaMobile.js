@@ -137,9 +137,11 @@ class DropDownMapaMobile extends React.Component {
         onClick={this.handleText}
         className="dropdown__item"
         key={item.name.toString()}
-        style={{ color: "#EC1382" }}
+  
+        style={{ color: "#EC1382", fontFamily: "EncodeSans-Bold",fontSize:10 }}
+
       >
-        {item.name}
+        {item.spanishName}
       </div>
     ));
 
