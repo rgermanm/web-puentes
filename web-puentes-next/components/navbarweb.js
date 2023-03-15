@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logoBsAs from "./../public/Assets/logos/gob_prov.png";
 import logoBsAsInverse from "./../public/Assets/logos/gob_prov_inverse.png";
-import LogoPuentes from "./../public/Assets/logofull.svg";
+import LogoPuentes from "./../public/Assets/logofullsvg.svg";
 import { useRouter } from 'next/router'
 
 import { Link as LinkScroll } from "react-scroll";
@@ -43,17 +43,15 @@ useEffect(() => {
       >
         <div className="navbar-nav">
           {canShowIcon && (
-            <div className="d-none d-sm-block" style={{position:"absolute"}}>
+            <div className="d-none d-sm-block" style={{ left: "-13vw",
+            width: 130,
+            height:90,
+            position: "absolute",
+            top: -10,}}>
               <Link className="nav-item nav-link" href="/">
                 <Image
                   src={LogoPuentes}
-                  style={{
-                    left: "-13vw",
-                    width: 130,
-                    height:90,
-                    position: "absolute",
-                    top: -15,
-                  }}
+              style={{width:400}}
                 ></Image>
                 
               </Link>
