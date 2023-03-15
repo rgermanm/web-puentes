@@ -2,12 +2,17 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import CountUp from "react-countup";
 
-export default function StatsCard({ ilustracion, fontColor, stat, label }) {
+export default function StatsCard({ ilustracion, fontColor, stat, label ,bigger}) {
   return (
     <div className="stats-card">
-      <div>
-        <Image className="stats-illustration" style={{width:60}} src={ilustracion}></Image>
+            <div className="d-none d-sm-block ">
+
+        <Image className="stats-illustration"  src={ilustracion}></Image>
       </div>
+      <div className="d-block d-sm-none ">
+
+<Image className="stats-illustration" style={{width:bigger?193:60}} src={ilustracion}></Image>
+</div>
       <div className="stats-number-container">
         <div>
           <CountUp

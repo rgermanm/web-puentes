@@ -117,6 +117,7 @@ export default function Home() {
     {
       number: 37,
       image: ilustracion6,
+      bigger:true,
       label: (
         <p>
           Centros universitarios
@@ -321,6 +322,7 @@ export default function Home() {
                       ilustracion={s.image}
                       stat={s.number}
                       label={s.label}
+                      bigger={s.bigger}
                     ></StatsCard>
                   </div>
                 ))}
@@ -389,6 +391,7 @@ export default function Home() {
                       ilustracion={s.image}
                       stat={s.number}
                       label={s.label}
+                      bigger={s.bigger}
                     ></StatsCard>
                   </div>
                 ))}
