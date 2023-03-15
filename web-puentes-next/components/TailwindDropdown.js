@@ -86,7 +86,7 @@ export default function Example({ items, color,text,filter }) {
                 filter(item.name,text)
               }}
             >
-              {item.name}
+              {item.spanishName || item.name}
             </MenuItem>
             <MenuDivider style={{ padding: 0, margin: 0 }} />
           </>
