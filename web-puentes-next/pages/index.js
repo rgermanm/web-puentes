@@ -451,7 +451,7 @@ export default function Home() {
           className="d-block d-sm-none"
           id="ProgramaMobile"
           name="ProgramaMobile"
-          style={{ minHeight: "113vw" }}
+          style={{ minHeight: "113vw",scrollMarginTop:"60px" }}
         >
           <ComponenteMapaWobile></ComponenteMapaWobile>
         </div>
@@ -480,7 +480,7 @@ export default function Home() {
           </Section>
         </div>
 
-        <SectionGaleria id="Galeria" background={BackgroundGaleria}>
+        <SectionGaleria id="Galeria" customStyles={{scrollMarginTop:window.innerWidth<700?"120px":"0px"}} background={BackgroundGaleria}>
           <div
             style={{
               display: "flex",
