@@ -866,7 +866,7 @@ z-index: 9999;
 @media (max-width: 900px) {
 
   .logoPuentesFooter {
-    margin-top: 50%;
+    margin-top: 25vh;
       max-width: 70%;
       max-height: 60%
   }
