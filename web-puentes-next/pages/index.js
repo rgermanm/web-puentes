@@ -49,7 +49,7 @@ import uni6 from "../public/Assets/logos/universidades/6.png";
 import uni7 from "../public/Assets/logos/universidades/7.png";
 import uni8 from "../public/Assets/logos/universidades/8.png";
 import uni9 from "../public/Assets/logos/universidades/9.png";
-import uni10 from "../public/Assets/logos/universidades/10.jpeg";
+import uni10 from "../public/Assets/logos/universidades/10.png";
 import uni11 from "../public/Assets/logos/universidades/f.jpeg";
 import StatsCard from "../components/statsCard";
 import { SVGMap } from "react-svg-map";
