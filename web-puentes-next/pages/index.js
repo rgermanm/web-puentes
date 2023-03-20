@@ -67,6 +67,7 @@ import SectionGaleria from "../components/sectionGaleria";
 
 export default function Home() {
   const [actualPath, setactualPath] = useState("");
+  const size = useWindowSize();
 
   const stats = [
     {
@@ -411,7 +412,7 @@ export default function Home() {
                 bottom: 0,
                 left: "50%",
                 transform: "translate(-50%, 0)",
-                marginBottom: 40,
+                marginBottom: "12%",
               }}
             >
               <div
@@ -451,7 +452,7 @@ export default function Home() {
           className="d-block d-sm-none"
           id="ProgramaMobile"
           name="ProgramaMobile"
-          style={{ minHeight: "113vw" }}
+          style={{ minHeight: "113vw",scrollMarginTop:"60px" }}
         >
           <ComponenteMapaWobile></ComponenteMapaWobile>
         </div>
@@ -480,7 +481,7 @@ export default function Home() {
           </Section>
         </div>
 
-        <SectionGaleria id="Galeria" background={BackgroundGaleria}>
+        <SectionGaleria id="Galeria" customStyles={{scrollMarginTop:size.width<700?"120px":"0px"}} background={BackgroundGaleria}>
           <div
             style={{
               display: "flex",
@@ -604,4 +605,36 @@ export default function Home() {
       </div>
     </ChakraProvider>
   );
+}
+
+
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    // only execute all the code below in client side
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+     
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+    
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
 }
