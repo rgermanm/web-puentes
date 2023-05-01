@@ -164,7 +164,12 @@
     {
         "id": 33,
         "idUniversidad": 11,
-        "name": "Diplomatura Universitaria en Programación"
+        "name": "Diplomatura Universitaria en Programación y Análisis de Datos"
+    },
+    {
+        "id": 34,
+        "idUniversidad": 9,
+        "name": "Tecnicatura de Analista en Programación"
     }
     
     

@@ -40,7 +40,7 @@ import ilustracion4 from "../public/Assets/ilustraciones/4.svg";
 import ilustracion5 from "../public/Assets/ilustraciones/5.svg";
 import ilustracion6 from "../public/Assets/ilustraciones/6.svg";
 
-import uni1 from "../public/Assets/logos/universidades/1.jpeg";
+//import uni1 from "../public/Assets/logos/universidades/1.jpeg";
 import uni2 from "../public/Assets/logos/universidades/2.png";
 import uni3 from "../public/Assets/logos/universidades/3.jpeg";
 import uni4 from "../public/Assets/logos/universidades/4.jpeg";
@@ -71,7 +71,7 @@ export default function Home() {
 
   const stats = [
     {
-      number: 37,
+      number: 43,
       image: ilustracion1,
       label: (
         <p>
@@ -99,13 +99,13 @@ export default function Home() {
       color: "#ed1581",
     },
     {
-      number: 2500,
+      number: 2853,
       image: ilustracion4,
       label: "Personas inscriptas",
       color: "#1facbe",
     },
     {
-      number: 1624,
+      number: 1685,
       image: ilustracion5,
       label: (
         <p>
@@ -116,7 +116,7 @@ export default function Home() {
       color: "#1facbe",
     },
     {
-      number: 37,
+      number: 40,
       image: ilustracion6,
       bigger:true,
       label: (
@@ -130,7 +130,7 @@ export default function Home() {
   ];
   const statsWeb = [
     {
-      number: 37,
+      number: 43,
       image: ilustracion1,
       label: "Municipios en Puentes",
       color: "#1facbe",
@@ -148,19 +148,19 @@ export default function Home() {
       color: "#1facbe",
     },
     {
-      number: 2500,
+      number: 2853,
       image: ilustracion4,
       label: "Personas inscriptas",
       color: "#ed1581",
     },
     {
-      number: 1624,
+      number: 1685,
       image: ilustracion5,
       label: "Millones de pesos en inversión",
       color: "#1facbe",
     },
     {
-      number: 37,
+      number: 40,
       image: ilustracion6,
       label: "Centros universitarios en construcción, ampliación o refacción",
       color: "#ed1581",
@@ -168,7 +168,7 @@ export default function Home() {
   ];
 
   const UnivImages = [
-    uni1,
+    //uni1,
     uni2,
     uni3,
     uni4,

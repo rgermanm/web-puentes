@@ -362,5 +362,12 @@
     "carreras": [],
     "spanishName": "Tres Arroyos",
     "adress":"Maipu 270"
+  },
+  {
+    "name": "Mercedes",
+    "id": 41,
+    "carreras": [34],
+    "spanishName": "Mercedes",
+    "adress":""
   }
 ]
