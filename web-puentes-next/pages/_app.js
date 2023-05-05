@@ -15,6 +15,19 @@ function MyApp({ Component, pageProps }) {
   async data-usrc
   strategy="lazyOnload">
 </Script>
+<Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-RTNS8BMQT2"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-RTNS8BMQT2');
+        `}
+      </Script>
       <Component {...pageProps} />
     
     </>
