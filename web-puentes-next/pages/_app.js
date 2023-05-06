@@ -1,8 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import '../styles/globals.css'
+import "bootstrap/dist/css/bootstrap.css";
+import "../styles/globals.css";
 import Head from "next/head";
-import Script from 'next/script'
-
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -11,11 +10,12 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Script
-  src="https://cdn2.woxo.tech/a.js#63b9e87941a2f36aa92fd38c" 
-  async data-usrc
-  strategy="lazyOnload">
-</Script>
-<Script
+        src="https://cdn2.woxo.tech/a.js#63b9e87941a2f36aa92fd38c"
+        async
+        data-usrc
+        strategy="lazyOnload"
+      ></Script>
+      <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-RTNS8BMQT2"
         strategy="afterInteractive"
       />
@@ -29,9 +29,8 @@ function MyApp({ Component, pageProps }) {
         `}
       </Script>
       <Component {...pageProps} />
-    
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
