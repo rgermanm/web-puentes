@@ -42,7 +42,7 @@ useEffect(() => {
         style={{ position: "relative",marginLeft:"13vw" }}
       >
         <div className="navbar-nav">
-          {canShowIcon && (
+          {canShowIcon && isHomeScreen && (
             <div className="d-none d-sm-block" style={{ left: "-13vw",
             width: 130,
             height:90,
