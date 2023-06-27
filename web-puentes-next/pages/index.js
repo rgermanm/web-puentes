@@ -64,6 +64,7 @@ import ComponenteMapaWeb from "../components/ComponenteMapaWeb";
 import ComponenteMapaWobile from "../components/ComponenteMapaWobile";
 import { scroller } from "react-scroll";
 import SectionGaleria from "../components/sectionGaleria";
+import BotonQuilmes from "../components/BotonQuilmes";
 
 export default function Home() {
   const [actualPath, setactualPath] = useState("");
@@ -540,8 +541,9 @@ export default function Home() {
         </Section>
         <Section id="Footer" gradientCode={"footer"}>
           <div
+          className={'quilmes-puentes-logo-container'}
             style={{
-              height: "100vh",
+      
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-start",
@@ -549,6 +551,7 @@ export default function Home() {
               position: "relative",
             }}
           >
+            <BotonQuilmes></BotonQuilmes>
             <Image
               className={"logoPuentesFooter"}
               src={LogoPuentesNoBottom}
