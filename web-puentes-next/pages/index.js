@@ -71,7 +71,7 @@ export default function Home() {
 
   const stats = [
     {
-      number: 43,
+      number: 50,
       image: ilustracion1,
       label: (
         <p>
@@ -88,7 +88,7 @@ export default function Home() {
       color: "#ed1581",
     },
     {
-      number: 60,
+      number: 71,
       image: ilustracion3,
       label: (
         <p>
@@ -99,13 +99,13 @@ export default function Home() {
       color: "#ed1581",
     },
     {
-      number: 2853,
+      number: 3017,
       image: ilustracion4,
       label: "Personas inscriptas",
       color: "#1facbe",
     },
     {
-      number: 1685,
+      number: 1690,
       image: ilustracion5,
       label: (
         <p>
@@ -130,7 +130,7 @@ export default function Home() {
   ];
   const statsWeb = [
     {
-      number: 43,
+      number: 50,
       image: ilustracion1,
       label: "Municipios en Puentes",
       color: "#1facbe",
@@ -142,19 +142,19 @@ export default function Home() {
       color: "#ed1581",
     },
     {
-      number: 60,
+      number: 71,
       image: ilustracion3,
       label: "Carreras en 2023",
       color: "#1facbe",
     },
     {
-      number: 2853,
+      number: 3017,
       image: ilustracion4,
       label: "Personas inscriptas",
       color: "#ed1581",
     },
     {
-      number: 1685,
+      number: 1690,
       image: ilustracion5,
       label: "Millones de pesos en inversión",
       color: "#1facbe",
